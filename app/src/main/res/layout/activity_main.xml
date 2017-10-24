@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.maste.ramen.MainActivity">
+
+    <TextView
+        android:id="@+id/textDish7"
+        android:layout_width="76dp"
+        android:layout_height="34dp"
+        android:text="Dish1"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.847" />
+
+    <TextView
+        android:id="@+id/textDish8"
+        android:layout_width="76dp"
+        android:layout_height="34dp"
+        android:text="Dish1"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.888" />
+
+    <TextView
+        android:id="@+id/textDish5"
+        android:layout_width="76dp"
+        android:layout_height="34dp"
+        android:text="Dish1"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.612" />
+
+    <TextView
+        android:id="@+id/textDish2"
+        android:layout_width="76dp"
+        android:layout_height="34dp"
+        android:text="Dish1"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.339" />
+
+    <TextView
+        android:id="@+id/textDish3"
+        android:layout_width="76dp"
+        android:layout_height="34dp"
+        android:text="Dish1"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.612" />
+
+    <TextView
+        android:id="@+id/textDish4"
+        android:layout_width="76dp"
+        android:layout_height="34dp"
+        android:text="Dish1"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.612" />
+
+    <TextView
+        android:id="@+id/textDish1"
+        android:layout_width="76dp"
+        android:layout_height="34dp"
+        android:text="Dish1"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.34" />
+
+    <TextView
+        android:id="@+id/textDish6"
+        android:layout_width="76dp"
+        android:layout_height="34dp"
+        android:text="Dish1"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.888" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="137dp"
+        android:layout_height="32dp"
+        android:text="Ramen R US!"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <TextView
+        android:id="@+id/textCreate"
+        android:layout_width="128dp"
+        android:layout_height="34dp"
+        android:text="Create Your       Own"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.338" />
+
+    <ImageButton
+        android:id="@+id/dish9"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        app:srcCompat="@android:drawable/picture_frame"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="350dp" />
+
+    <ImageButton
+        android:id="@+id/dish7"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        app:srcCompat="@android:drawable/picture_frame"
+        tools:layout_editor_absoluteY="350dp"
+        app:layout_constraintRight_toLeftOf="@+id/dish9"
+        android:layout_marginRight="32dp"
+        app:layout_constraintLeft_toRightOf="@+id/dish6"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp" />
+
+    <ImageButton
+        android:id="@+id/dish6"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        app:srcCompat="@android:drawable/picture_frame"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="350dp" />
+
+    <ImageButton
+        android:id="@+id/dish3"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        app:srcCompat="@android:drawable/picture_frame"
+        app:layout_constraintRight_toLeftOf="@+id/dish4"
+        android:layout_marginRight="31dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/createYourOwn"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/dish6"
+        app:layout_constraintVertical_bias="0.489"
+        android:layout_marginEnd="31dp" />
+
+    <ImageButton
+        android:id="@+id/dish4"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        app:srcCompat="@android:drawable/picture_frame"
+        app:layout_constraintRight_toLeftOf="@+id/dish5"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="58dp"
+        app:layout_constraintBottom_toTopOf="@+id/dish7"
+        android:layout_marginEnd="32dp" />
+
+    <ImageButton
+        android:id="@+id/dish5"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        app:srcCompat="@android:drawable/picture_frame"
+        tools:layout_editor_absoluteX="261dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/dish9"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/dish2"
+        app:layout_constraintVertical_bias="0.489" />
+
+    <ImageButton
+        android:id="@+id/dish1"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        app:srcCompat="@android:drawable/picture_frame"
+        app:layout_constraintLeft_toRightOf="@+id/createYourOwn"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintRight_toLeftOf="@+id/dish2"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/dish4"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintVertical_bias="0.4"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <ImageButton
+        android:id="@+id/dish2"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        app:srcCompat="@android:drawable/picture_frame"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="88dp" />
+
+    <ImageButton
+        android:id="@+id/createYourOwn"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        app:srcCompat="@android:drawable/picture_frame"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="88dp" />
+
+    <TextView
+        android:layout_width="137dp"
+        android:layout_height="32dp"
+        android:text="Ramen R US!"
+        android:textSize="22dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.033"
+        app:layout_constraintHorizontal_bias="0.502"
+        android:id="@+id/textView" />
+
+</android.support.constraint.ConstraintLayout>
