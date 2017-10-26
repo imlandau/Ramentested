@@ -3,7 +3,7 @@ package com.example.maste.ramen;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class createYourOwn extends AppCompatActivity {
+public class CreateYourOwn extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
