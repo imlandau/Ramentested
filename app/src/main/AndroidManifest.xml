@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".createYourOwn" />
-        <activity android:name=".Cart"></activity>
+        <activity android:name=".Cart" />
+        <activity android:name=".home"></activity>
     </application>
 
 </manifest>
