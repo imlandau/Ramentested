@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         createYourOwnImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent createYourOwnIntent = new Intent(getApplicationContext(), CreateYourOwn.class);
-                startActivity(createYourOwnIntent);
+                startActivity(new Intent(MainActivity.this, CreateYourOwn.class));
+
             }
         }); // end createYourOwnImgBtn OnClickListener
 
