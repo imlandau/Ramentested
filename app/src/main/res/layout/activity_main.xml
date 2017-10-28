@@ -148,8 +148,9 @@
         android:id="@+id/dish8ImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/picture_frame"
-        tools:layout_editor_absoluteX="261dp"
         tools:layout_editor_absoluteY="350dp" />
 
     <ImageButton
@@ -170,22 +171,24 @@
         android:id="@+id/dish6ImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
+        android:layout_marginBottom="84dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:srcCompat="@android:drawable/picture_frame"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="350dp" />
+        tools:layout_editor_absoluteX="48dp" />
 
     <ImageButton
         android:id="@+id/dish3IngBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="31dp"
         android:layout_marginRight="33dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/dish6ImgBtn"
         app:layout_constraintRight_toLeftOf="@+id/dish4ImgBtn"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createYourOwnImgBtn"
-        app:layout_constraintVertical_bias="0.489"
+        app:layout_constraintVertical_bias="0.48"
         app:srcCompat="@android:drawable/picture_frame" />
 
     <ImageButton
@@ -203,13 +206,14 @@
         android:id="@+id/dish5ImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        app:srcCompat="@android:drawable/picture_frame"
-        tools:layout_editor_absoluteX="261dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/dish8ImgBtn"
+        android:layout_marginEnd="48dp"
         android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/dish8ImgBtn"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dish2ImgBtn"
-        app:layout_constraintVertical_bias="0.489" />
+        app:layout_constraintVertical_bias="0.489"
+        app:srcCompat="@android:drawable/picture_frame" />
 
     <ImageButton
         android:id="@+id/dish1ImgBtn"
@@ -233,25 +237,25 @@
         android:id="@+id/dish2ImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        app:srcCompat="@android:drawable/picture_frame"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="48dp"
         android:layout_marginTop="88dp"
-        android:layout_marginRight="49dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/picture_frame" />
 
 
     <ImageButton
         android:id="@+id/createYourOwnImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        android:background="@android:drawable/arrow_down_float"
-        app:srcCompat="@android:drawable/picture_frame"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="48dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.19" />
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/arrow_down_float"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.187"
+        app:srcCompat="@android:drawable/picture_frame" />
 
 </android.support.constraint.ConstraintLayout>
