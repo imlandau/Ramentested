@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\IanL\StudioProjects\Ramentested\Ramen.iml" filepath="C:\Users\IanL\StudioProjects\Ramentested\Ramen.iml" />
       <module fileurl="file://$PROJECT_DIR$/Ramentested.iml" filepath="$PROJECT_DIR$/Ramentested.iml" />
-      <module fileurl="file://C:\Users\IanL\StudioProjects\Ramentested\Ramentested.iml" filepath="C:\Users\IanL\StudioProjects\Ramentested\Ramentested.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\IanL\StudioProjects\Ramentested\app\app.iml" filepath="C:\Users\IanL\StudioProjects\Ramentested\app\app.iml" />
     </modules>
   </component>
 </project>
