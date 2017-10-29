@@ -6,11 +6,47 @@
     android:layout_height="match_parent"
     tools:context="com.example.maste.ramen.CreateYourOwn">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="134dp" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="368dp"
+        android:layout_height="61dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="368dp"
+        android:layout_height="67dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="110dp" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="368dp"
+        android:layout_height="67dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="368dp"
+        android:layout_height="70dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <Spinner
+        android:id="@+id/spinner5"
+        android:layout_width="368dp"
+        android:layout_height="68dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="368dp" />
+
+    <Button
+        android:id="@+id/createbtn"
+        android:layout_width="368dp"
+        android:layout_height="58dp"
+        android:text="Done"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="445dp" />
 </android.support.constraint.ConstraintLayout>

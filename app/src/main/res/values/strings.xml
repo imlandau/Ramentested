@@ -1,3 +1,47 @@
 <resources>
     <string name="app_name">Ramen</string>
+
+    <string-array name="Noodles">
+        <item>Ramen</item>
+        <item>Yakisoba</item>
+        <item>Udon</item>
+        <item>Soba</item>
+        <item>Somen/Nyumen</item>
+        <item>Rice Noodles</item>
+    </string-array>
+
+    <string-array name="Flavoring">
+        <item>Shio</item>
+        <item>Shoyu</item>
+        <item>Miso Soup</item>
+        <item>Curry</item>
+        <item>Chicken</item>
+        <item>beef</item>
+        <item>Pork</item>
+    </string-array>
+
+    <string-array name="Protien">
+        <item>Beef</item>
+        <item>Chicken</item>
+        <item>Pork</item>
+        <item>Fish</item>
+        <item>Tofu</item>
+    </string-array>
+
+    <string-array name="Veggie">
+        <item>Broccoli</item>
+        <item>Carrot</item>
+        <item>Tomato</item>
+        <item>Onions</item>
+        <item>Mushrooms</item>
+    </string-array>
+
+    <string-array name="Extra">
+        <item>Egg</item>
+        <item>Spring Onions</item>
+        <item>Nori(Dried Seaweed)</item>
+        <item>Corn</item>
+        <item>Ginger</item>
+        <item>Peanuts</item>
+    </string-array>
 </resources>
