@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Ramen</string>
 
+
     <string-array name="Noodles">
         <item>Ramen</item>
         <item>Yakisoba</item>
