@@ -8,153 +8,184 @@
     tools:context="com.example.maste.ramen.MainActivity">
 
     <TextView
-        android:id="@+id/textDish7"
-        android:layout_width="76dp"
-        android:layout_height="34dp"
-        android:text="Dish 8"
-        android:textAlignment="center"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.847"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
-
-    <TextView
         android:id="@+id/textDish8"
         android:layout_width="76dp"
-        android:layout_height="34dp"
-        android:text="Dish 7"
-        android:textAlignment="center"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
-
-    <TextView
-        android:id="@+id/textDish5"
-        android:layout_width="76dp"
-        android:layout_height="34dp"
-        android:text="Dish 5"
-        android:textAlignment="center"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.847"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612" />
-
-    <TextView
-        android:id="@+id/textDish2"
-        android:layout_width="76dp"
-        android:layout_height="34dp"
-        android:text="Dish 2"
-        android:textAlignment="center"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.847"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339" />
-
-    <TextView
-        android:id="@+id/textDish3"
-        android:layout_width="76dp"
-        android:layout_height="34dp"
-        android:text="Dish 3"
-        android:textAlignment="center"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612" />
-
-    <TextView
-        android:id="@+id/textDish4"
-        android:layout_width="76dp"
-        android:layout_height="34dp"
-        android:text="Dish4"
-        android:textAlignment="center"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612" />
-
-    <TextView
-        android:id="@+id/textDish1"
-        android:layout_width="76dp"
-        android:layout_height="34dp"
+        android:layout_height="50dp"
         android:background="@drawable/white"
-        android:text="Test"
+        android:text="@string/dish8"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.857"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintVertical_bias="0.839"
+        tools:text="Dish8" />
+
+    <TextView
+        android:id="@+id/textDish7"
+        android:layout_width="76dp"
+        android:layout_height="50dp"
+        android:background="@drawable/white"
+        android:text="@string/dish7"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.839"
+        tools:text="Dish7" />
+
+    <TextView
+        android:id="@+id/textDish5"
+        android:layout_width="76dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="44dp"
+        android:background="@drawable/white"
+        android:text="@string/dish5"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57"
+        tools:text="Dish5" android:layout_marginEnd="44dp" />
+
+    <TextView
+        android:id="@+id/textDish2"
+        android:layout_width="76dp"
+        android:layout_height="50dp"
+        android:background="@drawable/white"
+        android:text="@string/dish2"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.269"
+        tools:text="Dish2" />
+
+    <TextView
+        android:id="@+id/textDish3"
+        android:layout_width="76dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="196dp"
+        android:background="@drawable/white"
+        android:text="@string/dish3"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="Dish3" />
+
+    <TextView
+        android:id="@+id/textDish4"
+        android:layout_width="76dp"
+        android:layout_height="50dp"
+        android:background="@drawable/white"
+        android:text="@string/dish4"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57"
+        tools:text="Dish4" />
+
+    <TextView
+        android:id="@+id/textDish1"
+        android:layout_width="76dp"
+        android:layout_height="50dp"
+        android:background="@drawable/white"
+        android:text="@string/dish1"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.269"
+        tools:text="Dish1" />
 
     <TextView
         android:id="@+id/textDish6"
         android:layout_width="76dp"
-        android:layout_height="34dp"
-        android:text="Dish 6"
+        android:layout_height="50dp"
+        android:background="@drawable/white"
+        android:text="@string/dish6"
         android:textAlignment="center"
-        android:textSize="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.155"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
+        app:layout_constraintVertical_bias="0.839"
+        tools:text="Dish6" />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="137dp"
-        android:layout_height="32dp"
-        android:text="Ramen R US!"
+        android:layout_height="50dp"
+        android:text="@string/app_name"
         android:textAlignment="center"
-        android:textSize="22dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.033" />
+        app:layout_constraintVertical_bias="0.013" />
 
     <TextView
         android:id="@+id/textCreate"
-        android:layout_width="128dp"
-        android:layout_height="34dp"
-        android:text="Create Your       Own"
+        android:layout_width="76dp"
+        android:layout_height="50dp"
+        android:background="@drawable/white"
+        android:text="@string/create"
         android:textAlignment="center"
-        android:textSize="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintHorizontal_bias="0.155"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.338" />
+        app:layout_constraintVertical_bias="0.269"
+        tools:text="Create Your Own" />
 
     <ImageButton
         android:id="@+id/dish8ImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        android:layout_marginBottom="84dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
+        android:layout_marginBottom="124dp"
+        android:layout_marginEnd="48dp"
+        android:contentDescription="@TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/picture_frame" />
@@ -163,27 +194,22 @@
         android:id="@+id/dish7ImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        android:layout_marginBottom="84dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="124dp"
         android:layout_marginRight="32dp"
+        android:contentDescription="@TODO"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toRightOf="@+id/dish6ImgBtn"
         app:layout_constraintRight_toLeftOf="@+id/dish8ImgBtn"
-        app:srcCompat="@android:drawable/picture_frame" />
+        app:srcCompat="@android:drawable/picture_frame" android:layout_marginEnd="32dp" />
 
     <ImageButton
         android:id="@+id/dish6ImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="64dp"
         android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="8dp"
+        android:contentDescription="@TODO"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDish3"
-        app:layout_constraintVertical_bias="0.432"
         app:srcCompat="@android:drawable/picture_frame" />
 
     <ImageButton
@@ -191,26 +217,27 @@
         android:layout_width="74dp"
         android:layout_height="74dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginRight="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="@TODO"
         app:layout_constraintBottom_toTopOf="@+id/dish6ImgBtn"
-        app:layout_constraintRight_toLeftOf="@+id/dish4ImgBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createYourOwnImgBtn"
-        app:layout_constraintVertical_bias="0.48"
+        app:layout_constraintVertical_bias="0.463"
         app:srcCompat="@android:drawable/picture_frame" />
 
     <ImageButton
         android:id="@+id/dish4ImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        android:layout_marginBottom="60dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/dish7ImgBtn"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@TODO"
+        app:layout_constraintBottom_toTopOf="@+id/textDish4"
         app:layout_constraintEnd_toStartOf="@+id/dish5ImgBtn"
+        app:layout_constraintStart_toEndOf="@+id/dish3IngBtn"
         app:srcCompat="@android:drawable/picture_frame" />
 
     <ImageButton
@@ -221,10 +248,11 @@
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="@TODO"
         app:layout_constraintBottom_toTopOf="@+id/dish8ImgBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textDish2"
-        app:layout_constraintVertical_bias="0.208"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:drawable/picture_frame" />
 
     <ImageButton
@@ -233,29 +261,23 @@
         android:layout_height="74dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/ramen"
+        android:contentDescription="@TODO"
         app:layout_constraintEnd_toStartOf="@+id/dish2ImgBtn"
         app:layout_constraintStart_toEndOf="@+id/createYourOwnImgBtn"
         app:layout_constraintTop_toTopOf="parent" />
-
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/dish4ImgBtn"
-        app:layout_constraintLeft_toRightOf="@+id/createYourOwnImgBtn"
-        app:layout_constraintRight_toLeftOf="@+id/dish2ImgBtn"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@android:drawable/picture_frame" />
 
     <ImageButton
         android:id="@+id/dish2ImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
         android:layout_marginRight="48dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="@TODO"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/picture_frame" />
+        app:srcCompat="@android:drawable/picture_frame" android:layout_marginEnd="48dp" />
 
 
     <ImageButton
@@ -263,9 +285,9 @@
         android:layout_width="74dp"
         android:layout_height="74dp"
         android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="56dp"
         android:background="@android:drawable/arrow_down_float"
+        android:contentDescription="@TODO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/picture_frame" />
