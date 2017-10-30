@@ -93,9 +93,12 @@
         android:id="@+id/textDish1"
         android:layout_width="76dp"
         android:layout_height="34dp"
-        android:text="Dish 1"
+        android:background="@drawable/white"
+        android:text="Test"
         android:textAlignment="center"
-        android:textSize="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -149,33 +152,39 @@
         android:id="@+id/dish8ImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="84dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/picture_frame"
-        tools:layout_editor_absoluteY="350dp" />
+        app:srcCompat="@android:drawable/picture_frame" />
 
     <ImageButton
         android:id="@+id/dish7ImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        app:srcCompat="@android:drawable/picture_frame"
-        tools:layout_editor_absoluteY="350dp"
-        app:layout_constraintRight_toLeftOf="@+id/dish8ImgBtn"
-        android:layout_marginRight="32dp"
-        app:layout_constraintLeft_toRightOf="@+id/dish6ImgBtn"
+        android:layout_marginBottom="84dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="32dp" />
+        app:layout_constraintLeft_toRightOf="@+id/dish6ImgBtn"
+        app:layout_constraintRight_toLeftOf="@+id/dish8ImgBtn"
+        app:srcCompat="@android:drawable/picture_frame" />
 
     <ImageButton
         android:id="@+id/dish6ImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        android:layout_marginBottom="84dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@android:drawable/picture_frame"
-        tools:layout_editor_absoluteX="48dp" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDish3"
+        app:layout_constraintVertical_bias="0.432"
+        app:srcCompat="@android:drawable/picture_frame" />
 
     <ImageButton
         android:id="@+id/dish3IngBtn"
@@ -184,6 +193,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginRight="33dp"
         android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/dish6ImgBtn"
         app:layout_constraintRight_toLeftOf="@+id/dish4ImgBtn"
@@ -196,12 +206,12 @@
         android:id="@+id/dish4ImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        app:srcCompat="@android:drawable/picture_frame"
-        app:layout_constraintRight_toLeftOf="@+id/dish5ImgBtn"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginBottom="58dp"
         app:layout_constraintBottom_toTopOf="@+id/dish7ImgBtn"
-        android:layout_marginEnd="32dp" />
+        app:layout_constraintEnd_toStartOf="@+id/dish5ImgBtn"
+        app:srcCompat="@android:drawable/picture_frame" />
 
     <ImageButton
         android:id="@+id/dish5ImgBtn"
@@ -209,30 +219,33 @@
         android:layout_height="74dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/dish8ImgBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dish2ImgBtn"
-        app:layout_constraintVertical_bias="0.489"
+        app:layout_constraintTop_toBottomOf="@+id/textDish2"
+        app:layout_constraintVertical_bias="0.208"
         app:srcCompat="@android:drawable/picture_frame" />
 
     <ImageButton
         android:id="@+id/dish1ImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        android:layout_marginBottom="56dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/ramen"
+        app:layout_constraintEnd_toStartOf="@+id/dish2ImgBtn"
+        app:layout_constraintStart_toEndOf="@+id/createYourOwnImgBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/dish4ImgBtn"
-        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintLeft_toRightOf="@+id/createYourOwnImgBtn"
         app:layout_constraintRight_toLeftOf="@+id/dish2ImgBtn"
-        app:srcCompat="@android:drawable/picture_frame"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/picture_frame" />
 
     <ImageButton
         android:id="@+id/dish2ImgBtn"
@@ -249,21 +262,21 @@
         android:id="@+id/createYourOwnImgBtn"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="88dp"
         android:background="@android:drawable/arrow_down_float"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187"
         app:srcCompat="@android:drawable/picture_frame" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/white"
         android:layout_marginStart="8dp"
         android:text="@Cart"
         app:layout_constraintBottom_toBottomOf="parent"
