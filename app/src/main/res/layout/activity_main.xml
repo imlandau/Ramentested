@@ -208,7 +208,7 @@
         android:layout_marginBottom="64dp"
         android:layout_marginStart="48dp"
         android:contentDescription="@TODO"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/cartBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/picture_frame" />
 
@@ -293,7 +293,7 @@
         app:srcCompat="@android:drawable/picture_frame" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/cartBtn"
         android:layout_width="90dp"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"

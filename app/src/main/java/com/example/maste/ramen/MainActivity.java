@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton dish6ImgBtn = (ImageButton) findViewById(R.id.dish6ImgBtn);
         ImageButton dish7ImgBtn = (ImageButton) findViewById(R.id.dish7ImgBtn);
         ImageButton dish8ImgBtn = (ImageButton) findViewById(R.id.dish8ImgBtn);
+        Button cartBtn = (Button) findViewById(R.id.cartBtn);
 
 
         createYourOwnImgBtn.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +90,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }); // end dish8ImgBtn OnClickListener
+
+        cartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Cart.class));
+            }
+        }); // end cartBtn OnClickListener
 
     }
 }
