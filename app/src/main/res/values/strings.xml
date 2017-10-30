@@ -2,9 +2,15 @@
     <string name="app_name">Ramen</string>
     <string name="this_will_be_for_the_cart">This will be for the cart</string>
     <string name="Create_your_own">Create Your Own</string>
-    <string name="dish6">Test</string>
     <string name="dish1">Test</string>
+    <string name="dish2">Test</string>
+    <string name="dish3">Test</string>
     <string name="dish4">Test</string>
+    <string name="dish5">Test</string>
+    <string name="dish6">Test</string>
+    <string name="dish7">Test</string>
+    <string name="dish8">Test</string>
+    <string name="create">Test</string>
 
 
     <string-array name="Noodles">
