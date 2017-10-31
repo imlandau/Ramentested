@@ -18,12 +18,10 @@ public class MainActivity extends AppCompatActivity {
         ImageButton createYourOwnImgBtn = (ImageButton) findViewById(R.id.createYourOwnImgBtn);
         ImageButton dish1ImgBtn = (ImageButton) findViewById(R.id.dish1ImgBtn);
         ImageButton dish2ImgBtn = (ImageButton) findViewById(R.id.dish2ImgBtn);
-        ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish3IngBtn);
+        ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
         ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
         ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
-        ImageButton dish6ImgBtn = (ImageButton) findViewById(R.id.dish6ImgBtn);
-        ImageButton dish7ImgBtn = (ImageButton) findViewById(R.id.dish7ImgBtn);
-        ImageButton dish8ImgBtn = (ImageButton) findViewById(R.id.dish8ImgBtn);
+
         Button cartBtn = (Button) findViewById(R.id.cartBtn);
 
 
@@ -70,26 +68,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }); // end dish5ImgBtn OnClickListener
 
-        dish6ImgBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        }); // end dish6ImgBtn OnClickListener
-
-        dish7ImgBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        }); // end dish7ImgBtn OnClickListener
-
-        dish8ImgBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        }); // end dish8ImgBtn OnClickListener
 
         cartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
