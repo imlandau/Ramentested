@@ -7,299 +7,166 @@
     android:background="@drawable/capture"
     tools:context="com.example.maste.ramen.MainActivity">
 
-    <TextView
-        android:id="@+id/textDish8"
-        android:layout_width="76dp"
-        android:layout_height="50dp"
-        android:background="@drawable/white"
-        android:text="@string/dish8"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.839"
-        tools:text="Dish8" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="401dp"
+        android:layout_height="411dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="56dp"
 
-    <TextView
-        android:id="@+id/textDish7"
-        android:layout_width="76dp"
-        android:layout_height="50dp"
-        android:background="@drawable/white"
-        android:text="@string/dish7"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.839"
-        tools:text="Dish7" />
-
-    <TextView
-        android:id="@+id/textDish5"
-        android:layout_width="76dp"
-        android:layout_height="50dp"
-        android:layout_marginRight="44dp"
-        android:background="@drawable/white"
-        android:text="@string/dish5"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.57"
-        tools:text="Dish5" android:layout_marginEnd="44dp" />
-
-    <TextView
-        android:id="@+id/textDish2"
-        android:layout_width="76dp"
-        android:layout_height="50dp"
-        android:background="@drawable/white"
-        android:text="@string/dish2"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.847"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269"
-        tools:text="Dish2" />
-
-    <TextView
-        android:id="@+id/textDish3"
-        android:layout_width="76dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="196dp"
-        android:background="@drawable/white"
-        android:text="@string/dish3"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:text="Dish3" />
-
-    <TextView
-        android:id="@+id/textDish4"
-        android:layout_width="76dp"
-        android:layout_height="50dp"
-        android:background="@drawable/white"
-        android:text="@string/dish4"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.57"
-        tools:text="Dish4" />
-
-    <TextView
-        android:id="@+id/textDish1"
-        android:layout_width="76dp"
-        android:layout_height="50dp"
-        android:background="@drawable/white"
-        android:text="@string/dish1"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269"
-        tools:text="Dish1" />
-
-    <TextView
-        android:id="@+id/textDish6"
-        android:layout_width="76dp"
-        android:layout_height="50dp"
-        android:background="@drawable/white"
-        android:text="@string/dish6"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.839"
-        tools:text="Dish6" />
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="137dp"
-        android:layout_height="50dp"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.013" />
-
-    <TextView
-        android:id="@+id/textCreate"
-        android:layout_width="76dp"
-        android:layout_height="50dp"
-        android:background="@drawable/white"
-        android:text="@string/create"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269"
-        tools:text="Create Your Own" />
-
-    <ImageButton
-        android:id="@+id/dish8ImgBtn"
-        android:layout_width="74dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="124dp"
-        android:layout_marginEnd="48dp"
-        android:contentDescription="@TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/picture_frame" />
-
-    <ImageButton
-        android:id="@+id/dish7ImgBtn"
-        android:layout_width="74dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="124dp"
-        android:layout_marginRight="32dp"
-        android:contentDescription="@TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/dish8ImgBtn"
-        app:srcCompat="@android:drawable/picture_frame" android:layout_marginEnd="32dp" />
-
-    <ImageButton
-        android:id="@+id/dish6ImgBtn"
-        android:layout_width="74dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="64dp"
-        android:layout_marginStart="48dp"
-        android:contentDescription="@TODO"
-        app:layout_constraintBottom_toTopOf="@+id/cartBtn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/picture_frame" />
-
-    <ImageButton
-        android:id="@+id/dish3IngBtn"
-        android:layout_width="74dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@TODO"
-        app:layout_constraintBottom_toTopOf="@+id/dish6ImgBtn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createYourOwnImgBtn"
-        app:layout_constraintVertical_bias="0.463"
-        app:srcCompat="@android:drawable/picture_frame" />
-
-    <ImageButton
-        android:id="@+id/dish4ImgBtn"
-        android:layout_width="74dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:contentDescription="@TODO"
-        app:layout_constraintBottom_toTopOf="@+id/textDish4"
-        app:layout_constraintEnd_toStartOf="@+id/dish5ImgBtn"
-        app:layout_constraintStart_toEndOf="@+id/dish3IngBtn"
-        app:srcCompat="@android:drawable/picture_frame" />
-
-    <ImageButton
-        android:id="@+id/dish5ImgBtn"
-        android:layout_width="74dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@TODO"
-        app:layout_constraintBottom_toTopOf="@+id/dish8ImgBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDish2"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/picture_frame" />
-
-    <ImageButton
-        android:id="@+id/dish1ImgBtn"
-        android:layout_width="74dp"
-        android:layout_height="74dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
-        android:background="@drawable/ramen"
-        android:contentDescription="@TODO"
-        app:layout_constraintEnd_toStartOf="@+id/dish2ImgBtn"
-        app:layout_constraintStart_toEndOf="@+id/createYourOwnImgBtn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/dish2ImgBtn"
-        android:layout_width="74dp"
-        android:layout_height="74dp"
-        android:layout_marginRight="48dp"
-        android:layout_marginTop="56dp"
-        android:contentDescription="@TODO"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/picture_frame" android:layout_marginEnd="48dp" />
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
 
 
-    <ImageButton
-        android:id="@+id/createYourOwnImgBtn"
-        android:layout_width="74dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="56dp"
-        android:background="@android:drawable/arrow_down_float"
-        android:contentDescription="@TODO"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/picture_frame" />
+        <ImageButton
+            android:id="@+id/createYourOwnImgBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/create"
+            android:contentDescription="@TODO"
+            android:textSize="16pt"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/dish1ImgBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_toEndOf="@+id/createYourOwnImgBtn"
+            android:layout_toRightOf="@+id/createYourOwnImgBtn"
+            android:background="@drawable/ramen"
+            android:contentDescription="@TODO"
+            android:textSize="16pt"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <ImageButton
+            android:id="@+id/dish2ImgBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_toEndOf="@+id/dish1ImgBtn"
+            android:layout_toRightOf="@+id/dish1ImgBtn"
+            android:background="@drawable/ramen"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:contentDescription="@TODO"
+            android:textSize="16pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="@string/Create_your_own"
+            android:textSize="14sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/createYourOwnImgBtn" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignBaseline="@+id/text3"
+            android:layout_alignBottom="@+id/text3"
+            android:layout_toEndOf="@+id/createYourOwnImgBtn"
+            android:layout_toRightOf="@+id/createYourOwnImgBtn" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/dish2ImgBtn"
+            android:layout_toEndOf="@id/text2"
+            android:layout_toRightOf="@id/text2" />
+
+        <ImageButton
+            android:id="@+id/dish3ImgBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/text1"
+            android:background="@drawable/ramen"
+            android:contentDescription="@TODO"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="16pt"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/dish4ImgBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/text2"
+            android:layout_toEndOf="@+id/dish3ImgBtn"
+            android:layout_toRightOf="@+id/dish3ImgBtn"
+            android:background="@drawable/ramen"
+            android:contentDescription="@TODO"
+            android:textSize="16pt"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/dish5ImgBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/text3"
+            android:layout_toEndOf="@+id/text2"
+            android:layout_toRightOf="@+id/text2"
+            android:background="@drawable/ramen"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:contentDescription="@TODO"
+            android:textSize="16pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/dish3ImgBtn" />
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/dish4ImgBtn"
+            android:layout_toEndOf="@id/text4"
+            android:layout_toRightOf="@id/text4" />
+
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/dish5ImgBtn"
+            android:layout_toEndOf="@id/text5"
+            android:layout_toRightOf="@id/text5" />
+
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/cartBtn"
-        android:layout_width="90dp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
-        android:background="@drawable/white"
         android:layout_marginStart="8dp"
+        android:background="@drawable/white"
         android:text="@Cart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
