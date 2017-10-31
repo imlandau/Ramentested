@@ -1,7 +1,10 @@
 package com.example.maste.ramen;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -11,6 +14,24 @@ public class Cart extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
+
+        //Create reference to the Menu button in the cart
+        Button menuBtn = (Button) findViewById(R.id.menuBtn);
+        Button homeBtn = (Button) findViewById(R.id.homeBtn);
+
+        menuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Cart.this, MainActivity.class));
+            }
+        });
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Cart.this, Home.class));
+            }
+        });
     } // end onCreate
 
     // the number of items in the cart

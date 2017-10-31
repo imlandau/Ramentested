@@ -19,8 +19,20 @@
         <activity
             android:name=".CreateYourOwn"
             android:label="@string/app_name" />
-        <activity android:name=".Cart"></activity>
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Cart" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Home" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
