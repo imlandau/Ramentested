@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button cartBtn = (Button) findViewById(R.id.cartBtn);
 
+        Button homeTest = (Button) findViewById(R.id.homeTest);
 
         createYourOwnImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,5 +77,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }); // end cartBtn OnClickListener
 
+        homeTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Home.class));
+            }
+        }); // end homeTest OnClickListener
     }
 }
