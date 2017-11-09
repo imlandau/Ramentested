@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Ramen</string>
     <string name="Create_your_own">Create Your Own</string>
-    <string name="dish1">Each</string>
-    <string name="dish2">Of</string>
-    <string name="dish3">These</string>
-    <string name="dish4">Are</string>
-    <string name="dish5">Different</string>
+    <string name="dish1">SWEET AND SPICY PORK RAMEN</string>
+    <string name="dish2">MONGOLIAN BEEF RAMEN NOODLES</string>
+    <string name="dish3">RAMEN VEGETABLE STIR FRY</string>
+    <string name="dish4">CRUNCHY ASIAN RAMEN NOODLE SALAD</string>
+    <string name="dish5">CHICKEN VEGGIE RAMEN BOWLS</string>
     <string name="create">Test</string>
     <string name="login">Login</string>
     <string name="signup">Sign Up</string>
