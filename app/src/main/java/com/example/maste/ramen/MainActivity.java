@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
         ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
         ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
+        TextView textView2 = (TextView) findViewById(R.id.textView2);
 
         Button cartBtn = (Button) findViewById(R.id.cartBtn);
 
@@ -37,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
         dish1ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final TextView textView2 = (TextView) findViewById(R.id.textView2);
+                textView2.setVisibility(View.VISIBLE);
+                textView2.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        textView2.setVisibility(View.INVISIBLE);
+                    }
+                }, 1500);
 
             }
         }); // end dish1ImgBtn OnClickListener
@@ -44,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
         dish2ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final TextView textView2 = (TextView) findViewById(R.id.textView2);
+                textView2.setVisibility(View.VISIBLE);
+                textView2.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        textView2.setVisibility(View.INVISIBLE);
+                    }
+                }, 1500);
 
             }
         }); // end dish2ImgBtn OnClickListener
@@ -51,6 +70,14 @@ public class MainActivity extends AppCompatActivity {
         dish3ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final TextView textView2 = (TextView) findViewById(R.id.textView2);
+                textView2.setVisibility(View.VISIBLE);
+                textView2.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        textView2.setVisibility(View.INVISIBLE);
+                    }
+                }, 1500);
 
             }
         }); // end dish3ImgBtn OnClickListener
@@ -58,6 +85,14 @@ public class MainActivity extends AppCompatActivity {
         dish4ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final TextView textView2 = (TextView) findViewById(R.id.textView2);
+                textView2.setVisibility(View.VISIBLE);
+                textView2.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        textView2.setVisibility(View.INVISIBLE);
+                    }
+                }, 1500);
 
             }
         }); // end dish4ImgBtn OnClickListener
@@ -65,6 +100,14 @@ public class MainActivity extends AppCompatActivity {
         dish5ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final TextView textView2 = (TextView) findViewById(R.id.textView2);
+                textView2.setVisibility(View.VISIBLE);
+                textView2.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        textView2.setVisibility(View.INVISIBLE);
+                    }
+                }, 1500);
 
             }
         }); // end dish5ImgBtn OnClickListener
