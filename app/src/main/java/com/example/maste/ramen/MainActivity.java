@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         textView2.setVisibility(View.INVISIBLE);
                     }
-                }, 1500);
+                }, 1501);
 
             }
         }); // end dish5ImgBtn OnClickListener
