@@ -1,21 +1,22 @@
 <resources>
     <string name="app_name">Ramen</string>
-    <string name="this_will_be_for_the_cart">This will be for the cart</string>
     <string name="Create_your_own">Create Your Own</string>
-    <string name="dish1">Test</string>
-    <string name="dish2">Test</string>
-    <string name="dish3">Test</string>
-    <string name="dish4">Test</string>
-    <string name="dish5">Test</string>
-    <string name="dish6">Test</string>
-    <string name="dish7">Test</string>
-    <string name="dish8">Test</string>
+    <string name="dish1">Each</string>
+    <string name="dish2">Of</string>
+    <string name="dish3">These</string>
+    <string name="dish4">Are</string>
+    <string name="dish5">Different</string>
     <string name="create">Test</string>
     <string name="login">Login</string>
     <string name="signup">Sign Up</string>
     <string name="Username">Username</string>
     <string name="Password">Password</string>
     <string name="menu">Go to menu as a Guest</string>
+    <string name="main">Menu</string>
+    <string name="goCart">Cart</string>
+    <string name="home">Home</string>
+    <string name="addedCart">This item has been added to the cart</string>
+    <string name="cart">Items you select will appear here</string>
 
 
     <string-array name="colorNames">
