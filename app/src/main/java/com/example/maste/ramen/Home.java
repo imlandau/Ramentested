@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Home extends AppCompatActivity {
-    Button login;
     EditText username, password;
 
 
@@ -17,36 +16,52 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        login=(Button)findViewById(R.id.login);
+
         username=(EditText)findViewById(R.id.userName);
         password=(EditText)findViewById(R.id.userPass);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                login();
-
-            }
-        });
-
 
         Button toMenuBtn = (Button) findViewById(R.id.toMenuBtn);
+        Button loginBtn = (Button) findViewById(R.id.loginBtn);
+        Button signUpBtn = (Button) findViewById(R.id.signUpBtn);
 
+        // create onClickListener for the toMenuBtn
         toMenuBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Home.this, MainActivity.class));
+            } // end onClick
+        });
+
+        // create onClickListener for loginBtn
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (login()) {
+                    startActivity(new Intent(Home.this, MainActivity.class));
+                } // end if
+            } // end onClick
+        });
+        // create OnClickListener for the signUpBtn
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
-    }
-    public void login() {
+    } // end onCreate
+
+    public Boolean login() {
         String user = username.getText().toString().trim();
         String pass = password.getText().toString().trim();
+
+        // checks whether the username and password match
         if (user.equals("ramen") && pass.equals("ramen"))
         {
             Toast.makeText(this, "username and password matched!", Toast.LENGTH_LONG).show();
-        }
-        else {
+            return true;
+        } else {
             Toast.makeText(this, "username and password do no matched", Toast.LENGTH_LONG).show();
-        }
-    }
-}
+            return false;
+        } // end if else
+    } // end login
+} // end class
