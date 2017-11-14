@@ -27,29 +27,29 @@ public class CreateYourOwn extends AppCompatActivity {
 
         ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(CreateYourOwn.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Flavoring));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mySpinner.setAdapter(myAdapter);
+        myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner2.setAdapter(myAdapter2);
 
-        Spinner mySpinner3 = (Spinner) findViewById(R.id.spinner2);
+        Spinner mySpinner3 = (Spinner) findViewById(R.id.spinner3);
 
         ArrayAdapter<String> myAdapter3 = new ArrayAdapter<String>(CreateYourOwn.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Protien));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mySpinner.setAdapter(myAdapter);
+        myAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner3.setAdapter(myAdapter3);
 
-        Spinner mySpinner4 = (Spinner) findViewById(R.id.spinner2);
+        Spinner mySpinner4 = (Spinner) findViewById(R.id.spinner4);
 
         ArrayAdapter<String> myAdapter4 = new ArrayAdapter<String>(CreateYourOwn.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Veggie));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mySpinner.setAdapter(myAdapter);
+        myAdapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner4.setAdapter(myAdapter4);
 
-        Spinner mySpinner5 = (Spinner) findViewById(R.id.spinner2);
+        Spinner mySpinner5 = (Spinner) findViewById(R.id.spinner5);
 
         ArrayAdapter<String> myAdapter5 = new ArrayAdapter<String>(CreateYourOwn.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Extra));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mySpinner.setAdapter(myAdapter);
+        myAdapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner5.setAdapter(myAdapter5);
 
         menuBtn.setOnClickListener(new View.OnClickListener() {
             @Override
