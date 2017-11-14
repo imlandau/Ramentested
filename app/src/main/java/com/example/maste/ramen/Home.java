@@ -29,9 +29,9 @@ public class Home extends AppCompatActivity {
         });
 
 
-        Button menuBtn = (Button) findViewById(R.id.menuBtn);
+        Button toMenuBtn = (Button) findViewById(R.id.toMenuBtn);
 
-        menuBtn.setOnClickListener(new View.OnClickListener() {
+        toMenuBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Home.this, MainActivity.class));
