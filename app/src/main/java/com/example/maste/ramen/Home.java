@@ -29,7 +29,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Home.this, MainActivity.class));
-            } // end onClick
+            }
         });
 
         // create onClickListener for loginBtn
