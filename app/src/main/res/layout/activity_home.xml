@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.maste.ramen.Home">
 
-
     <Button
         android:id="@+id/toMenuBtn"
         android:layout_width="368dp"
