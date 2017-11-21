@@ -66,7 +66,7 @@ public class Cart extends AppCompatActivity {
     public void remove(Item toRemove) {
         // do stuff
         // decrement the size of the cart
-        this.size--;
+        //this.size--;
     } // end remove
 
     /**

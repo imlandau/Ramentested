@@ -1,10 +1,6 @@
 package com.example.maste.ramen;
 
 /**
- * Created by Blake on 10/27/17.
- */
-
-/**
  * Instances of this class are objects that will be added to the cart.
  */
 public class Item {
@@ -74,5 +70,10 @@ public class Item {
     public void setType(itemType type) {
         this.type = type;
     } // end setType
+
+    public String toString() {
+        return this.type + "\n" + this.name + "\nQuantity: " + this.quantity + "Price per unit: " +
+                this.price + "\nSubtotal: $" + this.price*this.quantity + "\n\n";
+    } // end toString
 
 } // end class
