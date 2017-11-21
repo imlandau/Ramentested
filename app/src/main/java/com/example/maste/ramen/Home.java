@@ -1,8 +1,8 @@
 package com.example.maste.ramen;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +13,8 @@ public class Home extends AppCompatActivity {
     EditText username, password;
 
 
+
+    DatabaseHelper helper = new DatabaseHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,9 +46,20 @@ public class Home extends AppCompatActivity {
         if (user.equals("ramen") && pass.equals("ramen"))
         {
             Toast.makeText(this, "username and password matched!", Toast.LENGTH_LONG).show();
+            String password = helper.searchPass(toString());
         }
         else {
             Toast.makeText(this, "username and password do no matched", Toast.LENGTH_LONG).show();
+            String password = helper.searchPass((pass));
+            //insert the details in the database
+            Contact c = new Contact();
+            //c.setName(namestr);
+            //c.setEmail(emailstr);
+            //c.setUserName(UserName);
+            //c.setUserPass(password);
+            //helper.InsertContact(Contact);
         }
+
+
     }
 }
