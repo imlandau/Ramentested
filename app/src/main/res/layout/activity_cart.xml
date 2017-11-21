@@ -31,7 +31,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText"
         android:layout_width="311dp"
         android:layout_height="205dp"
@@ -41,7 +41,6 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/white"
         android:ems="10"
-        android:inputType="textPersonName"
         android:singleLine="true"
         android:text="@string/cart"
         app:layout_constraintBottom_toBottomOf="parent"
