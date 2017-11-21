@@ -32,50 +32,23 @@ public class Cart extends AppCompatActivity {
                 startActivity(new Intent(Cart.this, Home.class));
             }
         });
+
+        Item[] cartArray = new Item[6];
+        cartArray[0] = new Item(6.9, 0, "Sweet and Spicy Pork");
+        cartArray[1] = new Item(6.9, 0, "Mongolian Beef");
+        cartArray[2] = new Item(6.9, 0, "Ramen Vegetable Stir Fry");
+        cartArray[3] = new Item(6.9, 0, "Crunchy Asian Ramen Noodle Salad");
+        cartArray[4] = new Item(6.9, 0, "Chicken Veggie Ramen Bowl");
+        cartArray[5] = new Item(6.9, 0, "Drank");
+
     } // end onCreate
-
-    // the number of items in the cart
-    int size;
-    ArrayList<Item> cart;
-
-    /**
-     * Creates an ArrayList to hold all Items in the cart with an initial size of 10 items (see
-     * ArrayList documentation). If more than 10 items are added, the ArrayList will resize itself
-     * using the ensureCapacity method.
-     */
-    public Cart() {
-        // creates an ArrayList that holds Item objects
-        this.cart = new ArrayList<Item>();
-    } // end Cart constructor
 
     /**
      * Adds an item to the cart
      * @param toAdd an Item that will be added to the cart
      */
     public void add(Item toAdd) {
-        // check to see if the array is large enough to hold another item, and resizes if not
-        this.cart.ensureCapacity(this.size + 1);
-        // increment the size of the cart
-        this.size++;
     } // end add
 
-    /**
-     * Removes a specified item from the cart.
-     * @param toRemove the Item that needs to be removed from the cart
-     */
-    public void remove(Item toRemove) {
-        // do stuff
-        // decrement the size of the cart
-        //this.size--;
-    } // end remove
-
-    /**
-     * Removes ALL items from the cart.
-     */
-    public void empty() {
-        // do stuff
-        // cart is empty now
-        this.size = 0;
-    } // end clear
 
 } // end class
