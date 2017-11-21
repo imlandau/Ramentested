@@ -208,7 +208,6 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:layout_below="@+id/text1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
         android:background="@drawable/white"
@@ -218,6 +217,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.347" />
 
 </android.support.constraint.ConstraintLayout>
