@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.maste.ramen.Home">
 
-
     <Button
         android:id="@+id/toMenuBtn"
         android:layout_width="368dp"
@@ -25,6 +24,23 @@
         app:layout_constraintVertical_bias="0.82" />
 
     <EditText
+        android:id="@+id/userName"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/White"
+        android:inputType="text"
+        android:nextFocusDown="@+id/userPass"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.383" />
+
+    <EditText
         android:id="@+id/userPass"
         android:layout_width="150dp"
         android:layout_height="20dp"
@@ -41,21 +57,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.498" />
 
-    <EditText
-        android:id="@+id/userName"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@color/White"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383" />
+
 
     <Button
         android:id="@+id/loginBtn"
