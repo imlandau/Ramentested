@@ -10,6 +10,7 @@
     <string name="login">Login</string>
     <string name="signup">Sign Up</string>
     <string name="Username">Username</string>
+    <string name="update">Update Cart</string>
     <string name="Password">Password</string>
     <string name="menu">Go to menu as a Guest</string>
     <string name="main">Menu</string>
@@ -17,6 +18,7 @@
     <string name="home">Home</string>
     <string name="addedCart">This item has been added to the cart</string>
     <string name="cart">Items you select will appear here</string>
+    <string name="start">0</string>
 
 
     <string-array name="colorNames">
