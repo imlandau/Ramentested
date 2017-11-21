@@ -27,28 +27,28 @@ public class CreateYourOwn extends AppCompatActivity {
 
         Spinner mySpinner2 = (Spinner) findViewById(R.id.spinner2);
 
-        ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(CreateYourOwn.this,
+        ArrayAdapter<String> myAdapter2 = new ArrayAdapter<>(CreateYourOwn.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Flavoring));
         myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner2.setAdapter(myAdapter2);
 
         Spinner mySpinner3 = (Spinner) findViewById(R.id.spinner3);
 
-        ArrayAdapter<String> myAdapter3 = new ArrayAdapter<String>(CreateYourOwn.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Protein));
+        ArrayAdapter<String> myAdapter3 = new ArrayAdapter<>(CreateYourOwn.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Protien));
         myAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner3.setAdapter(myAdapter3);
 
         Spinner mySpinner4 = (Spinner) findViewById(R.id.spinner4);
 
-        ArrayAdapter<String> myAdapter4 = new ArrayAdapter<String>(CreateYourOwn.this,
+        ArrayAdapter<String> myAdapter4 = new ArrayAdapter<>(CreateYourOwn.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Veggie));
         myAdapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner4.setAdapter(myAdapter4);
 
         Spinner mySpinner5 = (Spinner) findViewById(R.id.spinner5);
 
-        ArrayAdapter<String> myAdapter5 = new ArrayAdapter<String>(CreateYourOwn.this,
+        ArrayAdapter<String> myAdapter5 = new ArrayAdapter<>(CreateYourOwn.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Extra));
         myAdapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner5.setAdapter(myAdapter5);

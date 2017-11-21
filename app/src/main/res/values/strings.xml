@@ -166,6 +166,7 @@
 
 
     <string-array name="Noodles">
+        <item>Select your Noodles</item>
         <item>Ramen</item>
         <item>Yakisoba</item>
         <item>Udon</item>
@@ -175,6 +176,7 @@
     </string-array>
 
     <string-array name="Flavoring">
+        <item>Select your Flavoring</item>
         <item>Shio</item>
         <item>Shoyu</item>
         <item>Miso Soup</item>
@@ -185,6 +187,7 @@
     </string-array>
 
     <string-array name="Protien">
+        <item>Select your Protien</item>
         <item>Beef</item>
         <item>Chicken</item>
         <item>Pork</item>
@@ -193,6 +196,7 @@
     </string-array>
 
     <string-array name="Veggie">
+        <item>Select your Veggie</item>
         <item>Broccoli</item>
         <item>Carrot</item>
         <item>Tomato</item>
@@ -201,6 +205,7 @@
     </string-array>
 
     <string-array name="Extra">
+        <item>Select your Extra</item>
         <item>Egg</item>
         <item>Spring Onions</item>
         <item>Nori(Dried Seaweed)</item>
