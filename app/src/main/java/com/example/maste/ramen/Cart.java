@@ -40,6 +40,7 @@ public class Cart extends AppCompatActivity {
         cartArray[3] = new Item(6.9, 0, "Crunchy Asian Ramen Noodle Salad");
         cartArray[4] = new Item(6.9, 0, "Chicken Veggie Ramen Bowl");
         cartArray[5] = new Item(6.9, 0, "Drank");
+
     } // end onCreate
 
     /**
@@ -48,5 +49,6 @@ public class Cart extends AppCompatActivity {
      */
     public void add(Item toAdd) {
     } // end add
+
 
 } // end class
