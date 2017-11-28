@@ -32,9 +32,9 @@
             android:layout_height="100dp"
             android:background="@drawable/create"
             android:contentDescription="@null"
-            android:textSize="16pt"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+            android:textSize="16pt"
             android:textStyle="bold" />
 
         <ImageButton
@@ -45,12 +45,12 @@
             android:layout_toRightOf="@+id/createYourOwnImgBtn"
             android:background="@drawable/dish1"
             android:contentDescription="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:textSize="16pt"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"/>
+            tools:layout_editor_absoluteY="0dp" />
 
         <ImageButton
             android:id="@+id/dish2ImgBtn"
@@ -59,9 +59,9 @@
             android:layout_toEndOf="@+id/dish1ImgBtn"
             android:layout_toRightOf="@+id/dish1ImgBtn"
             android:background="@drawable/dish2"
+            android:contentDescription="@null"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:contentDescription="@null"
             android:textSize="16pt"
             android:textStyle="bold" />
 
@@ -69,22 +69,22 @@
             android:id="@+id/text1"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:text="@string/Create_your_own"
-            android:background="@color/Honeydew"
-            android:textSize="14sp"
-            android:gravity="center"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@id/createYourOwnImgBtn" />
+            android:layout_below="@id/createYourOwnImgBtn"
+            android:background="@color/Honeydew"
+            android:gravity="center"
+            android:text="@string/Create_your_own"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/text2"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@color/Honeydew"
             android:layout_below="@+id/dish1ImgBtn"
             android:layout_toEndOf="@+id/text1"
             android:layout_toRightOf="@+id/text1"
+            android:background="@color/Honeydew"
             android:gravity="center"
             android:text="@string/dish1" />
 
@@ -92,12 +92,12 @@
             android:id="@+id/text3"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:text="@string/dish2"
-            android:background="@color/Honeydew"
-            android:gravity="center"
             android:layout_below="@id/dish2ImgBtn"
             android:layout_toEndOf="@id/text2"
-            android:layout_toRightOf="@id/text2" />
+            android:layout_toRightOf="@id/text2"
+            android:background="@color/Honeydew"
+            android:gravity="center"
+            android:text="@string/dish2" />
 
         <ImageButton
             android:id="@+id/dish3ImgBtn"
@@ -120,9 +120,9 @@
             android:layout_toRightOf="@+id/dish3ImgBtn"
             android:background="@drawable/dish4"
             android:contentDescription="@null"
-            android:textSize="16pt"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+            android:textSize="16pt"
             android:textStyle="bold" />
 
         <ImageButton
@@ -133,44 +133,44 @@
             android:layout_toEndOf="@+id/text2"
             android:layout_toRightOf="@+id/text2"
             android:background="@drawable/dish5"
+            android:contentDescription="@null"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:contentDescription="@null"
             android:textSize="16pt"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/text4"
             android:layout_width="100dp"
-            android:background="@color/Honeydew"
             android:layout_height="100dp"
-            android:text="@string/dish3"
-            android:gravity="center"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@id/dish3ImgBtn" />
+            android:layout_below="@id/dish3ImgBtn"
+            android:background="@color/Honeydew"
+            android:gravity="center"
+            android:text="@string/dish3" />
 
         <TextView
             android:id="@+id/text5"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:text="@string/dish4"
-            android:background="@color/Honeydew"
-            android:gravity="center"
             android:layout_below="@id/dish4ImgBtn"
             android:layout_toEndOf="@id/text4"
-            android:layout_toRightOf="@id/text4" />
+            android:layout_toRightOf="@id/text4"
+            android:background="@color/Honeydew"
+            android:gravity="center"
+            android:text="@string/dish4" />
 
         <TextView
             android:id="@+id/text6"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:text="@string/dish5"
-            android:background="@color/Honeydew"
-            android:gravity="center"
             android:layout_below="@id/dish5ImgBtn"
             android:layout_toEndOf="@id/text5"
-            android:layout_toRightOf="@id/text5" />
+            android:layout_toRightOf="@id/text5"
+            android:background="@color/Honeydew"
+            android:gravity="center"
+            android:text="@string/dish5" />
 
 
     </RelativeLayout>
@@ -195,13 +195,31 @@
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="276dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="276dp"
-        android:layout_marginLeft="276dp"
         android:background="@drawable/white"
         android:text="@string/home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="178dp"
+        android:layout_height="207dp"
+        android:layout_alignBaseline="@+id/text4"
+        android:layout_alignBottom="@+id/text4"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/text4"
+        android:layout_toRightOf="@+id/text4"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

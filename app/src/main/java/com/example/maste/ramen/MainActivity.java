@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
         ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
 
         final int[] cartHolder = new int[7];
-        cartHolder[1] = Cart.cart1.getQuantity();
-        cartHolder[2] = Cart.cart2.getQuantity();
-        cartHolder[3] = Cart.cart3.getQuantity();
-        cartHolder[4] = Cart.cart4.getQuantity();
-        cartHolder[5] = Cart.cart5.getQuantity();
-        cartHolder[6] = Cart.cart6.getQuantity();
+        cartHolder[1] = Cart.dish1.getQuantity();
+        cartHolder[2] = Cart.dish2.getQuantity();
+        cartHolder[3] = Cart.dish3.getQuantity();
+        cartHolder[4] = Cart.dish4.getQuantity();
+        cartHolder[5] = Cart.dish5.getQuantity();
+        cartHolder[6] = Cart.drink.getQuantity();
 
         final Button cartBtn = (Button) findViewById(R.id.cartBtn);
 
@@ -63,25 +63,26 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 cartHolder[1]++;
-                Cart.cart1.setQuantity(cartHolder[1]);
-            }
-
-        });
+                Cart.dish1.setQuantity(cartHolder[1]);
+                //CartActivity.updateCart();
+            } // end onClick
+        }); // end dish1ImgBtn onClickListener
 
         dish2ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 cartHolder[2]++;
-                Cart.cart2.setQuantity(cartHolder[2]);
-            }
-
+                Cart.dish2.setQuantity(cartHolder[2]);
+                //CartActivity.updateCart();
+            } // end onClick
         });
 
         dish3ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 cartHolder[3]++;
-                Cart.cart3.setQuantity(cartHolder[3]);
+                Cart.dish3.setQuantity(cartHolder[3]);
+                //CartActivity.updateCart();
             }
 
         });
@@ -90,7 +91,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 cartHolder[4]++;
-                Cart.cart4.setQuantity(cartHolder[4]);
+                Cart.dish4.setQuantity(cartHolder[4]);
+                //CartActivity.updateCart();
             }
 
         });
@@ -99,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 cartHolder[5]++;
-                Cart.cart5.setQuantity(cartHolder[5]);
+                //Cart.dish5.setQuantity(cartHolder[5]);
             }
 
         });
