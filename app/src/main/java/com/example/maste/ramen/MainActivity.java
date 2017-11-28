@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         dish3ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                cartHolder[3]++;
+                cartHolder[3]++; //casd
                 Cart.dish3.setQuantity(cartHolder[3]);
             }
 
