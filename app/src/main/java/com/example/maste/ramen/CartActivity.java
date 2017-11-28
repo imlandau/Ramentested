@@ -51,11 +51,11 @@ public class CartActivity extends AppCompatActivity{
                 String strPrice = "Price\n";
                 String strQuantity = "Quantity\n";
                 // total of all items before tax
-                double subtotal;
+                double subtotal = 0;
                 // the amount of tax being charged on all items combined
-                double tax;
+                double tax = 0;
                 // subtotal plus tax
-                double total;
+                double total = 0;
 
 
                 if(Cart.dish1.getQuantity() > 0) {
@@ -113,6 +113,5 @@ public class CartActivity extends AppCompatActivity{
         });
 
     } // end onCreate
-
 
 } // end class
