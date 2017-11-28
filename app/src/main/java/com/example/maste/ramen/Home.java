@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+//test
 public class Home extends AppCompatActivity {
     EditText username, password;
 

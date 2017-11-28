@@ -9,6 +9,7 @@
     <string name="create">Add</string>
     <string name="quantity">Quantity</string>
     <string name="login">Login</string>
+    <string name="loginpage">Go to Login</string>
     <string name="beg">1</string>
     <string name="signup">Sign Up</string>
     <string name="Username">Username</string>
@@ -21,6 +22,7 @@
     <string name="addedCart">This item has been added to the cart</string>
     <string name="cart">Items you select will appear here</string>
     <string name="start">0</string>
+    <string name="tab">\u0009\u0009\u0009\u0009</string>
 
 
     <string-array name="colorNames">
