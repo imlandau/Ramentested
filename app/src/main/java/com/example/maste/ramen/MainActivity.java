@@ -5,9 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // create reference to all of the buttons on the menu
-        ImageButton createYourOwnImgBtn = (ImageButton) findViewById(R.id.createYourOwnImgBtn);
+        ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.drinkImgBtn);
         ImageButton dish1ImgBtn = (ImageButton) findViewById(R.id.dish1ImgBtn);
         ImageButton dish2ImgBtn = (ImageButton) findViewById(R.id.dish2ImgBtn);
         ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
@@ -32,18 +30,11 @@ public class MainActivity extends AppCompatActivity {
         cartHolder[5] = Cart.dish5.getQuantity();
         cartHolder[6] = Cart.drink.getQuantity();
 
+        // button that takes the user to the cart
         final Button cartBtn = (Button) findViewById(R.id.cartBtn);
 
-        Button homeTest = (Button) findViewById(R.id.homeTest);
-
-        createYourOwnImgBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, CreateYourOwn.class));
-
-            }
-        }); // end createYourOwnImgBtn OnClickListener
-
+        // button that takes the user to the home screen
+        Button homeBtn = (Button) findViewById(R.id.homeBtn);
 
         cartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,19 +43,26 @@ public class MainActivity extends AppCompatActivity {
             }
         }); // end cartBtn OnClickListener
 
-        homeTest.setOnClickListener(new View.OnClickListener() {
+        homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, Home.class));
             }
-        }); // end homeTest OnClickListener
+        }); // end homeBtn OnClickListener
+
+        drinkImgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cartHolder[6]++;
+                Cart.drink.setQuantity(cartHolder[6]);
+            }
+        }); // end createYourOwnImgBtn OnClickListener
 
         dish1ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 cartHolder[1]++;
                 Cart.dish1.setQuantity(cartHolder[1]);
-                //CartActivity.updateCart();
             } // end onClick
         }); // end dish1ImgBtn onClickListener
 
@@ -73,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 cartHolder[2]++;
                 Cart.dish2.setQuantity(cartHolder[2]);
-                //CartActivity.updateCart();
             } // end onClick
         });
 
@@ -82,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 cartHolder[3]++;
                 Cart.dish3.setQuantity(cartHolder[3]);
-                //CartActivity.updateCart();
             }
 
         });
@@ -92,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 cartHolder[4]++;
                 Cart.dish4.setQuantity(cartHolder[4]);
-                //CartActivity.updateCart();
             }
 
         });
@@ -101,9 +96,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 cartHolder[5]++;
-                //Cart.dish5.setQuantity(cartHolder[5]);
+                Cart.dish5.setQuantity(cartHolder[5]);
             }
 
         });
-    }
-}
+    } // end onCreate
+} // end class

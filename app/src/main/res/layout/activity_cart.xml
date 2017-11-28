@@ -39,9 +39,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:autoText="false"
         android:background="@drawable/white"
-        android:editable="false"
         android:ems="10"
         android:text="Item"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,6 +76,7 @@
         android:layout_width="64dp"
         android:layout_height="205dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/white"
         android:text="Quantity"
         android:textAlignment="center"
@@ -90,27 +89,54 @@
         android:id="@+id/subtotalTextView"
         android:layout_width="114dp"
         android:layout_height="54dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/white"
         android:text="Subtotal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textQuantity" />
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.478"
+        android:gravity="right" />
 
     <TextView
         android:id="@+id/taxTextView"
         android:layout_width="114dp"
         android:layout_height="54dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/white"
         android:text="Tax"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="305dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtotalTextView"
+        app:layout_constraintVertical_bias="0.0"
+        android:gravity="right" />
 
     <TextView
         android:id="@+id/totalTextView"
         android:layout_width="114dp"
         android:layout_height="54dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/white"
         android:text="Total"
-        tools:layout_editor_absoluteX="269dp"
-        tools:layout_editor_absoluteY="371dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.786"
+        android:gravity="right" />
 
 </android.support.constraint.ConstraintLayout>
