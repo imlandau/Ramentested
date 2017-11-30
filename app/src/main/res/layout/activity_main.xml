@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/capture"
+    android:background="@color/DarkCyan"
     tools:context="com.example.maste.ramen.MainActivity">
 
     <RelativeLayout
@@ -276,6 +276,8 @@
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_marginBottom="8dp"
+        android:background="@color/White"
+        android:visibility="invisible"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
