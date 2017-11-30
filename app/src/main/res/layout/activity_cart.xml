@@ -33,8 +33,8 @@
 
     <TextView
         android:id="@+id/textItem"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/white"
@@ -47,8 +47,8 @@
 
     <TextView
         android:id="@+id/textPrice"
-        android:layout_width="100dp"
-        android:layout_height="200dp"
+        android:layout_width="70dp"
+        android:layout_height="250dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/white"
@@ -61,15 +61,18 @@
 
     <TextView
         android:id="@+id/textQuantity"
-        android:layout_width="100dp"
-        android:layout_height="200dp"
+        android:layout_width="60dp"
+        android:layout_height="250dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/white"
         android:text="@string/Quantity"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/taxTextView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textPrice"
         app:layout_constraintTop_toTopOf="parent"
@@ -78,23 +81,24 @@
     <TextView
         android:id="@+id/subtotalTextView"
         android:layout_width="90dp"
-        android:layout_height="50dp"
+        android:layout_height="75dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/white"
         android:gravity="center"
         android:text="@string/Subtotal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textQuantity" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/taxTextView"
         android:layout_width="90dp"
-        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_height="75dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:background="@drawable/white"
         android:gravity="center"
         android:text="@string/Tax"
@@ -106,11 +110,10 @@
     <TextView
         android:id="@+id/totalTextView"
         android:layout_width="90dp"
-        android:layout_height="50dp"
+        android:layout_height="75dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:background="@drawable/white"
         android:gravity="center"
         android:text="@string/Total"

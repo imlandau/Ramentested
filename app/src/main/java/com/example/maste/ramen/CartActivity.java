@@ -40,37 +40,37 @@ public class CartActivity extends AppCompatActivity{
         //Creates the string to display all the information about the items in the cart
         if(Cart.dish1.getQuantity() > 0) {
             strName = strName + Cart.dish1.getName() + "\n";
-            strPrice = strPrice + String.valueOf(money.format(Cart.dish1.getPrice())) + "\n";
+            strPrice = strPrice + "$" + String.valueOf(money.format(Cart.dish1.getPrice())) + "\n";
             strQuantity = strQuantity + String.valueOf(Cart.dish1.getQuantity()) + "\n";
             subtotal = subtotal + (Cart.dish1.getQuantity() * Cart.dish1.getPrice());
         }
         if(Cart.dish2.getQuantity() > 0) {
             strName = strName + Cart.dish2.getName() + "\n";
-            strPrice = strPrice + String.valueOf(money.format(Cart.dish2.getPrice())) + "\n";
+            strPrice = strPrice + "$" + String.valueOf(money.format(Cart.dish2.getPrice())) + "\n";
             strQuantity = strQuantity + String.valueOf(Cart.dish2.getQuantity()) + "\n";
             subtotal = subtotal + (Cart.dish2.getQuantity() * Cart.dish2.getPrice());
         }
         if(Cart.dish3.getQuantity() > 0) {
             strName = strName + Cart.dish3.getName() + "\n";
-            strPrice = strPrice + String.valueOf(money.format(Cart.dish3.getPrice())) + "\n";
-            strQuantity = strQuantity + String.valueOf(Cart.dish3.getQuantity()) + "\n";
+            strPrice = strPrice + "$" + String.valueOf(money.format(Cart.dish3.getPrice())) + "\n \n";
+            strQuantity = strQuantity + String.valueOf(Cart.dish3.getQuantity()) + "\n \n";
             subtotal = subtotal + (Cart.dish3.getQuantity() * Cart.dish3.getPrice());
         }
         if(Cart.dish4.getQuantity() > 0) {
             strName = strName + Cart.dish4.getName() + "\n";
-            strPrice = strPrice + String.valueOf(money.format(Cart.dish4.getPrice())) + "\n";
-            strQuantity = strQuantity + String.valueOf(Cart.dish4.getQuantity()) + "\n";
+            strPrice = strPrice + "$" + String.valueOf(money.format(Cart.dish4.getPrice())) + "\n \n";
+            strQuantity = strQuantity + String.valueOf(Cart.dish4.getQuantity()) + "\n \n";
             subtotal = subtotal + (Cart.dish4.getQuantity() * Cart.dish4.getPrice());
         }
         if(Cart.dish5.getQuantity() > 0) {
             strName = strName + Cart.dish5.getName() + "\n";
-            strPrice = strPrice + String.valueOf(money.format(Cart.dish5.getPrice())) + "\n";
-            strQuantity = strQuantity + String.valueOf(Cart.dish5.getQuantity()) + "\n";
+            strPrice = strPrice + "$" + String.valueOf(money.format(Cart.dish5.getPrice())) + "\n \n";
+            strQuantity = strQuantity + String.valueOf(Cart.dish5.getQuantity()) + "\n \n";
             subtotal = subtotal + (Cart.dish5.getQuantity() * Cart.dish5.getPrice());
         }
         if(Cart.drink.getQuantity() > 0) {
             strName = strName + Cart.drink.getName() + "\n";
-            strPrice = strPrice + String.valueOf(money.format(Cart.drink.getPrice())) + "\n";
+            strPrice = strPrice + "$" + String.valueOf(money.format(Cart.drink.getPrice())) + "\n";
             strQuantity = strQuantity + String.valueOf(Cart.drink.getQuantity()) + "\n";
             subtotal = subtotal + (Cart.drink.getQuantity() * Cart.drink.getPrice());
         }
