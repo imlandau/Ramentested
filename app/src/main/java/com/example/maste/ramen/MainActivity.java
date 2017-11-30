@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         cartHolder[2] = Cart.dish2.getQuantity();
         cartHolder[3] = Cart.dish3.getQuantity();
         cartHolder[4] = Cart.dish4.getQuantity();
-        cartHolder[5] = Cart.dish5.getQuantity();
-        cartHolder[6] = Cart.drink.getQuantity();
+        cartHolder[5] = Cart.drink.getQuantity();
+        cartHolder[6] = Cart.dish5.getQuantity();
 
         // button that takes the user to the cart
         final Button cartBtn = (Button) findViewById(R.id.cartBtn);
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                                            }
                  }, 1000);
                 cartHolder[6]++;
-                Cart.drink.setQuantity(cartHolder[6]);
+                Cart.dish5.setQuantity(cartHolder[6]);
             }
         }); // end createYourOwnImgBtn OnClickListener
 
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 1000);
                 cartHolder[5]++;
-                Cart.dish5.setQuantity(cartHolder[5]);
+                Cart.drink.setQuantity(cartHolder[5]);
             }
 
         });
