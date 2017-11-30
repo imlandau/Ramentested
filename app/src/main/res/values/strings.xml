@@ -15,6 +15,12 @@
     <string name="Username">Username</string>
     <string name="update">Update Cart</string>
     <string name="Password">Password</string>
+    <string name="Price">Price</string>
+    <string name="Item">Item</string>
+    <string name="Subtotal">Subtotal</string>
+    <string name="Tax">Tax</string>
+    <string name="Quantity">Quantity</string>
+    <string name="Total">Total</string>
     <string name="menu">Go to menu as a Guest</string>
     <string name="main">Menu</string>
     <string name="goCart">Cart</string>
