@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         final Button quandown = (Button) findViewById(R.id.quandown);
         final Button quanup = (Button) findViewById(R.id.quanup);
         final Button submit = (Button) findViewById(R.id.submit);
+        final TextView textView3 = (TextView) findViewById(R.id.background);
 
         final int[] cartHolder = new int[7];
         cartHolder[1] = Cart.dish1.getQuantity();
@@ -141,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 final TextView textView2 = (TextView) findViewById(R.id.textView);
+                textView3.setVisibility(View.VISIBLE);
                 textView2.setVisibility(View.VISIBLE);
                 quandown.setVisibility(View.VISIBLE);
                 quanup.setVisibility(View.VISIBLE);
@@ -152,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
                         quandown.setVisibility(View.INVISIBLE);
                         quanup.setVisibility(View.INVISIBLE);
                         submit.setVisibility(View.INVISIBLE);
+                        textView3.setVisibility(View.INVISIBLE);
 
                     }
                 }, 3000);
