@@ -17,12 +17,14 @@ public class CartActivity extends AppCompatActivity{
 
         Button menuBtn = (Button) findViewById(R.id.menuBtn);
         Button homeBtn = (Button) findViewById(R.id.homeBtn);
+        Button removeBtn = (Button) findViewById(R.id.removeAll);
         final TextView CartDisplay = (TextView) findViewById(R.id.textItem);
         final TextView CartPrice = (TextView) findViewById(R.id.textPrice);
         final TextView CartQuantity = (TextView) findViewById(R.id.textQuantity);
         final TextView subtotalTextView = (TextView) findViewById(R.id.subtotalTextView);
         final TextView taxTextView = (TextView) findViewById(R.id.taxTextView);
         final TextView totalTextView = (TextView) findViewById(R.id.totalTextView);
+        final TextView bghtTextView = (TextView) findViewById(R.id.bght);
 
         String strName = "Item\n";
         String strPrice = "Price\n";
@@ -40,38 +42,38 @@ public class CartActivity extends AppCompatActivity{
         //Creates the string to display all the information about the items in the cart
         if(Cart.dish1.getQuantity() > 0) {
             strName = strName + Cart.dish1.getName() + "\n";
-            strPrice = strPrice + "$" + String.valueOf(money.format(Cart.dish1.getPrice())) + "\n";
+            strPrice = strPrice  + String.valueOf(money.format(Cart.dish1.getPrice())) + "\n";
             strQuantity = strQuantity + String.valueOf(Cart.dish1.getQuantity()) + "\n";
             subtotal = subtotal + (Cart.dish1.getQuantity() * Cart.dish1.getPrice());
         }
         if(Cart.dish2.getQuantity() > 0) {
             strName = strName + Cart.dish2.getName() + "\n";
-            strPrice = strPrice + "$" + String.valueOf(money.format(Cart.dish2.getPrice())) + "\n";
-            strQuantity = strQuantity + String.valueOf(Cart.dish2.getQuantity()) + "\n";
+            strPrice = strPrice +  String.valueOf(money.format(Cart.dish2.getPrice())) + "\n";
+            strQuantity = strQuantity  + String.valueOf(Cart.dish2.getQuantity()) + "\n";
             subtotal = subtotal + (Cart.dish2.getQuantity() * Cart.dish2.getPrice());
         }
         if(Cart.dish3.getQuantity() > 0) {
             strName = strName + Cart.dish3.getName() + "\n";
-            strPrice = strPrice + "$" + String.valueOf(money.format(Cart.dish3.getPrice())) + "\n \n";
-            strQuantity = strQuantity + String.valueOf(Cart.dish3.getQuantity()) + "\n \n";
+            strPrice = strPrice + "\n" + String.valueOf(money.format(Cart.dish3.getPrice())) + "\n";
+            strQuantity = strQuantity + "\n" +  String.valueOf(Cart.dish3.getQuantity()) + "\n";
             subtotal = subtotal + (Cart.dish3.getQuantity() * Cart.dish3.getPrice());
         }
         if(Cart.dish4.getQuantity() > 0) {
             strName = strName + Cart.dish4.getName() + "\n";
-            strPrice = strPrice + "$" + String.valueOf(money.format(Cart.dish4.getPrice())) + "\n \n";
-            strQuantity = strQuantity + String.valueOf(Cart.dish4.getQuantity()) + "\n \n";
+            strPrice = strPrice  + "\n" + String.valueOf(money.format(Cart.dish4.getPrice())) + "\n";
+            strQuantity = strQuantity + "\n" + String.valueOf(Cart.dish4.getQuantity()) + "\n";
             subtotal = subtotal + (Cart.dish4.getQuantity() * Cart.dish4.getPrice());
         }
         if(Cart.dish5.getQuantity() > 0) {
             strName = strName + Cart.dish5.getName() + "\n";
-            strPrice = strPrice + "$" + String.valueOf(money.format(Cart.dish5.getPrice())) + "\n \n";
-            strQuantity = strQuantity + String.valueOf(Cart.dish5.getQuantity()) + "\n \n";
+            strPrice = strPrice +  "\n" + String.valueOf(money.format(Cart.dish5.getPrice())) + "\n";
+            strQuantity = strQuantity  + "\n" + String.valueOf(Cart.dish5.getQuantity()) + "\n";
             subtotal = subtotal + (Cart.dish5.getQuantity() * Cart.dish5.getPrice());
         }
         if(Cart.drink.getQuantity() > 0) {
             strName = strName + Cart.drink.getName() + "\n";
-            strPrice = strPrice + "$" + String.valueOf(money.format(Cart.drink.getPrice())) + "\n";
-            strQuantity = strQuantity + String.valueOf(Cart.drink.getQuantity()) + "\n";
+            strPrice = strPrice + String.valueOf(money.format(Cart.drink.getPrice())) + "\n";
+            strQuantity = strQuantity  + String.valueOf(Cart.drink.getQuantity()) + "\n";
             subtotal = subtotal + (Cart.drink.getQuantity() * Cart.drink.getPrice());
         }
 
@@ -98,8 +100,25 @@ public class CartActivity extends AppCompatActivity{
         //Moves the user to the home page
         homeBtn.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
+                bghtTextView.setVisibility(View.VISIBLE);
+                bghtTextView.postDelayed(new Runnable() {
+
+                    public void run() {
+                        bghtTextView.setVisibility(View.INVISIBLE);
                 startActivity(new Intent(CartActivity.this, Home.class));
+                    }
+                }, 5000);
+            }
+        });
+
+        removeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Cart.removeAll();
+                CartDisplay.setText("Item");
+                CartPrice.setText("Price");
+                CartQuantity.setText("QUantity");
             }
         });
     } // end onCreate
