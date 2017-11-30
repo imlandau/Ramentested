@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.82" />
 
     <EditText
-        android:id="@+id/userPass"
+        android:id="@+id/UserPass"
         android:layout_width="150dp"
         android:layout_height="20dp"
         android:layout_marginBottom="8dp"
@@ -42,7 +42,7 @@
         app:layout_constraintVertical_bias="0.498" />
 
     <EditText
-        android:id="@+id/userName"
+        android:id="@+id/UserName"
         android:layout_width="150dp"
         android:layout_height="20dp"
         android:layout_marginBottom="8dp"

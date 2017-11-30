@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (textView2.getId() == R.id.signup)
         {
-            Intent i = new Intent(MainActivity.this , SignUp.class);
+            Intent i = new Intent(MainActivity.this , Home.class);
             startActivity(i);
         }
     }
