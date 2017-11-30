@@ -54,12 +54,15 @@
         android:layout_marginBottom="132dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/white"
         android:text="@string/update"
         app:layout_constraintBottom_toTopOf="@+id/homeBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.028"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textItem"
+        app:layout_constraintVertical_bias="0.8" />
 
     <TextView
         android:id="@+id/textPrice"
@@ -87,56 +90,92 @@
 
     <TextView
         android:id="@+id/subtotalTextView"
-        android:layout_width="114dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/white"
+        android:gravity="center"
         android:text="Subtotal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.478"
-        android:gravity="right" />
+        app:layout_constraintTop_toBottomOf="@+id/textQuantity" />
 
     <TextView
         android:id="@+id/taxTextView"
-        android:layout_width="114dp"
-        android:layout_height="54dp"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/white"
+        android:gravity="center"
         android:text="Tax"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/totalTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintHorizontal_bias="0.962"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subtotalTextView"
-        app:layout_constraintVertical_bias="0.0"
-        android:gravity="right" />
+        app:layout_constraintTop_toBottomOf="@+id/subtotalTextView" />
 
     <TextView
         android:id="@+id/totalTextView"
-        android:layout_width="114dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:background="@drawable/white"
+        android:gravity="center"
         android:text="Total"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/homeBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.786"
-        android:gravity="right" />
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/sbtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/White"
+        android:text="Subtotal"
+        app:layout_constraintBottom_toBottomOf="@+id/subtotalTextView"
+        app:layout_constraintEnd_toStartOf="@+id/subtotalTextView"
+        app:layout_constraintTop_toTopOf="@+id/subtotalTextView" />
+
+    <TextView
+        android:id="@+id/tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/White"
+        android:text="Tax"
+        app:layout_constraintBottom_toBottomOf="@+id/taxTextView"
+        app:layout_constraintEnd_toStartOf="@+id/taxTextView"
+        app:layout_constraintTop_toTopOf="@+id/taxTextView" />
+
+    <TextView
+        android:id="@+id/ttl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/White"
+        android:text="Total"
+        app:layout_constraintBottom_toBottomOf="@+id/totalTextView"
+        app:layout_constraintEnd_toStartOf="@+id/totalTextView"
+        app:layout_constraintTop_toTopOf="@+id/totalTextView" />
 
 </android.support.constraint.ConstraintLayout>
