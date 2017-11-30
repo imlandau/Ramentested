@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,14 +22,15 @@ public class MainActivity extends AppCompatActivity {
         ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
         ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
         ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
+        TextView textView2 = (TextView) findViewById(R.id.textView);
 
         final int[] cartHolder = new int[7];
         cartHolder[1] = Cart.dish1.getQuantity();
         cartHolder[2] = Cart.dish2.getQuantity();
         cartHolder[3] = Cart.dish3.getQuantity();
         cartHolder[4] = Cart.dish4.getQuantity();
-        cartHolder[5] = Cart.dish5.getQuantity();
-        cartHolder[6] = Cart.drink.getQuantity();
+        cartHolder[5] = Cart.drink.getQuantity();
+        cartHolder[6] = Cart.dish5.getQuantity();
 
         // button that takes the user to the cart
         final Button cartBtn = (Button) findViewById(R.id.cartBtn);
@@ -53,14 +55,30 @@ public class MainActivity extends AppCompatActivity {
         drinkImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final TextView textView2 = (TextView) findViewById(R.id.textView);
+                               textView2.setVisibility(View.VISIBLE);
+                               textView2.postDelayed(new Runnable() {
+
+                     public void run() {
+                                               textView2.setVisibility(View.INVISIBLE);
+                                           }
+                 }, 1000);
                 cartHolder[6]++;
-                Cart.drink.setQuantity(cartHolder[6]);
+                Cart.dish5.setQuantity(cartHolder[6]);
             }
         }); // end createYourOwnImgBtn OnClickListener
 
         dish1ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+                final TextView textView2 = (TextView) findViewById(R.id.textView);
+                textView2.setVisibility(View.VISIBLE);
+                textView2.postDelayed(new Runnable() {
+
+                    public void run() {
+                        textView2.setVisibility(View.INVISIBLE);
+                    }
+                }, 1000);
                 cartHolder[1]++;
                 Cart.dish1.setQuantity(cartHolder[1]);
             } // end onClick
@@ -69,6 +87,14 @@ public class MainActivity extends AppCompatActivity {
         dish2ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+                final TextView textView2 = (TextView) findViewById(R.id.textView);
+                textView2.setVisibility(View.VISIBLE);
+                textView2.postDelayed(new Runnable() {
+
+                    public void run() {
+                        textView2.setVisibility(View.INVISIBLE);
+                    }
+                }, 1000);
                 cartHolder[2]++;
                 Cart.dish2.setQuantity(cartHolder[2]);
             } // end onClick
@@ -77,6 +103,14 @@ public class MainActivity extends AppCompatActivity {
         dish3ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+                final TextView textView2 = (TextView) findViewById(R.id.textView);
+                textView2.setVisibility(View.VISIBLE);
+                textView2.postDelayed(new Runnable() {
+
+                    public void run() {
+                        textView2.setVisibility(View.INVISIBLE);
+                    }
+                }, 1000);
                 cartHolder[3]++; //casd
                 Cart.dish3.setQuantity(cartHolder[3]);
             }
@@ -86,6 +120,14 @@ public class MainActivity extends AppCompatActivity {
         dish4ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+                final TextView textView2 = (TextView) findViewById(R.id.textView);
+                textView2.setVisibility(View.VISIBLE);
+                textView2.postDelayed(new Runnable() {
+
+                    public void run() {
+                        textView2.setVisibility(View.INVISIBLE);
+                    }
+                }, 1000);
                 cartHolder[4]++;
                 Cart.dish4.setQuantity(cartHolder[4]);
             }
@@ -95,8 +137,16 @@ public class MainActivity extends AppCompatActivity {
         dish5ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+                final TextView textView2 = (TextView) findViewById(R.id.textView);
+                textView2.setVisibility(View.VISIBLE);
+                textView2.postDelayed(new Runnable() {
+
+                    public void run() {
+                        textView2.setVisibility(View.INVISIBLE);
+                    }
+                }, 1000);
                 cartHolder[5]++;
-                Cart.dish5.setQuantity(cartHolder[5]);
+                Cart.drink.setQuantity(cartHolder[5]);
             }
 
         });

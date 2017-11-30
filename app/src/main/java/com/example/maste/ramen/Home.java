@@ -45,9 +45,10 @@ public class Home extends AppCompatActivity {
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(Home.this, SignUp.class));
+            } // end onClick
+        }); // end onClickListener for signUpBtn
 
-            }
-        });
     } // end onCreate
 
     public Boolean login() {
