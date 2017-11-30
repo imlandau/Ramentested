@@ -84,9 +84,9 @@ public class CartActivity extends AppCompatActivity{
         CartDisplay.setText(strName);
         CartPrice.setText(strPrice);
         CartQuantity.setText(strQuantity);
-        subtotalTextView.setText("Subtotal:   $" + money.format(subtotal));
-        taxTextView.setText("Tax:                 $" + money.format(tax));
-        totalTextView.setText("Total:       $" + money.format(total));
+        subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
+        taxTextView.setText("Tax:\n$" + money.format(tax));
+        totalTextView.setText("Total:\n$" + money.format(total));
         //Moves the use to the menu page
         menuBtn.setOnClickListener(new View.OnClickListener(){
             @Override

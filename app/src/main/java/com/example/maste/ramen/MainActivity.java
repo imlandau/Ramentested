@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
         ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
         TextView textView2 = (TextView) findViewById(R.id.textView);
+        final Button quandown = (Button) findViewById(R.id.quandown);
+        final Button quanup = (Button) findViewById(R.id.quanup);
+        final Button submit = (Button) findViewById(R.id.submit);
 
         final int[] cartHolder = new int[7];
         cartHolder[1] = Cart.dish1.getQuantity();
@@ -139,12 +142,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 final TextView textView2 = (TextView) findViewById(R.id.textView);
                 textView2.setVisibility(View.VISIBLE);
+                quandown.setVisibility(View.VISIBLE);
+                quanup.setVisibility(View.VISIBLE);
+                submit.setVisibility(View.VISIBLE);
                 textView2.postDelayed(new Runnable() {
 
                     public void run() {
                         textView2.setVisibility(View.INVISIBLE);
+                        quandown.setVisibility(View.INVISIBLE);
+                        quanup.setVisibility(View.INVISIBLE);
+                        submit.setVisibility(View.INVISIBLE);
+
                     }
-                }, 1000);
+                }, 3000);
                 cartHolder[5]++;
                 Cart.drink.setQuantity(cartHolder[5]);
             }
