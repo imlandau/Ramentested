@@ -19,7 +19,7 @@ public class Cart extends AppCompatActivity {
     }
 
     //removes all the items currently in the cart
-    public void removeAll(){
+    public static void removeAll(){
         dish1.setQuantity(0);
         dish2.setQuantity(0);
         dish3.setQuantity(0);

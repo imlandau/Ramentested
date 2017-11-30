@@ -17,6 +17,7 @@ public class CartActivity extends AppCompatActivity{
 
         Button menuBtn = (Button) findViewById(R.id.menuBtn);
         Button homeBtn = (Button) findViewById(R.id.homeBtn);
+        Button removeBtn = (Button) findViewById(R.id.removeAll);
         final TextView CartDisplay = (TextView) findViewById(R.id.textItem);
         final TextView CartPrice = (TextView) findViewById(R.id.textPrice);
         final TextView CartQuantity = (TextView) findViewById(R.id.textQuantity);
@@ -100,6 +101,13 @@ public class CartActivity extends AppCompatActivity{
             @Override
             public void onClick(View view){
                 startActivity(new Intent(CartActivity.this, Home.class));
+            }
+        });
+
+        removeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Cart.removeAll();
             }
         });
     } // end onCreate

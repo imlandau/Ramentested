@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    static int i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,13 +17,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // create reference to all of the buttons on the menu
+        final Button quandDown = (Button)  findViewById(R.id.quandown);
+        final Button quanUp = (Button) findViewById(R.id.quanup);
+
         ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.drinkImgBtn);
         ImageButton dish1ImgBtn = (ImageButton) findViewById(R.id.dish1ImgBtn);
         ImageButton dish2ImgBtn = (ImageButton) findViewById(R.id.dish2ImgBtn);
         ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
         ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
         ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
-        TextView textView2 = (TextView) findViewById(R.id.textView);
         final Button quandown = (Button) findViewById(R.id.quandown);
         final Button quanup = (Button) findViewById(R.id.quanup);
         final Button submit = (Button) findViewById(R.id.submit);
@@ -42,6 +45,20 @@ public class MainActivity extends AppCompatActivity {
         // button that takes the user to the home screen
         Button homeBtn = (Button) findViewById(R.id.homeBtn);
 
+        quandDown.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                i--;
+            }
+        });
+
+        quanUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                i++;
+            }
+        });
+
         cartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         drinkImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                i = 0;
                 final TextView textView2 = (TextView) findViewById(R.id.textView);
                                textView2.setVisibility(View.VISIBLE);
                                textView2.postDelayed(new Runnable() {
@@ -67,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                                                textView2.setVisibility(View.INVISIBLE);
                                            }
                  }, 1000);
-                cartHolder[6]++;
+
                 Cart.dish5.setQuantity(cartHolder[6]);
             }
         }); // end createYourOwnImgBtn OnClickListener
@@ -91,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
         dish2ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+                i = 0;
                 final TextView textView2 = (TextView) findViewById(R.id.textView);
                 textView2.setVisibility(View.VISIBLE);
                 textView2.postDelayed(new Runnable() {
@@ -107,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
         dish3ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+                i = 0;
                 final TextView textView2 = (TextView) findViewById(R.id.textView);
                 textView2.setVisibility(View.VISIBLE);
                 textView2.postDelayed(new Runnable() {
@@ -124,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
         dish4ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+                i = 0;
                 final TextView textView2 = (TextView) findViewById(R.id.textView);
                 textView2.setVisibility(View.VISIBLE);
                 textView2.postDelayed(new Runnable() {
@@ -141,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
         dish5ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+                i = 0;
                 final TextView textView2 = (TextView) findViewById(R.id.textView);
                 textView3.setVisibility(View.VISIBLE);
                 textView2.setVisibility(View.VISIBLE);

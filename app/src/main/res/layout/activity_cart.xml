@@ -114,5 +114,15 @@
         app:layout_constraintTop_toBottomOf="@+id/taxTextView"
         app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/removeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="136dp"
+        android:layout_marginTop="8dp"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/taxTextView"
+        app:layout_constraintTop_toTopOf="@+id/taxTextView" />
+
 
 </android.support.constraint.ConstraintLayout>
