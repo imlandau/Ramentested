@@ -10,6 +10,16 @@ import android.widget.TextView;
 import java.text.DecimalFormat;
 
 public class CartActivity extends AppCompatActivity{
+
+    // total of all items before tax
+    double subtotal = 0;
+    // the amount of tax being charged on all items combined
+    double tax = 0;
+    // subtotal plus tax
+    double total = 0;
+
+    // decimal format to display money
+    DecimalFormat money = new DecimalFormat("0.00");
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -29,15 +39,7 @@ public class CartActivity extends AppCompatActivity{
         String strName = "Item\n";
         String strPrice = "Price\n";
         String strQuantity = "Quantity\n";
-        // total of all items before tax
-        double subtotal = 0;
-        // the amount of tax being charged on all items combined
-        double tax = 0;
-        // subtotal plus tax
-        double total = 0;
 
-
-        DecimalFormat money = new DecimalFormat("#.00");
 
         //Creates the string to display all the information about the items in the cart
         if(Cart.dish1.getQuantity() > 0) {
@@ -116,9 +118,15 @@ public class CartActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Cart.removeAll();
+                subtotal = 0;
+                tax = 0;
+                total = 0;
                 CartDisplay.setText("Item");
                 CartPrice.setText("Price");
-                CartQuantity.setText("QUantity");
+                CartQuantity.setText("Quantity");
+                subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
+                taxTextView.setText("Tax:\n$" + money.format(tax));
+                totalTextView.setText("Total:\n$" + money.format(total));
             }
         });
     } // end onCreate
