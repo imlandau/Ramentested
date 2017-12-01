@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.TextView;
 //test
 public class Home extends AppCompatActivity {
     EditText username, password;
@@ -20,14 +21,14 @@ public class Home extends AppCompatActivity {
         username=(EditText)findViewById(R.id.userName);
         password=(EditText)findViewById(R.id.userPass);
 
-        Button toMenuBtn = (Button) findViewById(R.id.toMenuBtn);
+
         Button loginBtn = (Button) findViewById(R.id.loginBtn);
         Button signUpBtn = (Button) findViewById(R.id.signUpBtn);
 
-        // create onClickListener for the toMenuBtn
+        TextView toMenuBtn = (TextView) findViewById(R.id.toMenuBtn);
         toMenuBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 startActivity(new Intent(Home.this, MainActivity.class));
             }
         });
