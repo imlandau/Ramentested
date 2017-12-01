@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/homeBtn"
+        android:id="@+id/purchaseBtn"
         android:layout_width="90dp"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
@@ -112,7 +112,7 @@
         android:background="@drawable/white"
         android:gravity="center"
         android:text="@string/Total"
-        app:layout_constraintBottom_toTopOf="@+id/homeBtn"
+        app:layout_constraintBottom_toTopOf="@+id/purchaseBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textQuantity"
         app:layout_constraintTop_toBottomOf="@+id/taxTextView"

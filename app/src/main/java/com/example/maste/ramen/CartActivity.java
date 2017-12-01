@@ -25,23 +25,41 @@ public class CartActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
+        // button that takes user to the menu
         Button menuBtn = (Button) findViewById(R.id.menuBtn);
-        Button homeBtn = (Button) findViewById(R.id.homeBtn);
+        // button that completes the purchase of the order
+        Button homeBtn = (Button) findViewById(R.id.purchaseBtn);
+        // button to remove everything from the cart
         Button removeBtn = (Button) findViewById(R.id.removeAll);
-        final TextView CartDisplay = (TextView) findViewById(R.id.textItem);
-        final TextView CartPrice = (TextView) findViewById(R.id.textPrice);
-        final TextView CartQuantity = (TextView) findViewById(R.id.textQuantity);
+        // displays the items in the cart
+        final TextView textItem = (TextView) findViewById(R.id.textItem);
+        // shows the prices of each item in the cart
+        final TextView textPrice = (TextView) findViewById(R.id.textPrice);
+        // shows the quantity of each item in the cart
+        final TextView textQuantity = (TextView) findViewById(R.id.textQuantity);
+        // shows the total of the order before tax
         final TextView subtotalTextView = (TextView) findViewById(R.id.subtotalTextView);
+        // shows the tax of the order
         final TextView taxTextView = (TextView) findViewById(R.id.taxTextView);
+        // shows the total cost of the order
         final TextView totalTextView = (TextView) findViewById(R.id.totalTextView);
+        // tells the user the order has been placed
         final TextView bghtTextView = (TextView) findViewById(R.id.bght);
 
+        // header for the textItem box
         String strName = "Item\n";
+        // header for the textPrice box
         String strPrice = "Price\n";
+        // header for the textQuantity box
         String strQuantity = "Quantity\n";
 
 
-        //Creates the string to display all the information about the items in the cart
+        /** Creates the string to display all the information about the items in the cart, and
+            updates the subtotal based on the quantity of each item. If the quantity of an item
+            is zero, it is not added to the string or subtotal. The item name, price, and quantity
+            are concatenated on to the strName, strPrice, and strQuantity strings respectively, so
+            that they can be displayed properly.
+         **/
         if(Cart.dish1.getQuantity() > 0) {
             strName = strName + Cart.dish1.getName() + "\n";
             strPrice = strPrice  + String.valueOf(money.format(Cart.dish1.getPrice())) + "\n";
@@ -84,14 +102,15 @@ public class CartActivity extends AppCompatActivity{
         // calculate the actual total for the order
         total = subtotal + tax;
 
-        // set the text of all of the textboxes pertaining to updating the cart
-        CartDisplay.setText(strName);
-        CartPrice.setText(strPrice);
-        CartQuantity.setText(strQuantity);
+        // set all of the text boxes to display their corresponding strings
+        textItem.setText(strName);
+        textPrice.setText(strPrice);
+        textQuantity.setText(strQuantity);
         subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
         taxTextView.setText("Tax:\n$" + money.format(tax));
         totalTextView.setText("Total:\n$" + money.format(total));
-        //Moves the use to the menu page
+
+        // returns the user to the menu page
         menuBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -99,7 +118,7 @@ public class CartActivity extends AppCompatActivity{
             }
         });
 
-        //Moves the user to the home page
+        // returns the user to the home page
         homeBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -114,6 +133,7 @@ public class CartActivity extends AppCompatActivity{
             }
         });
 
+        // this button removes all items in the cart
         removeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -121,9 +141,9 @@ public class CartActivity extends AppCompatActivity{
                 subtotal = 0;
                 tax = 0;
                 total = 0;
-                CartDisplay.setText("Item");
-                CartPrice.setText("Price");
-                CartQuantity.setText("Quantity");
+                textItem.setText("Item");
+                textPrice.setText("Price");
+                textQuantity.setText("Quantity");
                 subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
                 taxTextView.setText("Tax:\n$" + money.format(tax));
                 totalTextView.setText("Total:\n$" + money.format(total));

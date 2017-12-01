@@ -11,14 +11,7 @@ public class Cart extends AppCompatActivity {
     static Item dish5 = new Item(6.9, 0, "Chicken Veggie Ramen Bowl");
     static Item drink = new Item(1.85, 0, "Drink");
 
-    public Cart() {
-    }
-
-    public void remove(Item item, int quantity){
-        item.setQuantity(item.getQuantity()-quantity);
-    }
-
-    //removes all the items currently in the cart
+    // removes all the items currently in the cart by setting their quantities to 0
     public static void removeAll(){
         dish1.setQuantity(0);
         dish2.setQuantity(0);

@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         final Button cartBtn = (Button) findViewById(R.id.cartBtn);
 
         // button that takes the user to the home screen
-        Button homeBtn = (Button) findViewById(R.id.homeBtn);
+        Button homeBtn = (Button) findViewById(R.id.purchaseBtn);
 
         cartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
