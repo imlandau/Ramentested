@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
         ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
         final TextView Message = (TextView) findViewById(R.id.cartAddedTo);
+        final TextView title = (TextView) findViewById(R.id.title);
         final TextView description = (TextView) findViewById(R.id.description);
         final TextView curQuan = (TextView) findViewById(R.id.curQuan);
         final Button quantityDown = (Button) findViewById(R.id.quandown);
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
+                title.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[5]);
             }
@@ -89,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
+                title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[4]);
             } // end onClick
         }); // end dish1ImgBtn onClickListener
@@ -112,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
+                title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[0]);
             } // end onClick
         });
@@ -135,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
+                title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[1]);
             }
         });
@@ -158,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
+                title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[2]);
             }
         });
@@ -181,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
+                title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[3]);
 
         }});
@@ -285,6 +292,7 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.INVISIBLE);
                 curQuan.setVisibility(View.INVISIBLE);
                 description.setVisibility(View.INVISIBLE);
+                title.setVisibility(View.INVISIBLE);
             }
         }); //End submit OnClickListener
     } // end onCreate
