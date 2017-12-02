@@ -180,52 +180,12 @@
     </string-array>
 
 
-    <string-array name="Noodles">
-        <item>Select your Noodles</item>
-        <item>Ramen</item>
-        <item>Yakisoba</item>
-        <item>Udon</item>
-        <item>Soba</item>
-        <item>Somen/Nyumen</item>
-        <item>Rice Noodles</item>
-    </string-array>
-
-    <string-array name="Flavoring">
-        <item>Select your Flavoring</item>
-        <item>Shio</item>
-        <item>Shoyu</item>
-        <item>Miso Soup</item>
-        <item>Curry</item>
-        <item>Chicken</item>
-        <item>Beef</item>
-        <item>Pork</item>
-    </string-array>
-
-    <string-array name="Protien">
-        <item>Select your Protien</item>
-        <item>Beef</item>
-        <item>Chicken</item>
-        <item>Pork</item>
-        <item>Fish</item>
-        <item>Tofu</item>
-    </string-array>
-
-    <string-array name="Veggie">
-        <item>Select your Veggie</item>
-        <item>Broccoli</item>
-        <item>Carrot</item>
-        <item>Tomato</item>
-        <item>Onions</item>
-        <item>Mushrooms</item>
-    </string-array>
-
-    <string-array name="Extra">
-        <item>Select your Extra</item>
-        <item>Egg</item>
-        <item>Spring Onions</item>
-        <item>Nori(Dried Seaweed)</item>
-        <item>Corn</item>
-        <item>Ginger</item>
-        <item>Peanuts</item>
+    <string-array name="Descriptions">
+        <item>This pork ramen is sweet, spicy and filled with spinach, onions, and sweet peppers.</item>
+        <item>Mongolian Beef with green peppers, grilled onions and ramen noodles</item>
+        <item>Loaded with spinach, green peppers, and mushrooms. No meat.</item>
+        <item>Fried noodles with yellow and green peppers, and chicken.</item>
+        <item>A delicious combination of grilled chicken, broccoli, and mushrooms.</item>
+        <item>20oz cup. Fill it up with any pepsi product.</item>
     </string-array>
 </resources>
