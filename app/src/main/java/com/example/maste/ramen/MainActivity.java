@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         //Declaration for button that takes the user to the home screen
         Button homeBtn = (Button) findViewById(R.id.purchaseBtn);
 
+        final TextView description = (TextView) findViewById(R.id.description);
+
         //Declaration for the cartHolder which will redundancy within
         final int[] cartHolder = new int[7];
         cartHolder[1] = Cart.dish1.getQuantity();
@@ -52,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
                 if(cartHolder[6] == 0){
                     cartHolder[6] = 1;
                 }
+                description.setText(getResources().getStringArray(R.array.Descriptions)[5]);
+                description.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -70,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
                 if(cartHolder[1] == 0){
                     cartHolder[1] = 1;
                 }
+                description.setText(getResources().getStringArray(R.array.Descriptions)[0]);
+                description.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -88,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
                 if(cartHolder[2] == 0){
                     cartHolder[2] = 1;
                 }
+                description.setText(getResources().getStringArray(R.array.Descriptions)[1]);
+                description.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -106,6 +114,8 @@ public class MainActivity extends AppCompatActivity {
                 if(cartHolder[3] == 0){
                     cartHolder[3] = 1;
                 }
+                description.setText(getResources().getStringArray(R.array.Descriptions)[2]);
+                description.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -124,6 +134,8 @@ public class MainActivity extends AppCompatActivity {
                 if(cartHolder[4] == 0){
                     cartHolder[4] = 1;
                 }
+                description.setText(getResources().getStringArray(R.array.Descriptions)[3]);
+                description.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -142,6 +154,8 @@ public class MainActivity extends AppCompatActivity {
                 if(cartHolder[5] == 0){
                     cartHolder[5] = 1;
                 }
+                description.setText(getResources().getStringArray(R.array.Descriptions)[4]);
+                description.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);

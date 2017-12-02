@@ -175,6 +175,24 @@
             android:gravity="center"
             android:text="@string/Create_your_own" />
 
+        <TextView
+            android:id="@+id/background"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_alignLeft="@+id/drinkImgBtn"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/drinkImgBtn"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="top"
+            android:text="@string/background"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.605" />
+
 
     </RelativeLayout>
 
@@ -274,25 +292,6 @@
         app:layout_constraintVertical_bias="0.64" />
 
     <TextView
-        android:id="@+id/background"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/White"
-        android:text="@string/background"
-        android:gravity="top"
-        android:textAlignment="center"
-        android:visibility="invisible"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605" />
-
-    <TextView
         android:id="@+id/curQuan"
         android:layout_width="25dp"
         android:layout_height="25dp"
@@ -311,4 +310,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.55" />
 
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="200dp"
+        android:layout_height="117dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/White"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.247" />
 </android.support.constraint.ConstraintLayout>
