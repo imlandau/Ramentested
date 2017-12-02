@@ -48,6 +48,14 @@ public class MainActivity extends AppCompatActivity {
         cartHolder[5] = Cart.dish5.getQuantity();
         cartHolder[6] = Cart.drink.getQuantity();
 
+        final String[] itemHolder = new String[7];
+        itemHolder[1] = Cart.dish1.getName();
+        itemHolder[2] = Cart.dish2.getName();
+        itemHolder[3] = Cart.dish3.getName();
+        itemHolder[4] = Cart.dish4.getName();
+        itemHolder[5] = Cart.dish5.getName();
+        itemHolder[6] = Cart.drink.getName();
+
         //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
         //a quantity change through the popup menu that will be made visible as well.
         drinkImgBtn.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
                     dif = 1;
                 }
                 curQan.setText(String.valueOf(cartHolder[6]));
+                title.setText(String.valueOf(itemHolder[6]));
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -84,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
                     dif = 1;
                 }
                 curQan.setText(String.valueOf(cartHolder[1]));
+                title.setText(String.valueOf(itemHolder[1]));
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -108,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                     dif = 1;
                 }
                 curQan.setText(String.valueOf(cartHolder[2]));
+                title.setText(String.valueOf(itemHolder[2]));
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -132,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
                     dif = 1;
                 }
                 curQan.setText(String.valueOf(cartHolder[3]));
+                title.setText(String.valueOf(itemHolder[3]));
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -156,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
                     dif = 1;
                 }
                 curQan.setText(String.valueOf(cartHolder[4]));
+                title.setText(String.valueOf(itemHolder[4]));
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -180,6 +193,7 @@ public class MainActivity extends AppCompatActivity {
                     dif = 1;
                 }
                 curQan.setText(String.valueOf(cartHolder[5]));
+                title.setText(String.valueOf(itemHolder[5]));
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
