@@ -260,7 +260,7 @@
         android:id="@+id/submit"
         android:background="@drawable/shape"
         android:text="@string/submit"
-        android:layout_width="50dp"
+        android:layout_width="75dp"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -290,6 +290,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/Black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.598" />
 
@@ -304,6 +305,7 @@
         android:textSize="20sp"
         android:textAlignment="center"
         android:visibility="invisible"
+        android:textColor="@color/Black"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -325,6 +327,7 @@
         android:background="@color/WhiteSmoke"
         android:gravity="center"
         android:textAlignment="center"
+        android:textColor="@color/Black"
         android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/background"
