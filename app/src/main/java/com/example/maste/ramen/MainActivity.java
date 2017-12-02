@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
+                description.setText(getResources().getStringArray(R.array.Descriptions)[1]);
             }
         }); // end createYourOwnImgBtn OnClickListener
 
@@ -88,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
+                description.setText(getResources().getStringArray(R.array.Descriptions)[1]);
             } // end onClick
         }); // end dish1ImgBtn onClickListener
 
@@ -110,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
+                description.setText(getResources().getStringArray(R.array.Descriptions)[3]);
             } // end onClick
         });
 
@@ -132,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
+                description.setText(getResources().getStringArray(R.array.Descriptions)[4]);
             }
         });
 
@@ -154,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
+                description.setText(getResources().getStringArray(R.array.Descriptions)[5]);
             }
         });
 
@@ -176,6 +181,7 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
+                description.setText(getResources().getStringArray(R.array.Descriptions)[6]);
 
         }});
 
