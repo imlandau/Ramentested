@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 identifier = 6;
+                if(cartHolder[6] == 0){
+                    cartHolder[6] = 1;
+                }
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -62,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 identifier = 1;
+                if(cartHolder[1] == 0){
+                    cartHolder[1] = 1;
+                }
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -76,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 identifier = 2;
+                if(cartHolder[2] == 0){
+                    cartHolder[2] = 1;
+                }
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -90,6 +99,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 identifier = 3;
+                if(cartHolder[3] == 0){
+                    cartHolder[3] = 1;
+                }
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -104,6 +116,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 identifier = 4;
+                if(cartHolder[4] == 0){
+                    cartHolder[4] = 1;
+                }
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -118,6 +133,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 identifier = 5;
+                if(cartHolder[5] == 0){
+                    cartHolder[5] = 1;
+                }
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
