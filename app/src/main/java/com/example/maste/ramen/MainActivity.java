@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import static com.example.maste.ramen.Cart.identifier;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -117,6 +119,66 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+        dish5ImgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                textView3.setVisibility(View.VISIBLE);
+                quandown.setVisibility(View.VISIBLE);
+                quanup.setVisibility(View.VISIBLE);
+                submit.setVisibility(View.VISIBLE);
+                cartHolder[5]++;
+                Cart.drink.setQuantity(cartHolder[5]);
+            }
+
+        });
+
+
+        //Create an OnClickListener for quantityDown that will
+        //decrement the quantity of the item by 1 every click.
+        quantityDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(cartHolder[identifier] > 0){
+                    cartHolder[identifier]--;
+                }
+                switch (identifier) {
+                    case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 2: Cart.dish2.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 3: Cart.dish3.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 5: Cart.dish5.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
+                }
+            }
+        }); //End quantityDown OnClickListener
+
+        //Create an OnClickListener for quantityUp that will
+        //increment the quantity of the item by 1 every click.
+        quantityUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cartHolder[identifier]++;
+                switch (identifier) {
+                    case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 2: Cart.dish2.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 3: Cart.dish3.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 5: Cart.dish5.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
+                }
+            }
+        }); //End quantityUp OnClickListener
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -136,17 +198,6 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        dish5ImgBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                textView3.setVisibility(View.VISIBLE);
-                quandown.setVisibility(View.VISIBLE);
-                quanup.setVisibility(View.VISIBLE);
-                submit.setVisibility(View.VISIBLE);
-                cartHolder[5]++;
-                Cart.drink.setQuantity(cartHolder[5]);
-            }
 
-        });
     } // end onCreate
 } // end class

@@ -118,7 +118,7 @@ public class CartActivity extends AppCompatActivity{
             }
         });
 
-        // returns the user to the home page
+        // returns the user to the home page for completion of application
         homeBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
