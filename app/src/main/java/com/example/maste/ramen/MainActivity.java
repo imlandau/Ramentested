@@ -484,7 +484,7 @@ public class MainActivity extends AppCompatActivity {
                 text6.setVisibility(View.VISIBLE);
             }
         });
-
+//
     } // end onCreate
 
 } // end class
