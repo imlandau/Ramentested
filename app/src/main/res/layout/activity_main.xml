@@ -421,7 +421,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@color/Yellow"
+        android:background="@color/White"
+        android:text="@string/start"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -434,14 +435,15 @@
         android:id="@+id/item2"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:background="@color/Yellow"
+        android:background="@color/White"
+        android:text="@string/start"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285" />
+        app:layout_constraintVertical_bias="0.292" />
 
 
 </android.support.constraint.ConstraintLayout>

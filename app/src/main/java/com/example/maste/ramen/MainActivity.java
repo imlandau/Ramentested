@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Spinner;
 
 import static com.example.maste.ramen.Cart.identifier;
 
@@ -99,8 +100,6 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
-                item1.setVisibility(View.VISIBLE);
-                item2.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[5]);
             }
         }); // end createYourOwnImgBtn OnClickListener
@@ -179,8 +178,6 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
-                item1.setVisibility(View.VISIBLE);
-                item2.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[0]);
             } // end onClick
         });
@@ -219,8 +216,6 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
-                item1.setVisibility(View.VISIBLE);
-                item2.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[1]);
             }
         });
@@ -259,8 +254,6 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
-                item1.setVisibility(View.VISIBLE);
-                item2.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[2]);
             }
         });
@@ -295,8 +288,6 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
-                item1.setVisibility(View.VISIBLE);
-                item2.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[3]);
 
         }});
