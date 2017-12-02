@@ -11,6 +11,7 @@ import android.widget.TextView;
 import static com.example.maste.ramen.Cart.identifier;
 
 public class MainActivity extends AppCompatActivity {
+    static int dif;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,13 +51,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 identifier = 6;
+                dif = 0;
                 if(cartHolder[6] == 0){
                     cartHolder[6] = 1;
+                    dif = 1;
                 }
                 curQan.setText(String.valueOf(cartHolder[6]));
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
-                Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
@@ -70,13 +72,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 identifier = 1;
+                dif = 0;
                 if(cartHolder[1] == 0){
                     cartHolder[1] = 1;
+                    dif = 1;
                 }
                 curQan.setText(String.valueOf(cartHolder[1]));
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
-                Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
@@ -90,13 +93,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 identifier = 2;
+                dif = 0;
                 if(cartHolder[2] == 0){
                     cartHolder[2] = 1;
+                    dif = 1;
                 }
                 curQan.setText(String.valueOf(cartHolder[2]));
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
-                Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
@@ -110,13 +114,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 identifier = 3;
+                dif = 0;
                 if(cartHolder[3] == 0){
                     cartHolder[3] = 1;
+                    dif = 1;
                 }
                 curQan.setText(String.valueOf(cartHolder[3]));
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
-                Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
@@ -130,13 +135,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 identifier = 4;
+                dif = 0;
                 if(cartHolder[4] == 0){
                     cartHolder[4] = 1;
+                    dif = 1;
                 }
                 curQan.setText(String.valueOf(cartHolder[4]));
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
-                Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
@@ -150,13 +156,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 identifier = 5;
+                dif = 0;
                 if(cartHolder[5] == 0){
                     cartHolder[5] = 1;
+                    dif = 1;
                 }
                 curQan.setText(String.valueOf(cartHolder[5]));
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
-                Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
@@ -187,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(cartHolder[identifier] > 0){
                     cartHolder[identifier]--;
+                    dif--;
                 }
                 curQan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
@@ -211,6 +219,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 cartHolder[identifier]++;
+                dif++;
                 curQan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
                     case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
@@ -245,6 +254,16 @@ public class MainActivity extends AppCompatActivity {
                     case 5: Cart.dish5.setQuantity(cartHolder[identifier]);
                         break;
                     case 6: Cart.drink.setQuantity(cartHolder[identifier]);
+                }
+
+                if(dif > 0){
+                    Message.setVisibility(View.VISIBLE);
+                    Message.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Message.setVisibility(View.INVISIBLE);
+                        }
+                    },1500);
                 }
                 quantityDown.setVisibility(View.INVISIBLE);
                 quantityUp.setVisibility(View.INVISIBLE);

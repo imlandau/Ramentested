@@ -258,7 +258,7 @@
 
     <Button
         android:id="@+id/submit"
-        android:background="@color/FireBrick"
+        android:background="@drawable/shape"
         android:text="@string/submit"
         android:layout_width="50dp"
         android:layout_height="50dp"
