@@ -143,16 +143,16 @@ public class MainActivity extends AppCompatActivity {
                 item2.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[4]);
 
-                ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this,
+                ArrayAdapter<String> myAdapter = new ArrayAdapter<>(MainActivity.this,
                         android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Meat));
                 myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 item1.setAdapter(myAdapter);
 
 
-                ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(MainActivity.this,
-                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Veggies));
+                ArrayAdapter<String> myAdapter2 = new ArrayAdapter<>(MainActivity.this,
+                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Veggie));
                 myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                item2.setAdapter(myAdapter);
+                item2.setAdapter(myAdapter2);
 
 
             } // end onClick

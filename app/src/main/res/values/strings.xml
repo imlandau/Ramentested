@@ -190,4 +190,18 @@
         <item>20oz cup. Fill it up with any pepsi product.</item>
         <item>Test</item>
     </string-array>
+
+    <string-array name="Meat">
+        <item>Select Meat</item>
+        <item>Beef</item>
+        <item>Chicken</item>
+        <item>Pork</item>
+    </string-array>
+
+    <string-array name="Veggie">
+        <item>Select Veggie</item>
+        <item>Broccoli</item>
+        <item>Carrots</item>
+        <item>Asparagus</item>
+    </string-array>
 </resources>
