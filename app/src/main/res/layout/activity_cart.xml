@@ -36,7 +36,7 @@
     <TextView
         android:id="@+id/textItem"
         android:layout_width="150dp"
-        android:layout_height="249dp"
+        android:layout_height="250dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/WhiteSmoke"
@@ -50,7 +50,7 @@
     <TextView
         android:id="@+id/textPrice"
         android:layout_width="70dp"
-        android:layout_height="249dp"
+        android:layout_height="250dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/WhiteSmoke"
@@ -64,7 +64,7 @@
     <TextView
         android:id="@+id/textQuantity"
         android:layout_width="60dp"
-        android:layout_height="249dp"
+        android:layout_height="250dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/WhiteSmoke"
