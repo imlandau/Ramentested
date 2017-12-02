@@ -1,6 +1,7 @@
 package com.example.maste.ramen;
 
 import android.content.Intent;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -168,8 +169,13 @@ public class MainActivity extends AppCompatActivity {
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
+                Message.postDelayed(new Runnable() {
+
+                    public void run() {
+                        Message.setVisibility(View.INVISIBLE);
             }
-        });
+                }, 5000);
+        }});
 
         //Create an OnClickListener for cartBtn that will move the user to the cart page of the app.
         cartBtn.setOnClickListener(new View.OnClickListener() {
