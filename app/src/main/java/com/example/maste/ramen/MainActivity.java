@@ -1,7 +1,6 @@
 package com.example.maste.ramen;
 
 import android.content.Intent;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         final TextView title = (TextView) findViewById(R.id.title);
         final TextView description = (TextView) findViewById(R.id.description);
         final TextView extra = (TextView) findViewById(R.id.extra);
-        final TextView curQuan = (TextView) findViewById(R.id.curQuan);
         final Button quantityDown = (Button) findViewById(R.id.quandown);
         final Button quantityUp = (Button) findViewById(R.id.quanup);
         final Button submit = (Button) findViewById(R.id.submit);
@@ -97,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
                 extra.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
-                curQuan.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[5]);
@@ -136,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
-                curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[4]);
@@ -175,7 +171,6 @@ public class MainActivity extends AppCompatActivity {
                 quantityUp.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
-                curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[0]);
@@ -214,7 +209,6 @@ public class MainActivity extends AppCompatActivity {
                 oops.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
-                curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[1]);
@@ -253,7 +247,6 @@ public class MainActivity extends AppCompatActivity {
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
-                curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[2]);
@@ -272,7 +265,6 @@ public class MainActivity extends AppCompatActivity {
                     dif = 1;
                 }
                 curQan.setText(String.valueOf(cartHolder[5]));
-                title.setText(String.valueOf(itemHolder[5]));
                 dish1ImgBtn.setVisibility(View.INVISIBLE);
                 dish2ImgBtn.setVisibility(View.INVISIBLE);
                 dish3ImgBtn.setVisibility(View.INVISIBLE);
@@ -285,14 +277,10 @@ public class MainActivity extends AppCompatActivity {
                 text4.setVisibility(View.INVISIBLE);
                 text5.setVisibility(View.INVISIBLE);
                 text6.setVisibility(View.INVISIBLE);
-                curQan.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 extra.setVisibility(View.VISIBLE);
-                quantityDown.setVisibility(View.VISIBLE);
-                quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
-                curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[3]);
@@ -397,7 +385,7 @@ public class MainActivity extends AppCompatActivity {
                 quantityUp.setVisibility(View.INVISIBLE);
                 background.setVisibility(View.INVISIBLE);
                 submit.setVisibility(View.INVISIBLE);
-                curQuan.setVisibility(View.INVISIBLE);
+                curQan.setVisibility(View.INVISIBLE);
                 description.setVisibility(View.INVISIBLE);
                 oops.setVisibility(View.INVISIBLE);
                 title.setVisibility(View.INVISIBLE);
@@ -447,8 +435,8 @@ public class MainActivity extends AppCompatActivity {
                 quantityDown.setVisibility(View.INVISIBLE);
                 quantityUp.setVisibility(View.INVISIBLE);
                 background.setVisibility(View.INVISIBLE);
+                curQan.setVisibility(View.INVISIBLE);
                 byosubmit.setVisibility(View.INVISIBLE);
-                curQuan.setVisibility(View.INVISIBLE);
                 description.setVisibility(View.INVISIBLE);
                 oops.setVisibility(View.INVISIBLE);
                 title.setVisibility(View.INVISIBLE);
@@ -473,9 +461,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 quantityDown.setVisibility(View.INVISIBLE);
                 quantityUp.setVisibility(View.INVISIBLE);
+                curQan.setVisibility(View.INVISIBLE);
                 background.setVisibility(View.INVISIBLE);
                 submit.setVisibility(View.INVISIBLE);
-                curQuan.setVisibility(View.INVISIBLE);
                 description.setVisibility(View.INVISIBLE);
                 title.setVisibility(View.INVISIBLE);
                 oops.setVisibility(View.INVISIBLE);
