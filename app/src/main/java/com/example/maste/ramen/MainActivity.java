@@ -19,12 +19,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Create reference to all of the buttons  and TextViewon the menu
-        ImageButton dish1ImgBtn = (ImageButton) findViewById(R.id.drinkImgBtn);
-        ImageButton dish2ImgBtn = (ImageButton) findViewById(R.id.dish1ImgBtn);
-        ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish2ImgBtn);
-        ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
-        ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
-        ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
+        final ImageButton dish1ImgBtn = (ImageButton) findViewById(R.id.drinkImgBtn);
+        final ImageButton dish2ImgBtn = (ImageButton) findViewById(R.id.dish1ImgBtn);
+        final ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish2ImgBtn);
+        final ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
+        final ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
+        final ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
+        final TextView text1 = (TextView) findViewById(R.id.text1);
+        final TextView text2 = (TextView) findViewById(R.id.text2);
+        final TextView text3 = (TextView) findViewById(R.id.text3);
+        final TextView text4 = (TextView) findViewById(R.id.text4);
+        final TextView text5 = (TextView) findViewById(R.id.text5);
+        final TextView text6 = (TextView) findViewById(R.id.text6);
         final TextView Message = (TextView) findViewById(R.id.cartAddedTo);
         final TextView oops = (TextView) findViewById(R.id.oops);
         final TextView title = (TextView) findViewById(R.id.title);
@@ -70,6 +76,18 @@ public class MainActivity extends AppCompatActivity {
                 }
                 curQan.setText(String.valueOf(cartHolder[6]));
                 title.setText(String.valueOf(itemHolder[6]));
+                dish1ImgBtn.setVisibility(View.INVISIBLE);
+                dish2ImgBtn.setVisibility(View.INVISIBLE);
+                dish3ImgBtn.setVisibility(View.INVISIBLE);
+                dish4ImgBtn.setVisibility(View.INVISIBLE);
+                dish5ImgBtn.setVisibility(View.INVISIBLE);
+                drinkImgBtn.setVisibility(View.INVISIBLE);
+                text1.setVisibility(View.INVISIBLE);
+                text2.setVisibility(View.INVISIBLE);
+                text3.setVisibility(View.INVISIBLE);
+                text4.setVisibility(View.INVISIBLE);
+                text5.setVisibility(View.INVISIBLE);
+                text6.setVisibility(View.INVISIBLE);
                 curQan.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
@@ -96,6 +114,18 @@ public class MainActivity extends AppCompatActivity {
                 }
                 curQan.setText(String.valueOf(cartHolder[1]));
                 title.setText(String.valueOf(itemHolder[1]));
+                dish1ImgBtn.setVisibility(View.INVISIBLE);
+                dish2ImgBtn.setVisibility(View.INVISIBLE);
+                dish3ImgBtn.setVisibility(View.INVISIBLE);
+                dish4ImgBtn.setVisibility(View.INVISIBLE);
+                dish5ImgBtn.setVisibility(View.INVISIBLE);
+                drinkImgBtn.setVisibility(View.INVISIBLE);
+                text1.setVisibility(View.INVISIBLE);
+                text2.setVisibility(View.INVISIBLE);
+                text3.setVisibility(View.INVISIBLE);
+                text4.setVisibility(View.INVISIBLE);
+                text5.setVisibility(View.INVISIBLE);
+                text6.setVisibility(View.INVISIBLE);
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
@@ -122,6 +152,18 @@ public class MainActivity extends AppCompatActivity {
                 }
                 curQan.setText(String.valueOf(cartHolder[2]));
                 title.setText(String.valueOf(itemHolder[2]));
+                dish1ImgBtn.setVisibility(View.INVISIBLE);
+                dish2ImgBtn.setVisibility(View.INVISIBLE);
+                dish3ImgBtn.setVisibility(View.INVISIBLE);
+                dish4ImgBtn.setVisibility(View.INVISIBLE);
+                dish5ImgBtn.setVisibility(View.INVISIBLE);
+                drinkImgBtn.setVisibility(View.INVISIBLE);
+                text1.setVisibility(View.INVISIBLE);
+                text2.setVisibility(View.INVISIBLE);
+                text3.setVisibility(View.INVISIBLE);
+                text4.setVisibility(View.INVISIBLE);
+                text5.setVisibility(View.INVISIBLE);
+                text6.setVisibility(View.INVISIBLE);
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -148,6 +190,18 @@ public class MainActivity extends AppCompatActivity {
                 }
                 curQan.setText(String.valueOf(cartHolder[3]));
                 title.setText(String.valueOf(itemHolder[3]));
+                dish1ImgBtn.setVisibility(View.INVISIBLE);
+                dish2ImgBtn.setVisibility(View.INVISIBLE);
+                dish3ImgBtn.setVisibility(View.INVISIBLE);
+                dish4ImgBtn.setVisibility(View.INVISIBLE);
+                dish5ImgBtn.setVisibility(View.INVISIBLE);
+                drinkImgBtn.setVisibility(View.INVISIBLE);
+                text1.setVisibility(View.INVISIBLE);
+                text2.setVisibility(View.INVISIBLE);
+                text3.setVisibility(View.INVISIBLE);
+                text4.setVisibility(View.INVISIBLE);
+                text5.setVisibility(View.INVISIBLE);
+                text6.setVisibility(View.INVISIBLE);
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -174,6 +228,18 @@ public class MainActivity extends AppCompatActivity {
                 }
                 curQan.setText(String.valueOf(cartHolder[4]));
                 title.setText(String.valueOf(itemHolder[4]));
+                dish1ImgBtn.setVisibility(View.INVISIBLE);
+                dish2ImgBtn.setVisibility(View.INVISIBLE);
+                dish3ImgBtn.setVisibility(View.INVISIBLE);
+                dish4ImgBtn.setVisibility(View.INVISIBLE);
+                dish5ImgBtn.setVisibility(View.INVISIBLE);
+                drinkImgBtn.setVisibility(View.INVISIBLE);
+                text1.setVisibility(View.INVISIBLE);
+                text2.setVisibility(View.INVISIBLE);
+                text3.setVisibility(View.INVISIBLE);
+                text4.setVisibility(View.INVISIBLE);
+                text5.setVisibility(View.INVISIBLE);
+                text6.setVisibility(View.INVISIBLE);
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
@@ -200,6 +266,18 @@ public class MainActivity extends AppCompatActivity {
                 }
                 curQan.setText(String.valueOf(cartHolder[5]));
                 title.setText(String.valueOf(itemHolder[5]));
+                dish1ImgBtn.setVisibility(View.INVISIBLE);
+                dish2ImgBtn.setVisibility(View.INVISIBLE);
+                dish3ImgBtn.setVisibility(View.INVISIBLE);
+                dish4ImgBtn.setVisibility(View.INVISIBLE);
+                dish5ImgBtn.setVisibility(View.INVISIBLE);
+                drinkImgBtn.setVisibility(View.INVISIBLE);
+                text1.setVisibility(View.INVISIBLE);
+                text2.setVisibility(View.INVISIBLE);
+                text3.setVisibility(View.INVISIBLE);
+                text4.setVisibility(View.INVISIBLE);
+                text5.setVisibility(View.INVISIBLE);
+                text6.setVisibility(View.INVISIBLE);
                 curQan.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
@@ -315,6 +393,18 @@ public class MainActivity extends AppCompatActivity {
                 description.setVisibility(View.INVISIBLE);
                 oops.setVisibility(View.INVISIBLE);
                 title.setVisibility(View.INVISIBLE);
+                dish1ImgBtn.setVisibility(View.VISIBLE);
+                dish2ImgBtn.setVisibility(View.VISIBLE);
+                dish3ImgBtn.setVisibility(View.VISIBLE);
+                dish4ImgBtn.setVisibility(View.VISIBLE);
+                dish5ImgBtn.setVisibility(View.VISIBLE);
+                drinkImgBtn.setVisibility(View.VISIBLE);
+                text1.setVisibility(View.VISIBLE);
+                text2.setVisibility(View.VISIBLE);
+                text3.setVisibility(View.VISIBLE);
+                text4.setVisibility(View.VISIBLE);
+                text5.setVisibility(View.VISIBLE);
+                text6.setVisibility(View.VISIBLE);
             }
         }); //End submit OnClickListener
 
@@ -329,6 +419,18 @@ public class MainActivity extends AppCompatActivity {
                 description.setVisibility(View.INVISIBLE);
                 title.setVisibility(View.INVISIBLE);
                 oops.setVisibility(View.INVISIBLE);
+                dish1ImgBtn.setVisibility(View.VISIBLE);
+                dish2ImgBtn.setVisibility(View.VISIBLE);
+                dish3ImgBtn.setVisibility(View.VISIBLE);
+                dish4ImgBtn.setVisibility(View.VISIBLE);
+                dish5ImgBtn.setVisibility(View.VISIBLE);
+                drinkImgBtn.setVisibility(View.VISIBLE);
+                text1.setVisibility(View.VISIBLE);
+                text2.setVisibility(View.VISIBLE);
+                text3.setVisibility(View.VISIBLE);
+                text4.setVisibility(View.VISIBLE);
+                text5.setVisibility(View.VISIBLE);
+                text6.setVisibility(View.VISIBLE);
             }
         });
 
