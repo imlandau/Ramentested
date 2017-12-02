@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         final Button quandown = (Button) findViewById(R.id.quandown);
         final Button quanup = (Button) findViewById(R.id.quanup);
         final Button submit = (Button) findViewById(R.id.submit);
+
         final TextView textView3 = (TextView) findViewById(R.id.background);
 
         final int[] cartHolder = new int[7];
@@ -137,27 +138,32 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                final TextView textView2 = (TextView) findViewById(R.id.textView);
+                textView2.setVisibility(View.VISIBLE);
+                textView3.setVisibility(View.INVISIBLE);
+                quandown.setVisibility(View.INVISIBLE);
+                quanup.setVisibility(View.INVISIBLE);
+                submit.setVisibility(View.INVISIBLE);
+                textView2.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        textView2.setVisibility(View.INVISIBLE);
+                    }
+                }, 2000);
+            }
+
+        });
 
         dish5ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                final TextView textView2 = (TextView) findViewById(R.id.textView);
                 textView3.setVisibility(View.VISIBLE);
-                textView2.setVisibility(View.VISIBLE);
                 quandown.setVisibility(View.VISIBLE);
                 quanup.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
-                textView2.postDelayed(new Runnable() {
-
-                    public void run() {
-                        textView2.setVisibility(View.INVISIBLE);
-                        quandown.setVisibility(View.INVISIBLE);
-                        quanup.setVisibility(View.INVISIBLE);
-                        submit.setVisibility(View.INVISIBLE);
-                        textView3.setVisibility(View.INVISIBLE);
-
-                    }
-                }, 3000);
                 cartHolder[5]++;
                 Cart.drink.setQuantity(cartHolder[5]);
             }
