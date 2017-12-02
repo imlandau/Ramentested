@@ -10,6 +10,7 @@ public class Cart extends AppCompatActivity {
     static Item dish4 = new Item(6.9, 0, "Crunchy Asian Ramen Noodle Salad");
     static Item dish5 = new Item(6.9, 0, "Chicken Veggie Ramen Bowl");
     static Item drink = new Item(1.85, 0, "Drink");
+    static int identifier = 0;
 
     // removes all the items currently in the cart by setting their quantities to 0
     public static void removeAll(){
