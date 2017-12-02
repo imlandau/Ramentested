@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -141,6 +142,19 @@ public class MainActivity extends AppCompatActivity {
                 item1.setVisibility(View.VISIBLE);
                 item2.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[4]);
+
+                ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this,
+                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Meat));
+                myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                item1.setAdapter(myAdapter);
+
+
+                ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(MainActivity.this,
+                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Veggies));
+                myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                item2.setAdapter(myAdapter);
+
+
             } // end onClick
         }); // end dish1ImgBtn onClickListener
 
