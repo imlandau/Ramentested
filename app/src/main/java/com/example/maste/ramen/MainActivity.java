@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView oops = (TextView) findViewById(R.id.oops);
         final TextView title = (TextView) findViewById(R.id.title);
         final TextView description = (TextView) findViewById(R.id.description);
+        final TextView extra = (TextView) findViewById(R.id.extra);
         final TextView curQuan = (TextView) findViewById(R.id.curQuan);
         final Button quantityDown = (Button) findViewById(R.id.quandown);
         final Button quantityUp = (Button) findViewById(R.id.quanup);
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 oops.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
+                extra.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
@@ -127,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
                 text4.setVisibility(View.INVISIBLE);
                 text5.setVisibility(View.INVISIBLE);
                 text6.setVisibility(View.INVISIBLE);
+                extra.setVisibility(View.VISIBLE);
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
@@ -167,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
                 text6.setVisibility(View.INVISIBLE);
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
+                extra.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
@@ -205,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
                 text6.setVisibility(View.INVISIBLE);
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
+                extra.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
@@ -243,6 +248,7 @@ public class MainActivity extends AppCompatActivity {
                 text6.setVisibility(View.INVISIBLE);
                 curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
+                extra.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
@@ -282,6 +288,7 @@ public class MainActivity extends AppCompatActivity {
                 curQan.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
+                extra.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
@@ -394,6 +401,7 @@ public class MainActivity extends AppCompatActivity {
                 description.setVisibility(View.INVISIBLE);
                 oops.setVisibility(View.INVISIBLE);
                 title.setVisibility(View.INVISIBLE);
+                extra.setVisibility(View.INVISIBLE);
                 dish1ImgBtn.setVisibility(View.VISIBLE);
                 dish2ImgBtn.setVisibility(View.VISIBLE);
                 dish3ImgBtn.setVisibility(View.VISIBLE);
@@ -444,6 +452,7 @@ public class MainActivity extends AppCompatActivity {
                 description.setVisibility(View.INVISIBLE);
                 oops.setVisibility(View.INVISIBLE);
                 title.setVisibility(View.INVISIBLE);
+                extra.setVisibility(View.INVISIBLE);
                 dish1ImgBtn.setVisibility(View.VISIBLE);
                 dish2ImgBtn.setVisibility(View.VISIBLE);
                 dish3ImgBtn.setVisibility(View.VISIBLE);
@@ -470,6 +479,7 @@ public class MainActivity extends AppCompatActivity {
                 description.setVisibility(View.INVISIBLE);
                 title.setVisibility(View.INVISIBLE);
                 oops.setVisibility(View.INVISIBLE);
+                extra.setVisibility(View.INVISIBLE);
                 dish1ImgBtn.setVisibility(View.VISIBLE);
                 dish2ImgBtn.setVisibility(View.VISIBLE);
                 dish3ImgBtn.setVisibility(View.VISIBLE);
