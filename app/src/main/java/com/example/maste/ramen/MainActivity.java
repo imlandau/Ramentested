@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
         ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
         ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
-        final TextView Message = (TextView) findViewById(R.id.textView);
+        final TextView Message = (TextView) findViewById(R.id.cartAddedTo);
+        final TextView curQuan = (TextView) findViewById(R.id.curQuan);
         final Button quantityDown = (Button) findViewById(R.id.quandown);
         final Button quantityUp = (Button) findViewById(R.id.quanup);
         final Button submit = (Button) findViewById(R.id.submit);
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
             }
         }); // end createYourOwnImgBtn OnClickListener
 
@@ -73,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
             } // end onClick
         }); // end dish1ImgBtn onClickListener
 
@@ -90,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
             } // end onClick
         });
 
@@ -107,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
             }
         });
 
@@ -124,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
             }
         });
 
@@ -141,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
             }
         });
 
@@ -211,12 +218,25 @@ public class MainActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                switch (identifier) {
+                    case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 2: Cart.dish2.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 3: Cart.dish3.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 5: Cart.dish5.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
+                }
                 quantityDown.setVisibility(View.INVISIBLE);
                 quantityUp.setVisibility(View.INVISIBLE);
                 background.setVisibility(View.INVISIBLE);
                 submit.setVisibility(View.INVISIBLE);
+                curQuan.setVisibility(View.INVISIBLE);
             }
         }); //End submit OnClickListener
     } // end onCreate
 } // end class
-////
