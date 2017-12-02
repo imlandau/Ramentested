@@ -258,7 +258,7 @@
 
     <Button
         android:id="@+id/submit"
-        android:background="@color/White"
+        android:background="@color/FireBrick"
         android:text="@string/submit"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -281,7 +281,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@color/White"
+        android:background="@color/Yellow"
         android:gravity="top"
         android:text="@string/background"
         android:textAlignment="center"
@@ -290,14 +290,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintVertical_bias="0.598" />
 
     <TextView
         android:id="@+id/curQuan"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/White"
+        android:background="@color/Yellow"
         android:text="@string/start"
         android:gravity="top"
         android:textAlignment="center"
