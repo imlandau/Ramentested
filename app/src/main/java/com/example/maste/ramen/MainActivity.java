@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
         ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
         ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
+        final Button quantityDown = (Button) findViewById(R.id.quandown);
+        final Button quantityUp = (Button) findViewById(R.id.quanup);
         TextView textView2 = (TextView) findViewById(R.id.textView);
         final Button quandown = (Button) findViewById(R.id.quandown);
         final Button quanup = (Button) findViewById(R.id.quanup);
