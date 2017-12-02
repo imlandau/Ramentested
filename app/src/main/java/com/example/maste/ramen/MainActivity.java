@@ -8,41 +8,125 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import static com.example.maste.ramen.Cart.identifier;
 
+public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // create reference to all of the buttons on the menu
-        ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.drinkImgBtn);
-        ImageButton dish1ImgBtn = (ImageButton) findViewById(R.id.dish1ImgBtn);
-        ImageButton dish2ImgBtn = (ImageButton) findViewById(R.id.dish2ImgBtn);
-        ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
-        ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
-        ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
-        TextView textView2 = (TextView) findViewById(R.id.textView);
-        final Button quandown = (Button) findViewById(R.id.quandown);
-        final Button quanup = (Button) findViewById(R.id.quanup);
+        //Create reference to all of the buttons  and TextViewon the menu
+        ImageButton dish1ImgBtn = (ImageButton) findViewById(R.id.drinkImgBtn);
+        ImageButton dish2ImgBtn = (ImageButton) findViewById(R.id.dish1ImgBtn);
+        ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish2ImgBtn);
+        ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
+        ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
+        ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
+        final TextView Message = (TextView) findViewById(R.id.textView);
+        final Button quantityDown = (Button) findViewById(R.id.quandown);
+        final Button quantityUp = (Button) findViewById(R.id.quanup);
         final Button submit = (Button) findViewById(R.id.submit);
+        final TextView background = (TextView) findViewById(R.id.background);
+        //Declaration button that takes the user to the cart
+        final Button cartBtn = (Button) findViewById(R.id.cartBtn);
+        //Declaration for button that takes the user to the home screen
+        Button homeBtn = (Button) findViewById(R.id.purchaseBtn);
 
-        final TextView textView3 = (TextView) findViewById(R.id.background);
-
+        //Declaration for the cartHolder which will redundancy within
         final int[] cartHolder = new int[7];
         cartHolder[1] = Cart.dish1.getQuantity();
         cartHolder[2] = Cart.dish2.getQuantity();
         cartHolder[3] = Cart.dish3.getQuantity();
         cartHolder[4] = Cart.dish4.getQuantity();
-        cartHolder[5] = Cart.drink.getQuantity();
-        cartHolder[6] = Cart.dish5.getQuantity();
+        cartHolder[5] = Cart.dish5.getQuantity();
+        cartHolder[6] = Cart.drink.getQuantity();
 
-        // button that takes the user to the cart
-        final Button cartBtn = (Button) findViewById(R.id.cartBtn);
+        //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
+        //a quantity change through the popup menu that will be made visible as well.
+        drinkImgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                identifier = 6;
+                background.setVisibility(View.VISIBLE);
+                Message.setVisibility(View.VISIBLE);
+                quantityDown.setVisibility(View.VISIBLE);
+                quantityUp.setVisibility(View.VISIBLE);
+                submit.setVisibility(View.VISIBLE);
+            }
+        }); // end createYourOwnImgBtn OnClickListener
 
-        // button that takes the user to the home screen
-        Button homeBtn = (Button) findViewById(R.id.purchaseBtn);
+        //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
+        //a quantity change through the popup menu that will be made visible as well.
+        dish1ImgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                identifier = 1;
+                background.setVisibility(View.VISIBLE);
+                Message.setVisibility(View.VISIBLE);
+                quantityDown.setVisibility(View.VISIBLE);
+                quantityUp.setVisibility(View.VISIBLE);
+                submit.setVisibility(View.VISIBLE);
+            } // end onClick
+        }); // end dish1ImgBtn onClickListener
 
+        //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
+        //a quantity change through the popup menu that will be made visible as well.
+        dish2ImgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                identifier = 2;
+                background.setVisibility(View.VISIBLE);
+                Message.setVisibility(View.VISIBLE);
+                quantityDown.setVisibility(View.VISIBLE);
+                quantityUp.setVisibility(View.VISIBLE);
+                submit.setVisibility(View.VISIBLE);
+            } // end onClick
+        });
+
+        //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
+        //a quantity change through the popup menu that will be made visible as well.
+        dish3ImgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                identifier = 3;
+                background.setVisibility(View.VISIBLE);
+                Message.setVisibility(View.VISIBLE);
+                quantityDown.setVisibility(View.VISIBLE);
+                quantityUp.setVisibility(View.VISIBLE);
+                submit.setVisibility(View.VISIBLE);
+            }
+        });
+
+        //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
+        //a quantity change through the popup menu that will be made visible as well.
+        dish4ImgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                identifier = 4;
+                background.setVisibility(View.VISIBLE);
+                Message.setVisibility(View.VISIBLE);
+                quantityDown.setVisibility(View.VISIBLE);
+                quantityUp.setVisibility(View.VISIBLE);
+                submit.setVisibility(View.VISIBLE);
+            }
+        });
+
+        //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
+        //a quantity change through the popup menu that will be made visible as well.
+        dish5ImgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                identifier = 5;
+                background.setVisibility(View.VISIBLE);
+                Message.setVisibility(View.VISIBLE);
+                quantityDown.setVisibility(View.VISIBLE);
+                quantityUp.setVisibility(View.VISIBLE);
+                submit.setVisibility(View.VISIBLE);
+            }
+        });
+
+        //Create an OnClickListener for cartBtn that will move the user to the cart page of the app.
         cartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }); // end cartBtn OnClickListener
 
+        //Create an OnClickListener for homeBtn that will move the user to the home page of the app.
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,96 +142,62 @@ public class MainActivity extends AppCompatActivity {
             }
         }); // end homeBtn OnClickListener
 
-        drinkImgBtn.setOnClickListener(new View.OnClickListener() {
+        //Create an OnClickListener for quantityDown that will
+        //decrement the quantity of the item by 1 every click.
+        quantityDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textView3.setVisibility(View.VISIBLE);
-                quandown.setVisibility(View.VISIBLE);
-                quanup.setVisibility(View.VISIBLE);
-                submit.setVisibility(View.VISIBLE);
-                cartHolder[6]++;
-                Cart.dish5.setQuantity(cartHolder[6]);
+                if(cartHolder[identifier] > 0){
+                    cartHolder[identifier]--;
+                }
+                switch (identifier) {
+                    case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 2: Cart.dish2.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 3: Cart.dish3.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 5: Cart.dish5.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
+                }
             }
-        }); // end createYourOwnImgBtn OnClickListener
+        }); //End quantityDown OnClickListener
 
-        dish1ImgBtn.setOnClickListener(new View.OnClickListener() {
+        //Create an OnClickListener for quantityUp that will
+        //increment the quantity of the item by 1 every click.
+        quantityUp.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
-                textView3.setVisibility(View.VISIBLE);
-                quandown.setVisibility(View.VISIBLE);
-                quanup.setVisibility(View.VISIBLE);
-                submit.setVisibility(View.VISIBLE);
-                cartHolder[1]++;
-                Cart.dish1.setQuantity(cartHolder[1]);
-            } // end onClick
-        }); // end dish1ImgBtn onClickListener
-
-        dish2ImgBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                textView3.setVisibility(View.VISIBLE);
-                quandown.setVisibility(View.VISIBLE);
-                quanup.setVisibility(View.VISIBLE);
-                submit.setVisibility(View.VISIBLE);
-                cartHolder[2]++;
-                Cart.dish2.setQuantity(cartHolder[2]);
-            } // end onClick
-        });
-
-        dish3ImgBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                textView3.setVisibility(View.VISIBLE);
-                quandown.setVisibility(View.VISIBLE);
-                quanup.setVisibility(View.VISIBLE);
-                submit.setVisibility(View.VISIBLE);
-                Cart.dish3.setQuantity(cartHolder[3]);
+            public void onClick(View view) {
+                cartHolder[identifier]++;
+                switch (identifier) {
+                    case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 2: Cart.dish2.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 3: Cart.dish3.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 5: Cart.dish5.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
+                }
             }
+        }); //End quantityUp OnClickListener
 
-        });
-
-        dish4ImgBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                textView3.setVisibility(View.VISIBLE);
-                quandown.setVisibility(View.VISIBLE);
-                quanup.setVisibility(View.VISIBLE);
-                submit.setVisibility(View.VISIBLE);
-                cartHolder[4]++;
-                Cart.dish4.setQuantity(cartHolder[4]);
-            }
-
-        });
+        //Create an OnClickListener for submit that will
+        //make the popup menu for the quantity invisible.
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
-                final TextView textView2 = (TextView) findViewById(R.id.textView);
-                textView2.setVisibility(View.VISIBLE);
-                textView3.setVisibility(View.INVISIBLE);
-                quandown.setVisibility(View.INVISIBLE);
-                quanup.setVisibility(View.INVISIBLE);
+            public void onClick(View view) {
+                quantityDown.setVisibility(View.INVISIBLE);
+                quantityUp.setVisibility(View.INVISIBLE);
+                background.setVisibility(View.INVISIBLE);
                 submit.setVisibility(View.INVISIBLE);
-                textView2.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        textView2.setVisibility(View.INVISIBLE);
-                    }
-                }, 2000);
             }
-
-        });
-
-        dish5ImgBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                textView3.setVisibility(View.VISIBLE);
-                quandown.setVisibility(View.VISIBLE);
-                quanup.setVisibility(View.VISIBLE);
-                submit.setVisibility(View.VISIBLE);
-                cartHolder[5]++;
-                Cart.drink.setQuantity(cartHolder[5]);
-            }
-
-        });
+        }); //End submit OnClickListener
     } // end onCreate
 } // end class
