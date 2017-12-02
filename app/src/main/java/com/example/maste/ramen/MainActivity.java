@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         final Button quantityDown = (Button) findViewById(R.id.quandown);
         final Button quantityUp = (Button) findViewById(R.id.quanup);
         final Button submit = (Button) findViewById(R.id.submit);
+        final Button byosubmit =(Button) findViewById(R.id.byosubmit);
         final TextView background = (TextView) findViewById(R.id.background);
         final TextView curQan = (TextView) findViewById(R.id.curQuan);
         //Declaration button that takes the user to the cart
@@ -407,6 +408,56 @@ public class MainActivity extends AppCompatActivity {
                 text6.setVisibility(View.VISIBLE);
             }
         }); //End submit OnClickListener
+
+        //for the build your own
+        byosubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (identifier) {
+                    case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 2: Cart.dish2.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 3: Cart.dish3.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 5: Cart.dish5.setQuantity(cartHolder[identifier]);
+                        break;
+                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
+                }
+
+                if(dif > 0){
+                    Message.setVisibility(View.VISIBLE);
+                    Message.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Message.setVisibility(View.INVISIBLE);
+                        }
+                    },1500);
+                }
+                quantityDown.setVisibility(View.INVISIBLE);
+                quantityUp.setVisibility(View.INVISIBLE);
+                background.setVisibility(View.INVISIBLE);
+                byosubmit.setVisibility(View.INVISIBLE);
+                curQuan.setVisibility(View.INVISIBLE);
+                description.setVisibility(View.INVISIBLE);
+                oops.setVisibility(View.INVISIBLE);
+                title.setVisibility(View.INVISIBLE);
+                dish1ImgBtn.setVisibility(View.VISIBLE);
+                dish2ImgBtn.setVisibility(View.VISIBLE);
+                dish3ImgBtn.setVisibility(View.VISIBLE);
+                dish4ImgBtn.setVisibility(View.VISIBLE);
+                dish5ImgBtn.setVisibility(View.VISIBLE);
+                drinkImgBtn.setVisibility(View.VISIBLE);
+                text1.setVisibility(View.VISIBLE);
+                text2.setVisibility(View.VISIBLE);
+                text3.setVisibility(View.VISIBLE);
+                text4.setVisibility(View.VISIBLE);
+                text5.setVisibility(View.VISIBLE);
+                text6.setVisibility(View.VISIBLE);
+            }
+        }); //End build your own submit OnClickListener
 
         oops.setOnClickListener(new View.OnClickListener() {
             @Override

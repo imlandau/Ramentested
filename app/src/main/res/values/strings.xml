@@ -7,7 +7,7 @@
     <string name="dish2">MONGOLIAN BEEF RAMEN NOODLES</string>
     <string name="dish3">RAMEN VEGETABLE STIR FRY</string>
     <string name="dish4">CRUNCHY ASIAN RAMEN NOODLE SALAD</string>
-    <string name="dish5">CHICKEN VEGGIE RAMEN BOWLS</string>
+    <string name="dish5">BUILD YOUR OWN</string>
     <string name="create">Add</string>
     <string name="quantity">Quantity</string>
     <string name="login">Login</string>
@@ -186,7 +186,7 @@
         <item>Mongolian Beef with green peppers, grilled onions and ramen noodles</item>
         <item>Loaded with spinach, green peppers, and mushrooms. No meat.</item>
         <item>Fried noodles with yellow and green peppers, and chicken.</item>
-        <item>A delicious combination of grilled chicken, broccoli, and mushrooms.</item>
+        <item>Build your own ramen</item>
         <item>20oz cup. Fill it up with any pepsi product.</item>
         <item>Test</item>
     </string-array>
