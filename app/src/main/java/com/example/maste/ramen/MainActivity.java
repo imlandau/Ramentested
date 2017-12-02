@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         final Button quantityUp = (Button) findViewById(R.id.quanup);
         final Button submit = (Button) findViewById(R.id.submit);
         final TextView background = (TextView) findViewById(R.id.background);
-        final TextView curQan = (TextView) findViewById(R.id.curQuan);
         //Declaration button that takes the user to the cart
         final Button cartBtn = (Button) findViewById(R.id.cartBtn);
         //Declaration for button that takes the user to the home screen
@@ -68,15 +67,14 @@ public class MainActivity extends AppCompatActivity {
                     cartHolder[6] = 1;
                     dif = 1;
                 }
-                curQan.setText(String.valueOf(cartHolder[6]));
+                curQuan.setText(String.valueOf(cartHolder[6]));
                 title.setText(String.valueOf(itemHolder[6]));
-                curQan.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
-                curQuan.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[5]);
@@ -94,15 +92,14 @@ public class MainActivity extends AppCompatActivity {
                     cartHolder[1] = 1;
                     dif = 1;
                 }
-                curQan.setText(String.valueOf(cartHolder[1]));
+                curQuan.setText(String.valueOf(cartHolder[1]));
                 title.setText(String.valueOf(itemHolder[1]));
-                curQan.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
-                curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[4]);
@@ -120,15 +117,14 @@ public class MainActivity extends AppCompatActivity {
                     cartHolder[2] = 1;
                     dif = 1;
                 }
-                curQan.setText(String.valueOf(cartHolder[2]));
+                curQuan.setText(String.valueOf(cartHolder[2]));
                 title.setText(String.valueOf(itemHolder[2]));
-                curQan.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
-                curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[0]);
@@ -146,15 +142,14 @@ public class MainActivity extends AppCompatActivity {
                     cartHolder[3] = 1;
                     dif = 1;
                 }
-                curQan.setText(String.valueOf(cartHolder[3]));
+                curQuan.setText(String.valueOf(cartHolder[3]));
                 title.setText(String.valueOf(itemHolder[3]));
-                curQan.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
-                curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[1]);
@@ -172,15 +167,14 @@ public class MainActivity extends AppCompatActivity {
                     cartHolder[4] = 1;
                     dif = 1;
                 }
-                curQan.setText(String.valueOf(cartHolder[4]));
+                curQuan.setText(String.valueOf(cartHolder[4]));
                 title.setText(String.valueOf(itemHolder[4]));
-                curQan.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
-                curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[2]);
@@ -198,15 +192,14 @@ public class MainActivity extends AppCompatActivity {
                     cartHolder[5] = 1;
                     dif = 1;
                 }
-                curQan.setText(String.valueOf(cartHolder[5]));
+                curQuan.setText(String.valueOf(cartHolder[5]));
                 title.setText(String.valueOf(itemHolder[5]));
-                curQan.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
-                curQuan.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[3]);
@@ -238,7 +231,7 @@ public class MainActivity extends AppCompatActivity {
                     cartHolder[identifier]--;
                     dif--;
                 }
-                curQan.setText(String.valueOf(cartHolder[identifier]));
+                curQuan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
                     case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
                         break;
@@ -262,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 cartHolder[identifier]++;
                 dif++;
-                curQan.setText(String.valueOf(cartHolder[identifier]));
+                curQuan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
                     case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
                         break;

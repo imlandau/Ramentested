@@ -11,46 +11,46 @@ import java.text.DecimalFormat;
 
 public class CartActivity extends AppCompatActivity{
 
-    // total of all items before tax
+    //Total of all items before tax
     double subtotal = 0;
-    // the amount of tax being charged on all items combined
+    //The amount of tax being charged on all items combined
     double tax = 0;
-    // subtotal plus tax
+    //Subtotal plus tax
     double total = 0;
 
-    // decimal format to display money
+    //Decimal format to display money
     DecimalFormat money = new DecimalFormat("0.00");
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
-        // button that takes user to the menu
+        //Button that takes user to the menu
         Button menuBtn = (Button) findViewById(R.id.menuBtn);
-        // button that completes the purchase of the order
+        //Button that completes the purchase of the order
         Button homeBtn = (Button) findViewById(R.id.purchaseBtn);
-        // button to remove everything from the cart
+        //Button to remove everything from the cart
         Button removeBtn = (Button) findViewById(R.id.removeAll);
-        // displays the items in the cart
+        //Displays the items in the cart
         final TextView textItem = (TextView) findViewById(R.id.textItem);
-        // shows the prices of each item in the cart
+        //Shows the prices of each item in the cart
         final TextView textPrice = (TextView) findViewById(R.id.textPrice);
-        // shows the quantity of each item in the cart
+        //Shows the quantity of each item in the cart
         final TextView textQuantity = (TextView) findViewById(R.id.textQuantity);
-        // shows the total of the order before tax
+        //Shows the total of the order before tax
         final TextView subtotalTextView = (TextView) findViewById(R.id.subtotalTextView);
-        // shows the tax of the order
+        //Shows the tax of the order
         final TextView taxTextView = (TextView) findViewById(R.id.taxTextView);
-        // shows the total cost of the order
+        //Shows the total cost of the order
         final TextView totalTextView = (TextView) findViewById(R.id.totalTextView);
-        // tells the user the order has been placed
+        //Tells the user the order has been placed
         final TextView bghtTextView = (TextView) findViewById(R.id.bght);
 
-        // header for the textItem box
+        // Header for the textItem box
         String strName = "Item\n";
-        // header for the textPrice box
+        //Header for the textPrice box
         String strPrice = "Price\n";
-        // header for the textQuantity box
+        //Header for the textQuantity box
         String strQuantity = "Quantity\n";
 
 
@@ -98,12 +98,12 @@ public class CartActivity extends AppCompatActivity{
             subtotal = subtotal + (Cart.drink.getQuantity() * Cart.drink.getPrice());
         }
 
-        // calculate the tax for the order
+        //Calculate the tax for the order
         tax = subtotal * .06;
-        // calculate the actual total for the order
+        //Calculate the actual total for the order
         total = subtotal + tax;
 
-        // set all of the text boxes to display their corresponding strings
+        //Set all of the text boxes to display their corresponding strings
         textItem.setText(strName);
         textPrice.setText(strPrice);
         textQuantity.setText(strQuantity);
@@ -111,7 +111,7 @@ public class CartActivity extends AppCompatActivity{
         taxTextView.setText("Tax:\n$" + money.format(tax));
         totalTextView.setText("Total:\n$" + money.format(total));
 
-        // returns the user to the menu page
+        //Returns the user to the menu page
         menuBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -119,7 +119,7 @@ public class CartActivity extends AppCompatActivity{
             }
         });
 
-        // returns the user to the home page
+        //Returns the user to the home page
         homeBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -145,7 +145,7 @@ public class CartActivity extends AppCompatActivity{
             }
         });
 
-        // this button removes all items in the cart
+        //This button removes all items in the cart
         removeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

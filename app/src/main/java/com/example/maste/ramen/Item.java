@@ -35,10 +35,6 @@ public class Item {
         return price;
     } // end getPrice
 
-    public void setPrice(double price) {
-        this.price = price;
-    } // end setPrice
-
     public int getQuantity() {
         return quantity;
     } // end getQuantity
@@ -50,10 +46,6 @@ public class Item {
     public String getName() {
         return name;
     } // end getName
-
-    public void setName(String name) {
-        this.name = name;
-    } // end setName
 
     public String toString() {
         return this.name + "\nQuantity: " + this.quantity + "Price per unit: " +
