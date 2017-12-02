@@ -4,11 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 
 public class Cart extends AppCompatActivity {
     //Create all the items in the cart
-    static Item dish1 = new Item(6.9, 0, "Sweet and Spicy Pork");
-    static Item dish2 = new Item(6.9, 0, "Mongolian Beef");
-    static Item dish3 = new Item(6.9, 0, "Ramen Vegetable Stir Fry");
-    static Item dish4 = new Item(6.9, 0, "Crunchy Asian Ramen Noodle Salad");
-    static Item dish5 = new Item(6.9, 0, "Chicken Veggie Ramen Bowl");
+    static Item dish1 = new Item(5.85, 0, "Chicken Veggie Ramen Bowls");
+    static Item dish2 = new Item(7.20, 0, "Sweet and Spicy Pork Ramen");
+    static Item dish3 = new Item(6.65, 0, "Mongolian Beef Ramen Noodles");
+    static Item dish4 = new Item(8.35, 0, "Ramen Vegetable Stir Fry");
+    static Item dish5 = new Item(6.95, 0, "Crunchy Asian Ramen Noodle Salad");
     static Item drink = new Item(1.85, 0, "Drink");
     static int identifier = 0;
 

@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         final Button quantityUp = (Button) findViewById(R.id.quanup);
         final Button submit = (Button) findViewById(R.id.submit);
         final TextView background = (TextView) findViewById(R.id.background);
+        final TextView curQan = (TextView) findViewById(R.id.curQuan);
         //Declaration button that takes the user to the cart
         final Button cartBtn = (Button) findViewById(R.id.cartBtn);
         //Declaration for button that takes the user to the home screen
@@ -52,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
                 if(cartHolder[6] == 0){
                     cartHolder[6] = 1;
                 }
+                curQan.setText(String.valueOf(cartHolder[6]));
+                curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -70,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
                 if(cartHolder[1] == 0){
                     cartHolder[1] = 1;
                 }
+                curQan.setText(String.valueOf(cartHolder[1]));
+                curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -88,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
                 if(cartHolder[2] == 0){
                     cartHolder[2] = 1;
                 }
+                curQan.setText(String.valueOf(cartHolder[2]));
+                curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -106,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
                 if(cartHolder[3] == 0){
                     cartHolder[3] = 1;
                 }
+                curQan.setText(String.valueOf(cartHolder[3]));
+                curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -124,6 +133,8 @@ public class MainActivity extends AppCompatActivity {
                 if(cartHolder[4] == 0){
                     cartHolder[4] = 1;
                 }
+                curQan.setText(String.valueOf(cartHolder[4]));
+                curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -142,6 +153,8 @@ public class MainActivity extends AppCompatActivity {
                 if(cartHolder[5] == 0){
                     cartHolder[5] = 1;
                 }
+                curQan.setText(String.valueOf(cartHolder[5]));
+                curQan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 Message.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -175,6 +188,7 @@ public class MainActivity extends AppCompatActivity {
                 if(cartHolder[identifier] > 0){
                     cartHolder[identifier]--;
                 }
+                curQan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
                     case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
                         break;
@@ -197,6 +211,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 cartHolder[identifier]++;
+                curQan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
                     case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
                         break;

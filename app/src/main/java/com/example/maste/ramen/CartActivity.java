@@ -62,14 +62,15 @@ public class CartActivity extends AppCompatActivity{
          **/
         if(Cart.dish1.getQuantity() > 0) {
             strName = strName + Cart.dish1.getName() + "\n";
-            strPrice = strPrice  + String.valueOf(money.format(Cart.dish1.getPrice())) + "\n";
-            strQuantity = strQuantity + String.valueOf(Cart.dish1.getQuantity()) + "\n";
+            strPrice = strPrice  + "\n" + String.valueOf(money.format(Cart.dish1.getPrice())) +
+                    "\n";
+            strQuantity = strQuantity + "\n" + String.valueOf(Cart.dish1.getQuantity()) + "\n";
             subtotal = subtotal + (Cart.dish1.getQuantity() * Cart.dish1.getPrice());
         }
         if(Cart.dish2.getQuantity() > 0) {
             strName = strName + Cart.dish2.getName() + "\n";
-            strPrice = strPrice +  String.valueOf(money.format(Cart.dish2.getPrice())) + "\n";
-            strQuantity = strQuantity  + String.valueOf(Cart.dish2.getQuantity()) + "\n";
+            strPrice = strPrice + "\n" + String.valueOf(money.format(Cart.dish2.getPrice())) + "\n";
+            strQuantity = strQuantity + "\n" + String.valueOf(Cart.dish2.getQuantity()) + "\n";
             subtotal = subtotal + (Cart.dish2.getQuantity() * Cart.dish2.getPrice());
         }
         if(Cart.dish3.getQuantity() > 0) {
