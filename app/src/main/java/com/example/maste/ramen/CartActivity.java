@@ -127,7 +127,18 @@ public class CartActivity extends AppCompatActivity{
 
                     public void run() {
                         bghtTextView.setVisibility(View.INVISIBLE);
+
                 startActivity(new Intent(CartActivity.this, Home.class));
+                        Cart.removeAll();
+                        subtotal = 0;
+                        tax = 0;
+                        total = 0;
+                        textItem.setText("Item");
+                        textPrice.setText("Price");
+                        textQuantity.setText("Quantity");
+                        subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
+                        taxTextView.setText("Tax:\n$" + money.format(tax));
+                        totalTextView.setText("Total:\n$" + money.format(total));
                     }
                 }, 5000);
             }
