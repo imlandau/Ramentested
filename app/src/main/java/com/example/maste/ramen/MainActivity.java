@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
         ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
         final TextView Message = (TextView) findViewById(R.id.cartAddedTo);
+        final TextView description = (TextView) findViewById(R.id.description);
         final TextView curQuan = (TextView) findViewById(R.id.curQuan);
         final Button quantityDown = (Button) findViewById(R.id.quandown);
         final Button quantityUp = (Button) findViewById(R.id.quanup);
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
+                description.setVisibility(View.VISIBLE);
             }
         }); // end createYourOwnImgBtn OnClickListener
 
@@ -85,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
+                description.setVisibility(View.VISIBLE);
             } // end onClick
         }); // end dish1ImgBtn onClickListener
 
@@ -106,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
+                description.setVisibility(View.VISIBLE);
             } // end onClick
         });
 
@@ -127,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
+                description.setVisibility(View.VISIBLE);
             }
         });
 
@@ -148,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
+                description.setVisibility(View.VISIBLE);
             }
         });
 
@@ -169,12 +175,8 @@ public class MainActivity extends AppCompatActivity {
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
-                Message.postDelayed(new Runnable() {
+                description.setVisibility(View.VISIBLE);
 
-                    public void run() {
-                        Message.setVisibility(View.INVISIBLE);
-            }
-                }, 5000);
         }});
 
         //Create an OnClickListener for cartBtn that will move the user to the cart page of the app.
@@ -276,6 +278,7 @@ public class MainActivity extends AppCompatActivity {
                 background.setVisibility(View.INVISIBLE);
                 submit.setVisibility(View.INVISIBLE);
                 curQuan.setVisibility(View.INVISIBLE);
+                description.setVisibility(View.INVISIBLE);
             }
         }); //End submit OnClickListener
     } // end onCreate
