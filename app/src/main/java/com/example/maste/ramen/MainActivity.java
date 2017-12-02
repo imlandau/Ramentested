@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         final ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
         final ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
         final ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
+        final Spinner item1 = (Spinner) findViewById(R.id.item1);
+        final Spinner item2 = (Spinner) findViewById(R.id.item2);
         final TextView text1 = (TextView) findViewById(R.id.text1);
         final TextView text2 = (TextView) findViewById(R.id.text2);
         final TextView text3 = (TextView) findViewById(R.id.text3);
@@ -97,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
+                item1.setVisibility(View.VISIBLE);
+                item2.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[5]);
             }
         }); // end createYourOwnImgBtn OnClickListener
@@ -135,6 +139,8 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
+                item1.setVisibility(View.VISIBLE);
+                item2.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[4]);
             } // end onClick
         }); // end dish1ImgBtn onClickListener
@@ -173,6 +179,8 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
+                item1.setVisibility(View.VISIBLE);
+                item2.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[0]);
             } // end onClick
         });
@@ -211,6 +219,8 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
+                item1.setVisibility(View.VISIBLE);
+                item2.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[1]);
             }
         });
@@ -249,6 +259,8 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
+                item1.setVisibility(View.VISIBLE);
+                item2.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[2]);
             }
         });
@@ -283,6 +295,8 @@ public class MainActivity extends AppCompatActivity {
                 submit.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
+                item1.setVisibility(View.VISIBLE);
+                item2.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[3]);
 
         }});
@@ -390,6 +404,8 @@ public class MainActivity extends AppCompatActivity {
                 oops.setVisibility(View.INVISIBLE);
                 title.setVisibility(View.INVISIBLE);
                 extra.setVisibility(View.INVISIBLE);
+                item1.setVisibility(View.INVISIBLE);
+                item2.setVisibility(View.INVISIBLE);
                 dish1ImgBtn.setVisibility(View.VISIBLE);
                 dish2ImgBtn.setVisibility(View.VISIBLE);
                 dish3ImgBtn.setVisibility(View.VISIBLE);
@@ -441,6 +457,8 @@ public class MainActivity extends AppCompatActivity {
                 oops.setVisibility(View.INVISIBLE);
                 title.setVisibility(View.INVISIBLE);
                 extra.setVisibility(View.INVISIBLE);
+                item1.setVisibility(View.INVISIBLE);
+                item2.setVisibility(View.INVISIBLE);
                 dish1ImgBtn.setVisibility(View.VISIBLE);
                 dish2ImgBtn.setVisibility(View.VISIBLE);
                 dish3ImgBtn.setVisibility(View.VISIBLE);
@@ -468,6 +486,8 @@ public class MainActivity extends AppCompatActivity {
                 title.setVisibility(View.INVISIBLE);
                 oops.setVisibility(View.INVISIBLE);
                 extra.setVisibility(View.INVISIBLE);
+                item1.setVisibility(View.INVISIBLE);
+                item2.setVisibility(View.INVISIBLE);
                 dish1ImgBtn.setVisibility(View.VISIBLE);
                 dish2ImgBtn.setVisibility(View.VISIBLE);
                 dish3ImgBtn.setVisibility(View.VISIBLE);
