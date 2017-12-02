@@ -228,38 +228,38 @@
 
     <Button
         android:id="@+id/quanup"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginRight="104dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/right"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.553" />
+        app:layout_constraintVertical_bias="0.564" />
 
     <Button
         android:id="@+id/quandown"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:visibility="invisible"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/left"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/quanup"
-        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.553" />
+        app:layout_constraintVertical_bias="0.564" />
 
     <Button
         android:id="@+id/submit"
+        android:background="@color/White"
+        android:text="@string/submit"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
@@ -279,6 +279,9 @@
         android:layout_height="100dp"
         android:layout_marginBottom="8dp"
         android:background="@color/White"
+        android:text="@string/background"
+        android:gravity="top"
+        android:textAlignment="center"
         android:visibility="invisible"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"

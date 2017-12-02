@@ -60,14 +60,10 @@ public class MainActivity extends AppCompatActivity {
         drinkImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final TextView textView2 = (TextView) findViewById(R.id.textView);
-                               textView2.setVisibility(View.VISIBLE);
-                               textView2.postDelayed(new Runnable() {
-
-                     public void run() {
-                                               textView2.setVisibility(View.INVISIBLE);
-                                           }
-                 }, 1000);
+                textView3.setVisibility(View.VISIBLE);
+                quandown.setVisibility(View.VISIBLE);
+                quanup.setVisibility(View.VISIBLE);
+                submit.setVisibility(View.VISIBLE);
                 cartHolder[6]++;
                 Cart.dish5.setQuantity(cartHolder[6]);
             }
@@ -76,14 +72,10 @@ public class MainActivity extends AppCompatActivity {
         dish1ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                final TextView textView2 = (TextView) findViewById(R.id.textView);
-                textView2.setVisibility(View.VISIBLE);
-                textView2.postDelayed(new Runnable() {
-
-                    public void run() {
-                        textView2.setVisibility(View.INVISIBLE);
-                    }
-                }, 1000);
+                textView3.setVisibility(View.VISIBLE);
+                quandown.setVisibility(View.VISIBLE);
+                quanup.setVisibility(View.VISIBLE);
+                submit.setVisibility(View.VISIBLE);
                 cartHolder[1]++;
                 Cart.dish1.setQuantity(cartHolder[1]);
             } // end onClick
@@ -92,14 +84,10 @@ public class MainActivity extends AppCompatActivity {
         dish2ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                final TextView textView2 = (TextView) findViewById(R.id.textView);
-                textView2.setVisibility(View.VISIBLE);
-                textView2.postDelayed(new Runnable() {
-
-                    public void run() {
-                        textView2.setVisibility(View.INVISIBLE);
-                    }
-                }, 1000);
+                textView3.setVisibility(View.VISIBLE);
+                quandown.setVisibility(View.VISIBLE);
+                quanup.setVisibility(View.VISIBLE);
+                submit.setVisibility(View.VISIBLE);
                 cartHolder[2]++;
                 Cart.dish2.setQuantity(cartHolder[2]);
             } // end onClick
@@ -108,15 +96,10 @@ public class MainActivity extends AppCompatActivity {
         dish3ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                final TextView textView2 = (TextView) findViewById(R.id.textView);
-                textView2.setVisibility(View.VISIBLE);
-                textView2.postDelayed(new Runnable() {
-
-                    public void run() {
-                        textView2.setVisibility(View.INVISIBLE);
-                    }
-                }, 1000);
-                cartHolder[3]++; //casd
+                textView3.setVisibility(View.VISIBLE);
+                quandown.setVisibility(View.VISIBLE);
+                quanup.setVisibility(View.VISIBLE);
+                submit.setVisibility(View.VISIBLE);
                 Cart.dish3.setQuantity(cartHolder[3]);
             }
 
@@ -125,14 +108,10 @@ public class MainActivity extends AppCompatActivity {
         dish4ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                final TextView textView2 = (TextView) findViewById(R.id.textView);
-                textView2.setVisibility(View.VISIBLE);
-                textView2.postDelayed(new Runnable() {
-
-                    public void run() {
-                        textView2.setVisibility(View.INVISIBLE);
-                    }
-                }, 1000);
+                textView3.setVisibility(View.VISIBLE);
+                quandown.setVisibility(View.VISIBLE);
+                quanup.setVisibility(View.VISIBLE);
+                submit.setVisibility(View.VISIBLE);
                 cartHolder[4]++;
                 Cart.dish4.setQuantity(cartHolder[4]);
             }
