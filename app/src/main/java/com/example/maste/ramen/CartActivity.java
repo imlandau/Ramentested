@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -122,11 +123,8 @@ public class CartActivity extends AppCompatActivity{
         homeBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                bghtTextView.setVisibility(View.VISIBLE);
-                bghtTextView.postDelayed(new Runnable() {
+                Toast.makeText(getApplicationContext(), "Your order has been placed, please wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
 
-                    public void run() {
-                        bghtTextView.setVisibility(View.INVISIBLE);
 
                 startActivity(new Intent(CartActivity.this, Home.class));
                         Cart.removeAll();
@@ -140,8 +138,6 @@ public class CartActivity extends AppCompatActivity{
                         taxTextView.setText("Tax:\n$" + money.format(tax));
                         totalTextView.setText("Total:\n$" + money.format(total));
                     }
-                }, 5000);
-            }
         });
 
         //This button removes all items in the cart

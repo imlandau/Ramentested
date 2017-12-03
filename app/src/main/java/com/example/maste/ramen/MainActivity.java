@@ -455,6 +455,7 @@ public class MainActivity extends AppCompatActivity {
                 extra.setVisibility(View.INVISIBLE);
                 item1.setVisibility(View.INVISIBLE);
                 item2.setVisibility(View.INVISIBLE);
+                Toast.makeText(getApplicationContext(), "Your item has been added to the cart", Toast.LENGTH_SHORT).show();
                 dish1ImgBtn.setVisibility(View.VISIBLE);
                 dish2ImgBtn.setVisibility(View.VISIBLE);
                 dish3ImgBtn.setVisibility(View.VISIBLE);
