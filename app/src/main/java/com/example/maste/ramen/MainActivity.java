@@ -514,7 +514,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else if(selectedDish.equals("-Select Meat -Select Veggie")){
                         Toast.makeText(getApplicationContext(), "Nothing was added", Toast.LENGTH_SHORT).show();
-
+                        return;
                     }
 
 
