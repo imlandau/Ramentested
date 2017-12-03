@@ -175,6 +175,26 @@
             android:gravity="center"
             android:text="@string/Create_your_own" />
 
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:layout_alignLeft="@+id/drinkImgBtn"
+            android:layout_alignStart="@+id/drinkImgBtn"
+            android:layout_alignTop="@+id/drinkImgBtn"
+            android:background="@color/WhiteSmoke"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/button"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
 
     </RelativeLayout>
 
@@ -336,26 +356,6 @@
         android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="300dp"
-        android:layout_height="75dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/WhiteSmoke"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textColor="@color/button"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

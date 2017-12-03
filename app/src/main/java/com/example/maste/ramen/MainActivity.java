@@ -61,18 +61,18 @@ public class MainActivity extends AppCompatActivity {
         cartHolder[6] = Cart.drink.getQuantity();
 
         final String[] itemHolder = new String[7];
-        itemHolder[1] = Cart.dish1.getName();
-        itemHolder[2] = Cart.dish2.getName();
-        itemHolder[3] = Cart.dish3.getName();
-        itemHolder[4] = Cart.dish4.getName();
         itemHolder[1] = "Create Your Own";
+        itemHolder[2] = Cart.dish1.getName();
+        itemHolder[3] = Cart.dish2.getName();
+        itemHolder[4] = Cart.dish3.getName();
+        itemHolder[5] = Cart.dish4.getName();
         itemHolder[6] = Cart.drink.getName();
 
 
         createYourOwnImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                identifier = 0;
+                identifier = 1;
                 dif = 1;
                 createYourOwnImgBtn.setVisibility(View.INVISIBLE);
                 curQuan.setText(String.valueOf(dif));
@@ -137,6 +137,8 @@ public class MainActivity extends AppCompatActivity {
                 text4.setVisibility(View.INVISIBLE);
                 text5.setVisibility(View.INVISIBLE);
                 text6.setVisibility(View.INVISIBLE);
+                item1.setVisibility(View.INVISIBLE);
+                item2.setVisibility(View.INVISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
@@ -153,59 +155,6 @@ public class MainActivity extends AppCompatActivity {
         //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
         //a quantity change through the popup menu that will be made visible as well.
         dish1ImgBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                identifier = 1;
-                dif = 0;
-                if(cartHolder[1] == 0){
-                    cartHolder[1] = 1;
-                    dif = 1;
-                }
-                curQuan.setText(String.valueOf(cartHolder[1]));
-                title.setText(String.valueOf(itemHolder[1]));
-                dish1ImgBtn.setVisibility(View.INVISIBLE);
-                dish2ImgBtn.setVisibility(View.INVISIBLE);
-                dish3ImgBtn.setVisibility(View.INVISIBLE);
-                dish4ImgBtn.setVisibility(View.INVISIBLE);
-                createYourOwnImgBtn.setVisibility(View.INVISIBLE);
-                drinkImgBtn.setVisibility(View.INVISIBLE);
-                text1.setVisibility(View.INVISIBLE);
-                text2.setVisibility(View.INVISIBLE);
-                text3.setVisibility(View.INVISIBLE);
-                text4.setVisibility(View.INVISIBLE);
-                text5.setVisibility(View.INVISIBLE);
-                text6.setVisibility(View.INVISIBLE);
-                extra.setVisibility(View.VISIBLE);
-                curQuan.setVisibility(View.VISIBLE);
-                background.setVisibility(View.VISIBLE);
-                oops.setVisibility(View.VISIBLE);
-                quantityDown.setVisibility(View.VISIBLE);
-                quantityUp.setVisibility(View.VISIBLE);
-                submit.setVisibility(View.VISIBLE);
-                description.setVisibility(View.VISIBLE);
-                title.setVisibility(View.VISIBLE);
-                item1.setVisibility(View.VISIBLE);
-                item2.setVisibility(View.VISIBLE);
-                description.setText(getResources().getStringArray(R.array.Descriptions)[4]);
-
-                ArrayAdapter<String> myAdapter = new ArrayAdapter<>(MainActivity.this,
-                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Meat));
-                myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                item1.setAdapter(myAdapter);
-
-
-                ArrayAdapter<String> myAdapter2 = new ArrayAdapter<>(MainActivity.this,
-                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Veggie));
-                myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                item2.setAdapter(myAdapter2);
-
-
-            } // end onClick
-        }); // end dish1ImgBtn onClickListener
-
-        //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
-        //a quantity change through the popup menu that will be made visible as well.
-        dish2ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 identifier = 2;
@@ -228,22 +177,37 @@ public class MainActivity extends AppCompatActivity {
                 text4.setVisibility(View.INVISIBLE);
                 text5.setVisibility(View.INVISIBLE);
                 text6.setVisibility(View.INVISIBLE);
+                extra.setVisibility(View.VISIBLE);
                 curQuan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
-                extra.setVisibility(View.VISIBLE);
+                oops.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
-                oops.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
+                item1.setVisibility(View.INVISIBLE);
+                item2.setVisibility(View.INVISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[0]);
+
+                ArrayAdapter<String> myAdapter = new ArrayAdapter<>(MainActivity.this,
+                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Meat));
+                myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                item1.setAdapter(myAdapter);
+
+
+                ArrayAdapter<String> myAdapter2 = new ArrayAdapter<>(MainActivity.this,
+                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Veggie));
+                myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                item2.setAdapter(myAdapter2);
+
+
             } // end onClick
-        });
+        }); // end dish1ImgBtn onClickListener
 
         //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
         //a quantity change through the popup menu that will be made visible as well.
-        dish3ImgBtn.setOnClickListener(new View.OnClickListener() {
+        dish2ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 identifier = 3;
@@ -270,18 +234,18 @@ public class MainActivity extends AppCompatActivity {
                 background.setVisibility(View.VISIBLE);
                 extra.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
-                oops.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
+                oops.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
                 description.setText(getResources().getStringArray(R.array.Descriptions)[1]);
-            }
+            } // end onClick
         });
 
         //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
         //a quantity change through the popup menu that will be made visible as well.
-        dish4ImgBtn.setOnClickListener(new View.OnClickListener() {
+        dish3ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 identifier = 4;
@@ -307,13 +271,51 @@ public class MainActivity extends AppCompatActivity {
                 curQuan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 extra.setVisibility(View.VISIBLE);
+                quantityDown.setVisibility(View.VISIBLE);
+                oops.setVisibility(View.VISIBLE);
+                quantityUp.setVisibility(View.VISIBLE);
+                submit.setVisibility(View.VISIBLE);
+                description.setVisibility(View.VISIBLE);
+                title.setVisibility(View.VISIBLE);
+                description.setText(getResources().getStringArray(R.array.Descriptions)[2]);
+            }
+        });
+
+        //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
+        //a quantity change through the popup menu that will be made visible as well.
+        dish4ImgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                identifier = 5;
+                dif = 0;
+                if(cartHolder[5] == 0){
+                    cartHolder[5] = 1;
+                    dif = 1;
+                }
+                curQuan.setText(String.valueOf(cartHolder[5]));
+                title.setText(String.valueOf(itemHolder[5]));
+                dish1ImgBtn.setVisibility(View.INVISIBLE);
+                dish2ImgBtn.setVisibility(View.INVISIBLE);
+                dish3ImgBtn.setVisibility(View.INVISIBLE);
+                dish4ImgBtn.setVisibility(View.INVISIBLE);
+                createYourOwnImgBtn.setVisibility(View.INVISIBLE);
+                drinkImgBtn.setVisibility(View.INVISIBLE);
+                text1.setVisibility(View.INVISIBLE);
+                text2.setVisibility(View.INVISIBLE);
+                text3.setVisibility(View.INVISIBLE);
+                text4.setVisibility(View.INVISIBLE);
+                text5.setVisibility(View.INVISIBLE);
+                text6.setVisibility(View.INVISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
+                background.setVisibility(View.VISIBLE);
+                extra.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
                 quantityUp.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setVisibility(View.VISIBLE);
-                description.setText(getResources().getStringArray(R.array.Descriptions)[2]);
+                description.setText(getResources().getStringArray(R.array.Descriptions)[3]);
             }
         });
 
@@ -348,15 +350,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 curQuan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
-                    case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
+                    case 2: Cart.dish1.setQuantity(cartHolder[identifier]);
                         break;
-                    case 2: Cart.dish2.setQuantity(cartHolder[identifier]);
+                    case 3: Cart.dish2.setQuantity(cartHolder[identifier]);
                         break;
-                    case 3: Cart.dish3.setQuantity(cartHolder[identifier]);
+                    case 4: Cart.dish3.setQuantity(cartHolder[identifier]);
                         break;
-                    case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
+                    case 5: Cart.dish4.setQuantity(cartHolder[identifier]);
                         break;
-                    case 5: Cart.drink.setQuantity(cartHolder[identifier]);
+                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
             }
         }); //End quantityDown OnClickListener
@@ -370,15 +372,15 @@ public class MainActivity extends AppCompatActivity {
                 dif++;
                 curQuan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
-                    case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
+                    case 2: Cart.dish1.setQuantity(cartHolder[identifier]);
                         break;
-                    case 2: Cart.dish2.setQuantity(cartHolder[identifier]);
+                    case 3: Cart.dish2.setQuantity(cartHolder[identifier]);
                         break;
-                    case 3: Cart.dish3.setQuantity(cartHolder[identifier]);
+                    case 4: Cart.dish3.setQuantity(cartHolder[identifier]);
                         break;
-                    case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
+                    case 5: Cart.dish4.setQuantity(cartHolder[identifier]);
                         break;
-                    case 5: Cart.drink.setQuantity(cartHolder[identifier]);
+                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
             }
         }); //End quantityUp OnClickListener
@@ -389,15 +391,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 switch (identifier) {
-                    case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
+                    case 2: Cart.dish1.setQuantity(cartHolder[identifier]);
                         break;
-                    case 2: Cart.dish2.setQuantity(cartHolder[identifier]);
+                    case 3: Cart.dish2.setQuantity(cartHolder[identifier]);
                         break;
-                    case 3: Cart.dish3.setQuantity(cartHolder[identifier]);
+                    case 4: Cart.dish3.setQuantity(cartHolder[identifier]);
                         break;
-                    case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
+                    case 5: Cart.dish4.setQuantity(cartHolder[identifier]);
                         break;
-                    case 5: Cart.drink.setQuantity(cartHolder[identifier]);
+                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
 
                 if(dif > 0){
