@@ -37,7 +37,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="250dp">
 
         <TextView
@@ -66,7 +66,7 @@
 
         <TextView
             android:id="@+id/textQuantity"
-            android:layout_width="75dp"
+            android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_marginEnd="4dp"
             android:layout_marginRight="4dp"
