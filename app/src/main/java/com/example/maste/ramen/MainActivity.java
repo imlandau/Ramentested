@@ -402,35 +402,86 @@ public class MainActivity extends AppCompatActivity {
                     case 6: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
 
-                if(dif > 0){
-
+                if (dif < 1) {
+                    quantityDown.setVisibility(View.INVISIBLE);
+                    quantityUp.setVisibility(View.INVISIBLE);
+                    background.setVisibility(View.INVISIBLE);
+                    curQuan.setVisibility(View.INVISIBLE);
+                    submit.setVisibility(View.INVISIBLE);
+                    description.setVisibility(View.INVISIBLE);
+                    oops.setVisibility(View.INVISIBLE);
+                    title.setVisibility(View.INVISIBLE);
+                    extra.setVisibility(View.INVISIBLE);
+                    item1.setVisibility(View.INVISIBLE);
+                    item2.setVisibility(View.INVISIBLE);
+                    dish1ImgBtn.setVisibility(View.VISIBLE);
+                    dish2ImgBtn.setVisibility(View.VISIBLE);
+                    dish3ImgBtn.setVisibility(View.VISIBLE);
+                    dish4ImgBtn.setVisibility(View.VISIBLE);
+                    createYourOwnImgBtn.setVisibility(View.VISIBLE);
+                    drinkImgBtn.setVisibility(View.VISIBLE);
+                    text1.setVisibility(View.VISIBLE);
+                    text2.setVisibility(View.VISIBLE);
+                    text3.setVisibility(View.VISIBLE);
+                    text4.setVisibility(View.VISIBLE);
+                    text5.setVisibility(View.VISIBLE);
+                    text6.setVisibility(View.VISIBLE);
+                    Toast.makeText(getApplicationContext(), "Your item(s) has been removed", Toast.LENGTH_SHORT).show();
+                }else if (dif == 0){
+                    quantityDown.setVisibility(View.INVISIBLE);
+                    quantityUp.setVisibility(View.INVISIBLE);
+                    background.setVisibility(View.INVISIBLE);
+                    curQuan.setVisibility(View.INVISIBLE);
+                    submit.setVisibility(View.INVISIBLE);
+                    description.setVisibility(View.INVISIBLE);
+                    oops.setVisibility(View.INVISIBLE);
+                    title.setVisibility(View.INVISIBLE);
+                    extra.setVisibility(View.INVISIBLE);
+                    item1.setVisibility(View.INVISIBLE);
+                    item2.setVisibility(View.INVISIBLE);
+                    dish1ImgBtn.setVisibility(View.VISIBLE);
+                    dish2ImgBtn.setVisibility(View.VISIBLE);
+                    dish3ImgBtn.setVisibility(View.VISIBLE);
+                    dish4ImgBtn.setVisibility(View.VISIBLE);
+                    createYourOwnImgBtn.setVisibility(View.VISIBLE);
+                    drinkImgBtn.setVisibility(View.VISIBLE);
+                    text1.setVisibility(View.VISIBLE);
+                    text2.setVisibility(View.VISIBLE);
+                    text3.setVisibility(View.VISIBLE);
+                    text4.setVisibility(View.VISIBLE);
+                    text5.setVisibility(View.VISIBLE);
+                    text6.setVisibility(View.VISIBLE);
+                    Toast.makeText(getApplicationContext(), "No changes have been made", Toast.LENGTH_SHORT).show();
+                } else {
+                    quantityDown.setVisibility(View.INVISIBLE);
+                    quantityUp.setVisibility(View.INVISIBLE);
+                    background.setVisibility(View.INVISIBLE);
+                    curQuan.setVisibility(View.INVISIBLE);
+                    submit.setVisibility(View.INVISIBLE);
+                    description.setVisibility(View.INVISIBLE);
+                    oops.setVisibility(View.INVISIBLE);
+                    title.setVisibility(View.INVISIBLE);
+                    extra.setVisibility(View.INVISIBLE);
+                    item1.setVisibility(View.INVISIBLE);
+                    item2.setVisibility(View.INVISIBLE);
+                    dish1ImgBtn.setVisibility(View.VISIBLE);
+                    dish2ImgBtn.setVisibility(View.VISIBLE);
+                    dish3ImgBtn.setVisibility(View.VISIBLE);
+                    dish4ImgBtn.setVisibility(View.VISIBLE);
+                    createYourOwnImgBtn.setVisibility(View.VISIBLE);
+                    drinkImgBtn.setVisibility(View.VISIBLE);
+                    text1.setVisibility(View.VISIBLE);
+                    text2.setVisibility(View.VISIBLE);
+                    text3.setVisibility(View.VISIBLE);
+                    text4.setVisibility(View.VISIBLE);
+                    text5.setVisibility(View.VISIBLE);
+                    text6.setVisibility(View.VISIBLE);
+                    Toast.makeText(getApplicationContext(), "Your item(s) has been added to the cart", Toast.LENGTH_SHORT).show();
                 }
-                quantityDown.setVisibility(View.INVISIBLE);
-                quantityUp.setVisibility(View.INVISIBLE);
-                background.setVisibility(View.INVISIBLE);
-                submit.setVisibility(View.INVISIBLE);
-                curQuan.setVisibility(View.INVISIBLE);
-                description.setVisibility(View.INVISIBLE);
-                oops.setVisibility(View.INVISIBLE);
-                title.setVisibility(View.INVISIBLE);
-                extra.setVisibility(View.INVISIBLE);
-                item1.setVisibility(View.INVISIBLE);
-                item2.setVisibility(View.INVISIBLE);
-                Toast.makeText(getApplicationContext(), "Your item(s) has been added to the cart", Toast.LENGTH_SHORT).show();
-                dish1ImgBtn.setVisibility(View.VISIBLE);
-                dish2ImgBtn.setVisibility(View.VISIBLE);
-                dish3ImgBtn.setVisibility(View.VISIBLE);
-                dish4ImgBtn.setVisibility(View.VISIBLE);
-                createYourOwnImgBtn.setVisibility(View.VISIBLE);
-                drinkImgBtn.setVisibility(View.VISIBLE);
-                text1.setVisibility(View.VISIBLE);
-                text2.setVisibility(View.VISIBLE);
-                text3.setVisibility(View.VISIBLE);
-                text4.setVisibility(View.VISIBLE);
-                text5.setVisibility(View.VISIBLE);
-                text6.setVisibility(View.VISIBLE);
+
             }
-        }); //End submit OnClickListener
+            }
+        ); //End submit OnClickListener
 
         //for the build your own
         byosubmit.setOnClickListener(new View.OnClickListener() {
@@ -463,33 +514,83 @@ public class MainActivity extends AppCompatActivity {
                     }
 
 
-                    if (dif > 0) {
+                    if (dif < 1) {
+                        quantityDown.setVisibility(View.INVISIBLE);
+                        quantityUp.setVisibility(View.INVISIBLE);
+                        background.setVisibility(View.INVISIBLE);
+                        curQuan.setVisibility(View.INVISIBLE);
+                        byosubmit.setVisibility(View.INVISIBLE);
+                        description.setVisibility(View.INVISIBLE);
+                        oops.setVisibility(View.INVISIBLE);
+                        title.setVisibility(View.INVISIBLE);
+                        extra.setVisibility(View.INVISIBLE);
+                        item1.setVisibility(View.INVISIBLE);
+                        item2.setVisibility(View.INVISIBLE);
+                        dish1ImgBtn.setVisibility(View.VISIBLE);
+                        dish2ImgBtn.setVisibility(View.VISIBLE);
+                        dish3ImgBtn.setVisibility(View.VISIBLE);
+                        dish4ImgBtn.setVisibility(View.VISIBLE);
+                        createYourOwnImgBtn.setVisibility(View.VISIBLE);
+                        drinkImgBtn.setVisibility(View.VISIBLE);
+                        text1.setVisibility(View.VISIBLE);
+                        text2.setVisibility(View.VISIBLE);
+                        text3.setVisibility(View.VISIBLE);
+                        text4.setVisibility(View.VISIBLE);
+                        text5.setVisibility(View.VISIBLE);
+                        text6.setVisibility(View.VISIBLE);
+                        Toast.makeText(getApplicationContext(), "Your item(s) has been removed", Toast.LENGTH_SHORT).show();
+                    }else if (dif == 0){
+                        quantityDown.setVisibility(View.INVISIBLE);
+                        quantityUp.setVisibility(View.INVISIBLE);
+                        background.setVisibility(View.INVISIBLE);
+                        curQuan.setVisibility(View.INVISIBLE);
+                        byosubmit.setVisibility(View.INVISIBLE);
+                        description.setVisibility(View.INVISIBLE);
+                        oops.setVisibility(View.INVISIBLE);
+                        title.setVisibility(View.INVISIBLE);
+                        extra.setVisibility(View.INVISIBLE);
+                        item1.setVisibility(View.INVISIBLE);
+                        item2.setVisibility(View.INVISIBLE);
+                        dish1ImgBtn.setVisibility(View.VISIBLE);
+                        dish2ImgBtn.setVisibility(View.VISIBLE);
+                        dish3ImgBtn.setVisibility(View.VISIBLE);
+                        dish4ImgBtn.setVisibility(View.VISIBLE);
+                        createYourOwnImgBtn.setVisibility(View.VISIBLE);
+                        drinkImgBtn.setVisibility(View.VISIBLE);
+                        text1.setVisibility(View.VISIBLE);
+                        text2.setVisibility(View.VISIBLE);
+                        text3.setVisibility(View.VISIBLE);
+                        text4.setVisibility(View.VISIBLE);
+                        text5.setVisibility(View.VISIBLE);
+                        text6.setVisibility(View.VISIBLE);
+                        Toast.makeText(getApplicationContext(), "No changes have been made", Toast.LENGTH_SHORT).show();
+                    } else {
+                        quantityDown.setVisibility(View.INVISIBLE);
+                        quantityUp.setVisibility(View.INVISIBLE);
+                        background.setVisibility(View.INVISIBLE);
+                        curQuan.setVisibility(View.INVISIBLE);
+                        byosubmit.setVisibility(View.INVISIBLE);
+                        description.setVisibility(View.INVISIBLE);
+                        oops.setVisibility(View.INVISIBLE);
+                        title.setVisibility(View.INVISIBLE);
+                        extra.setVisibility(View.INVISIBLE);
+                        item1.setVisibility(View.INVISIBLE);
+                        item2.setVisibility(View.INVISIBLE);
+                        dish1ImgBtn.setVisibility(View.VISIBLE);
+                        dish2ImgBtn.setVisibility(View.VISIBLE);
+                        dish3ImgBtn.setVisibility(View.VISIBLE);
+                        dish4ImgBtn.setVisibility(View.VISIBLE);
+                        createYourOwnImgBtn.setVisibility(View.VISIBLE);
+                        drinkImgBtn.setVisibility(View.VISIBLE);
+                        text1.setVisibility(View.VISIBLE);
+                        text2.setVisibility(View.VISIBLE);
+                        text3.setVisibility(View.VISIBLE);
+                        text4.setVisibility(View.VISIBLE);
+                        text5.setVisibility(View.VISIBLE);
+                        text6.setVisibility(View.VISIBLE);
+                        Toast.makeText(getApplicationContext(), "Your item(s) has been added to the cart", Toast.LENGTH_SHORT).show();
 
                     }
-                    quantityDown.setVisibility(View.INVISIBLE);
-                    quantityUp.setVisibility(View.INVISIBLE);
-                    background.setVisibility(View.INVISIBLE);
-                    byosubmit.setVisibility(View.INVISIBLE);
-                    description.setVisibility(View.INVISIBLE);
-                    curQuan.setVisibility(View.INVISIBLE);
-                    oops.setVisibility(View.INVISIBLE);
-                    title.setVisibility(View.INVISIBLE);
-                    extra.setVisibility(View.INVISIBLE);
-                    item1.setVisibility(View.INVISIBLE);
-                    item2.setVisibility(View.INVISIBLE);
-                    createYourOwnImgBtn.setVisibility(View.VISIBLE);
-                    Toast.makeText(getApplicationContext(), "Your item(s) has been added to the cart", Toast.LENGTH_SHORT).show();
-                    dish1ImgBtn.setVisibility(View.VISIBLE);
-                    dish2ImgBtn.setVisibility(View.VISIBLE);
-                    dish3ImgBtn.setVisibility(View.VISIBLE);
-                    dish4ImgBtn.setVisibility(View.VISIBLE);
-                    drinkImgBtn.setVisibility(View.VISIBLE);
-                    text1.setVisibility(View.VISIBLE);
-                    text2.setVisibility(View.VISIBLE);
-                    text3.setVisibility(View.VISIBLE);
-                    text4.setVisibility(View.VISIBLE);
-                    text5.setVisibility(View.VISIBLE);
-                    text6.setVisibility(View.VISIBLE);
                 }
             }
         }); //End build your own submit OnClickListener
@@ -514,6 +615,7 @@ public class MainActivity extends AppCompatActivity {
                 dish3ImgBtn.setVisibility(View.VISIBLE);
                 dish4ImgBtn.setVisibility(View.VISIBLE);
                 createYourOwnImgBtn.setVisibility(View.VISIBLE);
+                Toast.makeText(getApplicationContext(), "Your cart was not modified", Toast.LENGTH_SHORT).show();
                 drinkImgBtn.setVisibility(View.VISIBLE);
                 text1.setVisibility(View.VISIBLE);
                 text2.setVisibility(View.VISIBLE);
