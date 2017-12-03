@@ -52,11 +52,11 @@ public class MainActivity extends AppCompatActivity {
 
         //Declaration for the cartHolder which will redundancy within
         final int[] cartHolder = new int[7];
-        cartHolder[1] = Cart.dish1.getQuantity();
-        cartHolder[2] = Cart.dish2.getQuantity();
-        cartHolder[3] = Cart.dish3.getQuantity();
-        cartHolder[4] = Cart.dish4.getQuantity();
-        cartHolder[5] = Cart.dish5.getQuantity();
+        cartHolder[1] = Cart.nonDish.getQuantity();
+        cartHolder[2] = Cart.dish1.getQuantity();
+        cartHolder[3] = Cart.dish2.getQuantity();
+        cartHolder[4] = Cart.dish3.getQuantity();
+        cartHolder[5] = Cart.dish4.getQuantity();
         cartHolder[6] = Cart.drink.getQuantity();
 
         final String[] itemHolder = new String[7];
