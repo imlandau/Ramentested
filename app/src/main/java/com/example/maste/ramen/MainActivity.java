@@ -497,19 +497,19 @@ public class MainActivity extends AppCompatActivity {
                         createdDish[0].setQuantity(createdDish[0].getQuantity() + dif);
                     }else if(selectedDish.equals("-Beef 50c Extra -Carrots")){
                         createdDish[1].setQuantity(createdDish[1].getQuantity() + dif);
-                    }else if(selectedDish.equals("-Beef 50c Extra -Asparagus")){
+                    }else if(selectedDish.equals("-Beef 50c Extra -Spinach")){
                         createdDish[2].setQuantity(createdDish[2].getQuantity() + dif);
                     }else if(selectedDish.equals("-Chicken -Broccoli")){
                         createdDish[3].setQuantity(createdDish[3].getQuantity() + dif);
                     }else if(selectedDish.equals("-Chicken -Carrots")){
                         createdDish[4].setQuantity(createdDish[4].getQuantity() + dif);
-                    }else if(selectedDish.equals("-Chicken -Asparagus")){
+                    }else if(selectedDish.equals("-Chicken -Spinach")){
                         createdDish[5].setQuantity(createdDish[5].getQuantity() + dif);
                     }else if(selectedDish.equals("-Pork -Broccoli")){
                         createdDish[6].setQuantity(createdDish[6].getQuantity() + dif);
                     }else if(selectedDish.equals("-Pork -Carrots")){
                         createdDish[7].setQuantity(createdDish[7].getQuantity() + dif);
-                    }else if(selectedDish.equals("-Pork -Asparagus")){
+                    }else if(selectedDish.equals("-Pork -Spinach")){
                         createdDish[8].setQuantity(createdDish[8].getQuantity() + dif);
                     }
                     else if(selectedDish.equals("-Select Meat -Select Veggie")) {
@@ -524,7 +524,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Nothing was added", Toast.LENGTH_SHORT).show();
                             return;
                     }
-                    else if(selectedDish.equals("-Select Meat -Asparagus")) {
+                    else if(selectedDish.equals("-Select Meat -Spinach")) {
                         Toast.makeText(getApplicationContext(), "Nothing was added", Toast.LENGTH_SHORT).show();
                         return;
                     }

@@ -7,13 +7,13 @@ public class Cart extends AppCompatActivity {
 
     static Item var1 = new Item(6.50, 0, "-Beef - Broccoli");
     static Item var2 = new Item(6.50, 0, "-Beef -Carrots");
-    static Item var3 = new Item(6.50, 0, "-Beef -Asparagus");
+    static Item var3 = new Item(6.50, 0, "-Beef -Spinach");
     static Item var4 = new Item(6.00, 0, "-Chicken -Broccoli");
     static Item var5 = new Item(6.00, 0, "-Chicken -Carrots");
-    static Item var6 = new Item(6.00, 0, "-Chicken -Asparagus");
+    static Item var6 = new Item(6.00, 0, "-Chicken -Spinach");
     static Item var7 = new Item(6.00, 0, "-Pork -Broccoli");
     static Item var8 = new Item(6.00, 0, "-Pork -Carrots");
-    static Item var9 = new Item(6.00, 0, "-Pork -Asparagus");
+    static Item var9 = new Item(6.00, 0, "-Pork -Spinach");
     static Item[] createdDish = {var1, var2, var3, var4, var5, var6, var7, var8, var9};
     static Item nonDish = new Item(0,0,"");
     static Item dish1 = new Item(7.20, 0, "Sweet and Spicy Pork Ramen");
