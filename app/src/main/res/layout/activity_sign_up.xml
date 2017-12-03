@@ -29,55 +29,57 @@
         android:layout_height="40dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@color/WhiteSmoke"
+        android:hint="@string/Username"
+        android:inputType="text"
+        android:nextFocusDown="@+id/userUser"
+        android:singleLine="true"
         android:textColor="@color/Black"
         android:textColorHint="@color/Gray"
-        android:inputType="text"
-        android:singleLine="true"
-        android:nextFocusDown="@+id/userPass"
-        android:hint="@string/Username"
-        app:layout_constraintBottom_toTopOf="@+id/signPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <EditText
-        android:id="@+id/signPass"
+        android:id="@+id/signUser"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:inputType="textPassword"
-        android:singleLine="true"
+        android:layout_marginTop="8dp"
         android:background="@color/WhiteSmoke"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:singleLine="true"
         android:textColor="@color/Black"
         android:textColorHint="@color/Gray"
-        android:hint="@string/Password"
-        app:layout_constraintBottom_toTopOf="@+id/signUpBtn2"
+        app:layout_constraintBottom_toTopOf="@+id/signPass"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"  />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signName" />
 
-
-    <Button
-        android:id="@+id/homeBtn2"
-        style="?android:attr/borderlessButtonStyle"
+    <EditText
+        android:id="@+id/signPass"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/shape"
-        android:text="@string/loginpage"
-        android:textColor="@color/WhiteSmoke"
+        android:background="@color/WhiteSmoke"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textColor="@color/Black"
+        android:textColorHint="@color/Gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpBtn2"
-        app:layout_constraintVertical_bias="0.172" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.663" />
+
 
     <Button
         android:id="@+id/signUpBtn2"
@@ -87,6 +89,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/shape"
         android:text="@string/signup"
         android:textColor="@color/WhiteSmoke"
@@ -94,11 +97,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66"  />
+        app:layout_constraintTop_toBottomOf="@+id/signPass"
+        app:layout_constraintVertical_bias="0.172" />
+
+
 
     <TextView
-        android:id="@+id/ToMenuBtn"
+        android:id="@+id/loginPage"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
@@ -108,7 +113,7 @@
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"
-        android:text="@string/menu"
+        android:text="@string/loginpage"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
