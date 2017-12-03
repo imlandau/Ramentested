@@ -26,13 +26,15 @@ public class Cart extends AppCompatActivity {
 
     //Removes all the items currently in the cart by setting their quantities to 0
     public static void removeAll(){
-        int i = 0;
-        while(i < 0){
-            i++;
-            createdDish[i].setQuantity(0);
-            createdDish[i].setName("vacant");
-//
-        }
+        createdDish[0].setQuantity(0);
+        createdDish[1].setQuantity(0);
+        createdDish[2].setQuantity(0);
+        createdDish[3].setQuantity(0);
+        createdDish[4].setQuantity(0);
+        createdDish[5].setQuantity(0);
+        createdDish[6].setQuantity(0);
+        createdDish[7].setQuantity(0);
+        createdDish[8].setQuantity(0);
         dish1.setQuantity(0);
         dish2.setQuantity(0);
         dish3.setQuantity(0);

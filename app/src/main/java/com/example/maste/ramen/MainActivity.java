@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Create reference to all of the buttons  and TextViewon the menu
-        final ImageButton dish1ImgBtn = (ImageButton) findViewById(R.id.drinkImgBtn);
-        final ImageButton dish2ImgBtn = (ImageButton) findViewById(R.id.dish1ImgBtn);
-        final ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish2ImgBtn);
-        final ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
-        final ImageButton createYourOwnImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
+        final ImageButton createYourOwnImgBtn = (ImageButton) findViewById(R.id.drinkImgBtn);
+        final ImageButton dish1ImgBtn = (ImageButton) findViewById(R.id.dish1ImgBtn);
+        final ImageButton dish2ImgBtn = (ImageButton) findViewById(R.id.dish2ImgBtn);
+        final ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
+        final ImageButton dish4ImgBtn= (ImageButton) findViewById(R.id.dish4ImgBtn);
         final ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
         final Spinner item1 = (Spinner) findViewById(R.id.item1);
         final Spinner item2 = (Spinner) findViewById(R.id.item2);

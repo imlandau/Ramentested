@@ -8,9 +8,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.text.DecimalFormat;
 
 public class CartActivity extends AppCompatActivity{
+
 
     //Total of all items before tax
     double subtotal = 0;
@@ -32,6 +35,7 @@ public class CartActivity extends AppCompatActivity{
         Button homeBtn = (Button) findViewById(R.id.purchaseBtn);
         //Button to remove everything from the cart
         Button removeBtn = (Button) findViewById(R.id.removeAll);
+
         //Displays the items in the cart
         final TextView textItem = (TextView) findViewById(R.id.textItem);
         //Shows the prices of each item in the cart
@@ -98,12 +102,6 @@ public class CartActivity extends AppCompatActivity{
             strQuantity = strQuantity  + String.valueOf(Cart.dish4.getQuantity()) + "\n";
             subtotal = subtotal + (Cart.dish4.getQuantity() * Cart.dish4.getPrice());
         }
-        if(Cart.dish5.getQuantity() > 0) {
-            strName = strName + Cart.dish5.getName() + "\n";
-            strPrice = strPrice +  "\n" + String.valueOf(money.format(Cart.dish5.getPrice())) + "\n";
-            strQuantity = strQuantity  + "\n" + String.valueOf(Cart.dish5.getQuantity()) + "\n";
-            subtotal = subtotal + (Cart.dish5.getQuantity() * Cart.dish5.getPrice());
-        }
         if(Cart.drink.getQuantity() > 0) {
             strName = strName + Cart.drink.getName() + "\n";
             strPrice = strPrice + String.valueOf(money.format(Cart.drink.getPrice())) + "\n";
@@ -136,84 +134,34 @@ public class CartActivity extends AppCompatActivity{
         homeBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                if(Cart.dish1.getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your order has been placed, please wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(CartActivity.this, Home.class));
-                    Cart.removeAll();
-                    subtotal = 0;
-                    tax = 0;
-                    total = 0;
-                    textItem.setText("Item");
-                    textPrice.setText("Price");
-                    textQuantity.setText("Quantity");
-                    subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
-                    taxTextView.setText("Tax:\n$" + money.format(tax));
-                    totalTextView.setText("Total:\n$" + money.format(total));
+                if(Cart.createdDish[0].getQuantity() > 0){
+                    clear();
+                }else if(Cart.createdDish[1].getQuantity() > 0) {
+                    clear();
+                }else if(Cart.createdDish[2].getQuantity() > 0) {
+                    clear();
+                }else if(Cart.createdDish[3].getQuantity() > 0) {
+                    clear();
+                }else if(Cart.createdDish[4].getQuantity() > 0) {
+                    clear();
+                }else if(Cart.createdDish[5].getQuantity() > 0) {
+                    clear();
+                }else if(Cart.createdDish[6].getQuantity() > 0) {
+                    clear();
+                }else if(Cart.createdDish[7].getQuantity() > 0) {
+                    clear();
+                }else if(Cart.createdDish[8].getQuantity() > 0) {
+                    clear();
+                }else if(Cart.dish1.getQuantity() > 0) {
+                    clear();
                 }else if(Cart.dish2.getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your order has been placed, please wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(CartActivity.this, Home.class));
-                    Cart.removeAll();
-                    subtotal = 0;
-                    tax = 0;
-                    total = 0;
-                    textItem.setText("Item");
-                    textPrice.setText("Price");
-                    textQuantity.setText("Quantity");
-                    subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
-                    taxTextView.setText("Tax:\n$" + money.format(tax));
-                    totalTextView.setText("Total:\n$" + money.format(total));
+                    clear();
                 }else if(Cart.dish3.getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your order has been placed, please wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(CartActivity.this, Home.class));
-                    Cart.removeAll();
-                    subtotal = 0;
-                    tax = 0;
-                    total = 0;
-                    textItem.setText("Item");
-                    textPrice.setText("Price");
-                    textQuantity.setText("Quantity");
-                    subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
-                    taxTextView.setText("Tax:\n$" + money.format(tax));
-                    totalTextView.setText("Total:\n$" + money.format(total));
+                    clear();
                 }else if(Cart.dish4.getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your order has been placed, please wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(CartActivity.this, Home.class));
-                    Cart.removeAll();
-                    subtotal = 0;
-                    tax = 0;
-                    total = 0;
-                    textItem.setText("Item");
-                    textPrice.setText("Price");
-                    textQuantity.setText("Quantity");
-                    subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
-                    taxTextView.setText("Tax:\n$" + money.format(tax));
-                    totalTextView.setText("Total:\n$" + money.format(total));
-                }else if(Cart.dish5.getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your order has been placed, please wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(CartActivity.this, Home.class));
-                    Cart.removeAll();
-                    subtotal = 0;
-                    tax = 0;
-                    total = 0;
-                    textItem.setText("Item");
-                    textPrice.setText("Price");
-                    textQuantity.setText("Quantity");
-                    subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
-                    taxTextView.setText("Tax:\n$" + money.format(tax));
-                    totalTextView.setText("Total:\n$" + money.format(total));
+                    clear();
                 }else if(Cart.drink.getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your order has been placed, please wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(CartActivity.this, Home.class));
-                    Cart.removeAll();
-                    subtotal = 0;
-                    tax = 0;
-                    total = 0;
-                    textItem.setText("Item");
-                    textPrice.setText("Price");
-                    textQuantity.setText("Quantity");
-                    subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
-                    taxTextView.setText("Tax:\n$" + money.format(tax));
-                    totalTextView.setText("Total:\n$" + money.format(total));
+                    clear();
                 }else{
                     Toast.makeText(getApplicationContext(), "Your cart is empty.", Toast.LENGTH_SHORT).show();
                 }
@@ -238,4 +186,34 @@ public class CartActivity extends AppCompatActivity{
             }
         });
     } // end onCreate
+
+    public void clear(){
+        //Displays the items in the cart
+        final TextView textItem = (TextView) findViewById(R.id.textItem);
+        //Shows the prices of each item in the cart
+        final TextView textPrice = (TextView) findViewById(R.id.textPrice);
+        //Shows the quantity of each item in the cart
+        final TextView textQuantity = (TextView) findViewById(R.id.textQuantity);
+        //Shows the total of the order before tax
+        final TextView subtotalTextView = (TextView) findViewById(R.id.subtotalTextView);
+        //Shows the tax of the order
+        final TextView taxTextView = (TextView) findViewById(R.id.taxTextView);
+        //Shows the total cost of the order
+        final TextView totalTextView = (TextView) findViewById(R.id.totalTextView);
+        //Tells the user the order has been placed
+        final TextView bghtTextView = (TextView) findViewById(R.id.bght);
+
+        Toast.makeText(getApplicationContext(), "Your order has been placed, please wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(CartActivity.this, Home.class));
+        Cart.removeAll();
+        subtotal = 0;
+        tax = 0;
+        total = 0;
+        textItem.setText("Item");
+        textPrice.setText("Price");
+        textQuantity.setText("Quantity");
+        subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
+        taxTextView.setText("Tax:\n$" + money.format(tax));
+        totalTextView.setText("Total:\n$" + money.format(total));
+    }
 } // end class
