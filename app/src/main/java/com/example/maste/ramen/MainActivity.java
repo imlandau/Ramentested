@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import static com.example.maste.ramen.Cart.createdDish;
 import static com.example.maste.ramen.Cart.identifier;
 
 public class MainActivity extends AppCompatActivity {
@@ -457,7 +458,7 @@ public class MainActivity extends AppCompatActivity {
                 dish2ImgBtn.setVisibility(View.VISIBLE);
                 dish3ImgBtn.setVisibility(View.VISIBLE);
                 dish4ImgBtn.setVisibility(View.VISIBLE);
-                dish5ImgBtn.setVisibility(View.VISIBLE);
+                createYourOwnImgBtn.setVisibility(View.VISIBLE);
                 drinkImgBtn.setVisibility(View.VISIBLE);
                 text1.setVisibility(View.VISIBLE);
                 text2.setVisibility(View.VISIBLE);
@@ -472,46 +473,65 @@ public class MainActivity extends AppCompatActivity {
         byosubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switch (identifier) {
-                    case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
-                        break;
-                    case 2: Cart.dish2.setQuantity(cartHolder[identifier]);
-                        break;
-                    case 3: Cart.dish3.setQuantity(cartHolder[identifier]);
-                        break;
-                    case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
-                        break;
-                    case 5: Cart.dish5.setQuantity(cartHolder[identifier]);
-                        break;
-                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
-                }
+                if(item1.getSelectedItem().toString() == "Select Meat" ||
+                        item2.getSelectedItem().toString() == "Select Veggie"){
+                }else{
+                    String selectedDish = "-" + item1.getSelectedItem().toString() + " -" +
+                            item2.getSelectedItem().toString();
 
-                if(dif > 0){
+                    if(selectedDish.equals("-Beef -Broccoli")){
+                        createdDish[0].setQuantity(createdDish[0].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Beef -Carrots")){
+                        createdDish[1].setQuantity(createdDish[1].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Beef -Asparagus")){
+                        createdDish[2].setQuantity(createdDish[2].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Chicken -Broccoli")){
+                        createdDish[3].setQuantity(createdDish[3].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Chicken -Carrots")){
+                        createdDish[4].setQuantity(createdDish[4].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Chicken -Asparagus")){
+                        createdDish[5].setQuantity(createdDish[5].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Pork -Broccoli")){
+                        createdDish[6].setQuantity(createdDish[6].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Pork -Carrots")){
+                        createdDish[7].setQuantity(createdDish[7].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Pork -Asparagus")){
+                        createdDish[8].setQuantity(createdDish[8].getQuantity() + dif);
+                    }
+
+
+                    if (dif > 0) {
+                        Message.setVisibility(View.VISIBLE);
+                        Message.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                Message.setVisibility(View.INVISIBLE);
+                            }
+                        }, 1500);
+                    }
+                    quantityDown.setVisibility(View.INVISIBLE);
+                    quantityUp.setVisibility(View.INVISIBLE);
+                    background.setVisibility(View.INVISIBLE);
+                    byosubmit.setVisibility(View.INVISIBLE);
+                    description.setVisibility(View.INVISIBLE);
+                    oops.setVisibility(View.INVISIBLE);
+                    title.setVisibility(View.INVISIBLE);
+                    extra.setVisibility(View.INVISIBLE);
+                    item1.setVisibility(View.INVISIBLE);
+                    item2.setVisibility(View.INVISIBLE);
+                    createYourOwnImgBtn.setVisibility(View.VISIBLE);
+                    dish1ImgBtn.setVisibility(View.VISIBLE);
+                    dish2ImgBtn.setVisibility(View.VISIBLE);
+                    dish3ImgBtn.setVisibility(View.VISIBLE);
+                    dish4ImgBtn.setVisibility(View.VISIBLE);
+                    drinkImgBtn.setVisibility(View.VISIBLE);
+                    text1.setVisibility(View.VISIBLE);
+                    text2.setVisibility(View.VISIBLE);
+                    text3.setVisibility(View.VISIBLE);
+                    text4.setVisibility(View.VISIBLE);
+                    text5.setVisibility(View.VISIBLE);
+                    text6.setVisibility(View.VISIBLE);
                 }
-                quantityDown.setVisibility(View.INVISIBLE);
-                quantityUp.setVisibility(View.INVISIBLE);
-                background.setVisibility(View.INVISIBLE);
-                curQan.setVisibility(View.INVISIBLE);
-                byosubmit.setVisibility(View.INVISIBLE);
-                description.setVisibility(View.INVISIBLE);
-                oops.setVisibility(View.INVISIBLE);
-                title.setVisibility(View.INVISIBLE);
-                extra.setVisibility(View.INVISIBLE);
-                item1.setVisibility(View.INVISIBLE);
-                item2.setVisibility(View.INVISIBLE);
-                Toast.makeText(getApplicationContext(), "Your item(s) has been added to the cart", Toast.LENGTH_SHORT).show();
-                dish1ImgBtn.setVisibility(View.VISIBLE);
-                dish2ImgBtn.setVisibility(View.VISIBLE);
-                dish3ImgBtn.setVisibility(View.VISIBLE);
-                dish4ImgBtn.setVisibility(View.VISIBLE);
-                dish5ImgBtn.setVisibility(View.VISIBLE);
-                drinkImgBtn.setVisibility(View.VISIBLE);
-                text1.setVisibility(View.VISIBLE);
-                text2.setVisibility(View.VISIBLE);
-                text3.setVisibility(View.VISIBLE);
-                text4.setVisibility(View.VISIBLE);
-                text5.setVisibility(View.VISIBLE);
-                text6.setVisibility(View.VISIBLE);
             }
         }); //End build your own submit OnClickListener
 
