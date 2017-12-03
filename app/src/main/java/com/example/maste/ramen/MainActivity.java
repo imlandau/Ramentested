@@ -297,6 +297,9 @@ public class MainActivity extends AppCompatActivity {
                 text5.setVisibility(View.INVISIBLE);
                 text6.setVisibility(View.INVISIBLE);
                 oops.setVisibility(View.VISIBLE);
+                quantityDown.setVisibility(View.VISIBLE);
+                curQan.setVisibility(View.VISIBLE);
+                quantityUp.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 extra.setVisibility(View.VISIBLE);
                 submit.setVisibility(View.VISIBLE);
