@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import static com.example.maste.ramen.Cart.identifier;
 
@@ -34,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         final TextView text4 = (TextView) findViewById(R.id.text4);
         final TextView text5 = (TextView) findViewById(R.id.text5);
         final TextView text6 = (TextView) findViewById(R.id.text6);
-        final TextView Message = (TextView) findViewById(R.id.cartAddedTo);
         final TextView oops = (TextView) findViewById(R.id.oops);
         final TextView title = (TextView) findViewById(R.id.title);
         final TextView description = (TextView) findViewById(R.id.description);
@@ -395,13 +395,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if(dif > 0){
-                    Message.setVisibility(View.VISIBLE);
-                    Message.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Message.setVisibility(View.INVISIBLE);
-                        }
-                    },1500);
+
                 }
                 quantityDown.setVisibility(View.INVISIBLE);
                 quantityUp.setVisibility(View.INVISIBLE);
@@ -414,6 +408,7 @@ public class MainActivity extends AppCompatActivity {
                 extra.setVisibility(View.INVISIBLE);
                 item1.setVisibility(View.INVISIBLE);
                 item2.setVisibility(View.INVISIBLE);
+                Toast.makeText(getApplicationContext(), "Your item has been added to the cart", Toast.LENGTH_SHORT).show();
                 dish1ImgBtn.setVisibility(View.VISIBLE);
                 dish2ImgBtn.setVisibility(View.VISIBLE);
                 dish3ImgBtn.setVisibility(View.VISIBLE);
@@ -448,13 +443,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if(dif > 0){
-                    Message.setVisibility(View.VISIBLE);
-                    Message.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Message.setVisibility(View.INVISIBLE);
-                        }
-                    },1500);
                 }
                 quantityDown.setVisibility(View.INVISIBLE);
                 quantityUp.setVisibility(View.INVISIBLE);
