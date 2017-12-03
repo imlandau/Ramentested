@@ -31,7 +31,7 @@ public class Cart extends AppCompatActivity {
             i++;
             createdDish[i].setQuantity(0);
             createdDish[i].setName("vacant");
-
+//
         }
         dish1.setQuantity(0);
         dish2.setQuantity(0);
