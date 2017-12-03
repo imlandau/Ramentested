@@ -512,6 +512,10 @@ public class MainActivity extends AppCompatActivity {
                     }else if(selectedDish.equals("-Pork -Asparagus")){
                         createdDish[8].setQuantity(createdDish[8].getQuantity() + dif);
                     }
+                    else if(selectedDish.equals("-Select Meat -Select Veggie")){
+                        Toast.makeText(getApplicationContext(), "Nothing was added", Toast.LENGTH_SHORT).show();
+
+                    }
 
 
                     if (dif < 1) {
