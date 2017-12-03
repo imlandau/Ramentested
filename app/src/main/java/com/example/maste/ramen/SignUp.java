@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class SignUp extends AppCompatActivity {
 
@@ -18,6 +19,14 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SignUp.this, Home.class));
+            }
+        });
+
+        TextView ToMenuBtn = (TextView) findViewById(R.id.ToMenuBtn);
+        ToMenuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignUp.this, MainActivity.class));
             }
         });
 
