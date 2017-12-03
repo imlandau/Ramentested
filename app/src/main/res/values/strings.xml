@@ -2,7 +2,7 @@
     <string name="app_name">Ramen R Us</string>
     <string name="background">Quantity of item</string>
     <string name="submit">Place</string>
-    <string name="Create_your_own">Fountain Drink</string>
+    <string name="Create_your_own">FOUNTAIN DRINK</string>
     <string name="dish1">SWEET AND SPICY PORK RAMEN</string>
     <string name="dish2">MONGOLIAN BEEF RAMEN NOODLES</string>
     <string name="dish3">RAMEN VEGETABLE STIR FRY</string>
@@ -187,7 +187,7 @@
         <item>Loaded with spinach, green peppers, and mushrooms. No meat.</item>
         <item>Fried noodles with yellow and green peppers, and chicken.</item>
         <item> </item>
-        <item>20oz cup. Fill it up with any pepsi product.</item>
+        <item>20oz cup. Fill it up with any Coke product.</item>
         <item>Test</item>
     </string-array>
 
