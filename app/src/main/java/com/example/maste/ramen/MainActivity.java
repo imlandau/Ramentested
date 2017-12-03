@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         final ImageButton dish2ImgBtn = (ImageButton) findViewById(R.id.dish1ImgBtn);
         final ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish2ImgBtn);
         final ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
-        final ImageButton dish5ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
+        final ImageButton createYourOwnImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
         final ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
         final Spinner item1 = (Spinner) findViewById(R.id.item1);
         final Spinner item2 = (Spinner) findViewById(R.id.item2);
@@ -67,6 +67,50 @@ public class MainActivity extends AppCompatActivity {
         itemHolder[1] = "Create Your Own";
         itemHolder[6] = Cart.drink.getName();
 
+
+        createYourOwnImgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                identifier = 0;
+                dif = 1;
+                createYourOwnImgBtn.setVisibility(View.INVISIBLE);
+                curQuan.setText(String.valueOf(dif));
+                title.setText(String.valueOf(itemHolder[1]));
+                dish1ImgBtn.setVisibility(View.INVISIBLE);
+                dish2ImgBtn.setVisibility(View.INVISIBLE);
+                dish3ImgBtn.setVisibility(View.INVISIBLE);
+                dish4ImgBtn.setVisibility(View.INVISIBLE);
+                drinkImgBtn.setVisibility(View.INVISIBLE);
+                text1.setVisibility(View.INVISIBLE);
+                text2.setVisibility(View.INVISIBLE);
+                text3.setVisibility(View.INVISIBLE);
+                text4.setVisibility(View.INVISIBLE);
+                text5.setVisibility(View.INVISIBLE);
+                text6.setVisibility(View.INVISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
+                quantityDown.setVisibility(View.VISIBLE);
+                quantityUp.setVisibility(View.VISIBLE);
+                oops.setVisibility(View.VISIBLE);
+                background.setVisibility(View.VISIBLE);
+                extra.setVisibility(View.VISIBLE);
+                byosubmit.setVisibility(View.VISIBLE);
+                description.setVisibility(View.VISIBLE);
+                title.setVisibility(View.VISIBLE);
+                description.setText(getResources().getStringArray(R.array.Descriptions)[1]);
+                item1.setVisibility(View.VISIBLE);
+                item2.setVisibility(View.VISIBLE);
+                ArrayAdapter<String> myAdapter = new ArrayAdapter<>(MainActivity.this,
+                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Meat));
+                myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                item1.setAdapter(myAdapter);
+
+
+                ArrayAdapter<String> myAdapter2 = new ArrayAdapter<>(MainActivity.this,
+                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Veggie));
+                myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                item2.setAdapter(myAdapter2);
+            }
+        });
         //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
         //a quantity change through the popup menu that will be made visible as well.
         drinkImgBtn.setOnClickListener(new View.OnClickListener() {
