@@ -61,6 +61,19 @@ public class CartActivity extends AppCompatActivity{
          are concatenated on to the strName, strPrice, and strQuantity strings respectively, so
          that they can be displayed properly.
          **/
+
+        int i = 0;
+        while(i < 9){
+
+            if(Cart.createdDish[i].getQuantity() > 0){
+                strName = strName + "Create Your Own:\n" + Cart.createdDish[i].getName() + "\n";
+                strPrice = strPrice + "\n" + String.valueOf(Cart.createdDish[i].getPrice()) + "\n";
+                strQuantity = strQuantity + "\n" + String.valueOf(Cart.createdDish[i].getQuantity() + "\n");
+                subtotal = subtotal + (Cart.createdDish[i].getPrice() *
+                        Cart.createdDish[i].getQuantity());
+            }
+            i++;
+        }
         if(Cart.dish1.getQuantity() > 0) {
             strName = strName + Cart.dish1.getName() + "\n";
             strPrice = strPrice  + String.valueOf(money.format(Cart.dish1.getPrice())) + "\n";
