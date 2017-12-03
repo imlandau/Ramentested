@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         final Button submit = (Button) findViewById(R.id.submit);
         final Button byosubmit =(Button) findViewById(R.id.byosubmit);
         final TextView background = (TextView) findViewById(R.id.background);
-        final TextView curQan = (TextView) findViewById(R.id.curQuan);
+        final TextView curQuan = (TextView) findViewById(R.id.curQuan);
         //Declaration button that takes the user to the cart
         final Button cartBtn = (Button) findViewById(R.id.cartBtn);
         //Declaration for button that takes the user to the home screen
@@ -123,13 +123,13 @@ public class MainActivity extends AppCompatActivity {
                     cartHolder[6] = 1;
                     dif = 1;
                 }
-                curQan.setText(String.valueOf(cartHolder[6]));
+                curQuan.setText(String.valueOf(cartHolder[6]));
                 title.setText(String.valueOf(itemHolder[6]));
                 dish1ImgBtn.setVisibility(View.INVISIBLE);
                 dish2ImgBtn.setVisibility(View.INVISIBLE);
                 dish3ImgBtn.setVisibility(View.INVISIBLE);
                 dish4ImgBtn.setVisibility(View.INVISIBLE);
-                dish5ImgBtn.setVisibility(View.INVISIBLE);
+                createYourOwnImgBtn.setVisibility(View.INVISIBLE);
                 drinkImgBtn.setVisibility(View.INVISIBLE);
                 text1.setVisibility(View.INVISIBLE);
                 text2.setVisibility(View.INVISIBLE);
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
                 text4.setVisibility(View.INVISIBLE);
                 text5.setVisibility(View.INVISIBLE);
                 text6.setVisibility(View.INVISIBLE);
-                curQan.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -161,13 +161,13 @@ public class MainActivity extends AppCompatActivity {
                     cartHolder[1] = 1;
                     dif = 1;
                 }
-                curQan.setText(String.valueOf(cartHolder[1]));
+                curQuan.setText(String.valueOf(cartHolder[1]));
                 title.setText(String.valueOf(itemHolder[1]));
                 dish1ImgBtn.setVisibility(View.INVISIBLE);
                 dish2ImgBtn.setVisibility(View.INVISIBLE);
                 dish3ImgBtn.setVisibility(View.INVISIBLE);
                 dish4ImgBtn.setVisibility(View.INVISIBLE);
-                dish5ImgBtn.setVisibility(View.INVISIBLE);
+                createYourOwnImgBtn.setVisibility(View.INVISIBLE);
                 drinkImgBtn.setVisibility(View.INVISIBLE);
                 text1.setVisibility(View.INVISIBLE);
                 text2.setVisibility(View.INVISIBLE);
@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
                 text5.setVisibility(View.INVISIBLE);
                 text6.setVisibility(View.INVISIBLE);
                 extra.setVisibility(View.VISIBLE);
-                curQan.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -214,13 +214,13 @@ public class MainActivity extends AppCompatActivity {
                     cartHolder[2] = 1;
                     dif = 1;
                 }
-                curQan.setText(String.valueOf(cartHolder[2]));
+                curQuan.setText(String.valueOf(cartHolder[2]));
                 title.setText(String.valueOf(itemHolder[2]));
                 dish1ImgBtn.setVisibility(View.INVISIBLE);
                 dish2ImgBtn.setVisibility(View.INVISIBLE);
                 dish3ImgBtn.setVisibility(View.INVISIBLE);
                 dish4ImgBtn.setVisibility(View.INVISIBLE);
-                dish5ImgBtn.setVisibility(View.INVISIBLE);
+                createYourOwnImgBtn.setVisibility(View.INVISIBLE);
                 drinkImgBtn.setVisibility(View.INVISIBLE);
                 text1.setVisibility(View.INVISIBLE);
                 text2.setVisibility(View.INVISIBLE);
@@ -228,7 +228,7 @@ public class MainActivity extends AppCompatActivity {
                 text4.setVisibility(View.INVISIBLE);
                 text5.setVisibility(View.INVISIBLE);
                 text6.setVisibility(View.INVISIBLE);
-                curQan.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 extra.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -252,13 +252,13 @@ public class MainActivity extends AppCompatActivity {
                     cartHolder[3] = 1;
                     dif = 1;
                 }
-                curQan.setText(String.valueOf(cartHolder[3]));
+                curQuan.setText(String.valueOf(cartHolder[3]));
                 title.setText(String.valueOf(itemHolder[3]));
                 dish1ImgBtn.setVisibility(View.INVISIBLE);
                 dish2ImgBtn.setVisibility(View.INVISIBLE);
                 dish3ImgBtn.setVisibility(View.INVISIBLE);
                 dish4ImgBtn.setVisibility(View.INVISIBLE);
-                dish5ImgBtn.setVisibility(View.INVISIBLE);
+                createYourOwnImgBtn.setVisibility(View.INVISIBLE);
                 drinkImgBtn.setVisibility(View.INVISIBLE);
                 text1.setVisibility(View.INVISIBLE);
                 text2.setVisibility(View.INVISIBLE);
@@ -266,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
                 text4.setVisibility(View.INVISIBLE);
                 text5.setVisibility(View.INVISIBLE);
                 text6.setVisibility(View.INVISIBLE);
-                curQan.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 extra.setVisibility(View.VISIBLE);
                 quantityDown.setVisibility(View.VISIBLE);
@@ -290,13 +290,13 @@ public class MainActivity extends AppCompatActivity {
                     cartHolder[4] = 1;
                     dif = 1;
                 }
-                curQan.setText(String.valueOf(cartHolder[4]));
+                curQuan.setText(String.valueOf(cartHolder[4]));
                 title.setText(String.valueOf(itemHolder[4]));
                 dish1ImgBtn.setVisibility(View.INVISIBLE);
                 dish2ImgBtn.setVisibility(View.INVISIBLE);
                 dish3ImgBtn.setVisibility(View.INVISIBLE);
                 dish4ImgBtn.setVisibility(View.INVISIBLE);
-                dish5ImgBtn.setVisibility(View.INVISIBLE);
+                createYourOwnImgBtn.setVisibility(View.INVISIBLE);
                 drinkImgBtn.setVisibility(View.INVISIBLE);
                 text1.setVisibility(View.INVISIBLE);
                 text2.setVisibility(View.INVISIBLE);
@@ -304,7 +304,7 @@ public class MainActivity extends AppCompatActivity {
                 text4.setVisibility(View.INVISIBLE);
                 text5.setVisibility(View.INVISIBLE);
                 text6.setVisibility(View.INVISIBLE);
-                curQan.setVisibility(View.VISIBLE);
+                curQuan.setVisibility(View.VISIBLE);
                 background.setVisibility(View.VISIBLE);
                 extra.setVisibility(View.VISIBLE);
                 oops.setVisibility(View.VISIBLE);
@@ -319,40 +319,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
         //a quantity change through the popup menu that will be made visible as well.
-        dish5ImgBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                identifier = 5;
-                dif = 0;
-                if(cartHolder[5] == 0){
-                    cartHolder[5] = 1;
-                    dif = 1;
-                }
-                curQan.setText(String.valueOf(cartHolder[5]));
-                dish1ImgBtn.setVisibility(View.INVISIBLE);
-                dish2ImgBtn.setVisibility(View.INVISIBLE);
-                dish3ImgBtn.setVisibility(View.INVISIBLE);
-                dish4ImgBtn.setVisibility(View.INVISIBLE);
-                dish5ImgBtn.setVisibility(View.INVISIBLE);
-                drinkImgBtn.setVisibility(View.INVISIBLE);
-                text1.setVisibility(View.INVISIBLE);
-                text2.setVisibility(View.INVISIBLE);
-                text3.setVisibility(View.INVISIBLE);
-                text4.setVisibility(View.INVISIBLE);
-                text5.setVisibility(View.INVISIBLE);
-                text6.setVisibility(View.INVISIBLE);
-                oops.setVisibility(View.VISIBLE);
-                quantityDown.setVisibility(View.VISIBLE);
-                curQan.setVisibility(View.VISIBLE);
-                quantityUp.setVisibility(View.VISIBLE);
-                background.setVisibility(View.VISIBLE);
-                extra.setVisibility(View.VISIBLE);
-                submit.setVisibility(View.VISIBLE);
-                description.setVisibility(View.VISIBLE);
-                title.setVisibility(View.VISIBLE);
-                description.setText(getResources().getStringArray(R.array.Descriptions)[3]);
 
-        }});
 
         //Create an OnClickListener for cartBtn that will move the user to the cart page of the app.
         cartBtn.setOnClickListener(new View.OnClickListener() {
@@ -379,7 +346,7 @@ public class MainActivity extends AppCompatActivity {
                     cartHolder[identifier]--;
                     dif--;
                 }
-                curQan.setText(String.valueOf(cartHolder[identifier]));
+                curQuan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
                     case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
                         break;
@@ -389,7 +356,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
                         break;
-                    case 5: Cart.dish5.setQuantity(cartHolder[identifier]);
+                    case 5: Cart.createdDish.setQuantity(cartHolder[identifier]);
                         break;
                     case 6: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
@@ -403,7 +370,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 cartHolder[identifier]++;
                 dif++;
-                curQan.setText(String.valueOf(cartHolder[identifier]));
+                curQuan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
                     case 1: Cart.dish1.setQuantity(cartHolder[identifier]);
                         break;
@@ -413,7 +380,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
                         break;
-                    case 5: Cart.dish5.setQuantity(cartHolder[identifier]);
+                    case 5: Cart.createdDish.setQuantity(cartHolder[identifier]);
                         break;
                     case 6: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
@@ -434,7 +401,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
                         break;
-                    case 5: Cart.dish5.setQuantity(cartHolder[identifier]);
+                    case 5: Cart.createdDish.setQuantity(cartHolder[identifier]);
                         break;
                     case 6: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
@@ -446,7 +413,7 @@ public class MainActivity extends AppCompatActivity {
                 quantityUp.setVisibility(View.INVISIBLE);
                 background.setVisibility(View.INVISIBLE);
                 submit.setVisibility(View.INVISIBLE);
-                curQan.setVisibility(View.INVISIBLE);
+                curQuan.setVisibility(View.INVISIBLE);
                 description.setVisibility(View.INVISIBLE);
                 oops.setVisibility(View.INVISIBLE);
                 title.setVisibility(View.INVISIBLE);
@@ -501,13 +468,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                     if (dif > 0) {
-                        Message.setVisibility(View.VISIBLE);
-                        Message.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                Message.setVisibility(View.INVISIBLE);
-                            }
-                        }, 1500);
+
                     }
                     quantityDown.setVisibility(View.INVISIBLE);
                     quantityUp.setVisibility(View.INVISIBLE);
@@ -520,6 +481,7 @@ public class MainActivity extends AppCompatActivity {
                     item1.setVisibility(View.INVISIBLE);
                     item2.setVisibility(View.INVISIBLE);
                     createYourOwnImgBtn.setVisibility(View.VISIBLE);
+                    Toast.makeText(getApplicationContext(), "Your item(s) has been added to the cart", Toast.LENGTH_SHORT).show();
                     dish1ImgBtn.setVisibility(View.VISIBLE);
                     dish2ImgBtn.setVisibility(View.VISIBLE);
                     dish3ImgBtn.setVisibility(View.VISIBLE);
@@ -540,7 +502,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 quantityDown.setVisibility(View.INVISIBLE);
                 quantityUp.setVisibility(View.INVISIBLE);
-                curQan.setVisibility(View.INVISIBLE);
+                curQuan.setVisibility(View.INVISIBLE);
                 background.setVisibility(View.INVISIBLE);
                 submit.setVisibility(View.INVISIBLE);
                 description.setVisibility(View.INVISIBLE);
@@ -553,7 +515,7 @@ public class MainActivity extends AppCompatActivity {
                 dish2ImgBtn.setVisibility(View.VISIBLE);
                 dish3ImgBtn.setVisibility(View.VISIBLE);
                 dish4ImgBtn.setVisibility(View.VISIBLE);
-                dish5ImgBtn.setVisibility(View.VISIBLE);
+                createYourOwnImgBtn.setVisibility(View.VISIBLE);
                 drinkImgBtn.setVisibility(View.VISIBLE);
                 text1.setVisibility(View.VISIBLE);
                 text2.setVisibility(View.VISIBLE);
