@@ -356,9 +356,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
                         break;
-                    case 5: Cart.createdDish.setQuantity(cartHolder[identifier]);
-                        break;
-                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
+                    case 5: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
             }
         }); //End quantityDown OnClickListener
@@ -380,9 +378,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
                         break;
-                    case 5: Cart.createdDish.setQuantity(cartHolder[identifier]);
-                        break;
-                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
+                    case 5: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
             }
         }); //End quantityUp OnClickListener
@@ -401,9 +397,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 4: Cart.dish4.setQuantity(cartHolder[identifier]);
                         break;
-                    case 5: Cart.createdDish.setQuantity(cartHolder[identifier]);
-                        break;
-                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
+                    case 5: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
 
                 if(dif > 0){
