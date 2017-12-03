@@ -471,6 +471,7 @@ public class MainActivity extends AppCompatActivity {
                     background.setVisibility(View.INVISIBLE);
                     byosubmit.setVisibility(View.INVISIBLE);
                     description.setVisibility(View.INVISIBLE);
+                    curQuan.setVisibility(View.INVISIBLE);
                     oops.setVisibility(View.INVISIBLE);
                     title.setVisibility(View.INVISIBLE);
                     extra.setVisibility(View.INVISIBLE);
@@ -501,6 +502,7 @@ public class MainActivity extends AppCompatActivity {
                 curQuan.setVisibility(View.INVISIBLE);
                 background.setVisibility(View.INVISIBLE);
                 submit.setVisibility(View.INVISIBLE);
+                byosubmit.setVisibility(View.INVISIBLE);
                 description.setVisibility(View.INVISIBLE);
                 title.setVisibility(View.INVISIBLE);
                 oops.setVisibility(View.INVISIBLE);

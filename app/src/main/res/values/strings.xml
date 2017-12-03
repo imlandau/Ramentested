@@ -183,17 +183,17 @@
 
     <string-array name="Descriptions">
         <item>This pork ramen is sweet, spicy and filled with spinach, onions, and sweet peppers.</item>
-        <item>Mongolian Beef with green peppers, grilled onions and ramen noodles</item>
+        <item> </item>
         <item>Loaded with spinach, green peppers, and mushrooms. No meat.</item>
         <item>Fried noodles with yellow and green peppers, and chicken.</item>
-        <item> </item>
+        <item>Mongolian Beef with green peppers, grilled onions and ramen noodles</item>
         <item>20oz cup. Fill it up with any Coke product.</item>
         <item>Test</item>
     </string-array>
 
     <string-array name="Meat">
         <item>Select Meat</item>
-        <item>Beef</item>
+        <item>Beef 50c Extra</item>
         <item>Chicken</item>
         <item>Pork</item>
     </string-array>

@@ -173,17 +173,86 @@ public class CartActivity extends AppCompatActivity{
         removeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Cart.removeAll();
-                subtotal = 0;
-                tax = 0;
-                total = 0;
-                textItem.setText("Item");
-                textPrice.setText("Price");
-                textQuantity.setText("Quantity");
-                subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
-                taxTextView.setText("Tax:\n$" + money.format(tax));
-                totalTextView.setText("Total:\n$" + money.format(total));
+                if(Cart.dish1.getQuantity() > 0) {
+                    Cart.removeAll();
+                    subtotal = 0;
+                    tax = 0;
+                    total = 0;
+                    textItem.setText("Item");
+                    textPrice.setText("Price");
+                    textQuantity.setText("Quantity");
+                    subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
+                    taxTextView.setText("Tax:\n$" + money.format(tax));
+                    totalTextView.setText("Total:\n$" + money.format(total));
+                    Toast.makeText(getApplicationContext(), "Your cart has been emptied.", Toast.LENGTH_SHORT).show();
+                }else if(Cart.dish2.getQuantity() > 0) {
+                    Cart.removeAll();
+                    subtotal = 0;
+                    tax = 0;
+                    total = 0;
+                    textItem.setText("Item");
+                    textPrice.setText("Price");
+                    textQuantity.setText("Quantity");
+                    subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
+                    taxTextView.setText("Tax:\n$" + money.format(tax));
+                    totalTextView.setText("Total:\n$" + money.format(total));
+                    Toast.makeText(getApplicationContext(), "Your cart has been emptied.", Toast.LENGTH_SHORT).show();
+                }else if(Cart.dish3.getQuantity() > 0) {
+                    Cart.removeAll();
+                    subtotal = 0;
+                    tax = 0;
+                    total = 0;
+                    textItem.setText("Item");
+                    textPrice.setText("Price");
+                    textQuantity.setText("Quantity");
+                    subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
+                    taxTextView.setText("Tax:\n$" + money.format(tax));
+                    totalTextView.setText("Total:\n$" + money.format(total));
+                    Toast.makeText(getApplicationContext(), "Your cart has been emptied.", Toast.LENGTH_SHORT).show();
+                }else if(Cart.dish4.getQuantity() > 0) {
+                    Cart.removeAll();
+                    subtotal = 0;
+                    tax = 0;
+                    total = 0;
+                    textItem.setText("Item");
+                    textPrice.setText("Price");
+                    textQuantity.setText("Quantity");
+                    subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
+                    taxTextView.setText("Tax:\n$" + money.format(tax));
+                    totalTextView.setText("Total:\n$" + money.format(total));
+                    Toast.makeText(getApplicationContext(), "Your cart has been emptied.", Toast.LENGTH_SHORT).show();
+                }else if(Cart.createdDish.equals(1)) {
+                    Cart.removeAll();
+                    subtotal = 0;
+                    tax = 0;
+                    total = 0;
+                    textItem.setText("Item");
+                    textPrice.setText("Price");
+                    textQuantity.setText("Quantity");
+                    subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
+                    taxTextView.setText("Tax:\n$" + money.format(tax));
+                    totalTextView.setText("Total:\n$" + money.format(total));
+                    Toast.makeText(getApplicationContext(), "Your cart has been emptied.", Toast.LENGTH_SHORT).show();
+                }else if(Cart.drink.getQuantity() > 0) {
+                    Cart.removeAll();
+                    subtotal = 0;
+                    tax = 0;
+                    total = 0;
+                    textItem.setText("Item");
+                    textPrice.setText("Price");
+                    textQuantity.setText("Quantity");
+                    subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
+                    taxTextView.setText("Tax:\n$" + money.format(tax));
+                    totalTextView.setText("Total:\n$" + money.format(total));
+                    Toast.makeText(getApplicationContext(), "Your cart has been emptied.", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getApplicationContext(), "Your cart already empty.", Toast.LENGTH_SHORT).show();
+
+                }
+
+
             }
+
         });
     } // end onCreate
 
