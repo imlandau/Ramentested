@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         itemHolder[2] = Cart.dish2.getName();
         itemHolder[3] = Cart.dish3.getName();
         itemHolder[4] = Cart.dish4.getName();
-        itemHolder[5] = Cart.dish5.getName();
+        itemHolder[1] = "Create Your Own";
         itemHolder[6] = Cart.drink.getName();
 
         //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
