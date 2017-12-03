@@ -86,8 +86,8 @@
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         app:layout_constraintBottom_toTopOf="@+id/bght"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -103,6 +103,7 @@
             android:layout_marginTop="8dp"
             android:background="@color/WhiteSmoke"
             android:gravity="center"
+            android:layout_weight="2"
             android:text="@string/Subtotal" />
 
         <TextView
@@ -114,6 +115,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@color/WhiteSmoke"
+            android:layout_weight="2"
             android:gravity="center"
             android:text="@string/Tax" />
 
@@ -125,6 +127,7 @@
             android:layout_marginEnd="4dp"
             android:layout_marginRight="4dp"
             android:layout_marginTop="8dp"
+            android:layout_weight="2"
             android:background="@color/WhiteSmoke"
             android:gravity="center"
             android:text="@string/Total" />
