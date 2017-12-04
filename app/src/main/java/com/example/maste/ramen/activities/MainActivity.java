@@ -1,4 +1,4 @@
-package com.example.maste.ramen;
+package com.example.maste.ramen.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,8 +11,7 @@ import android.widget.TextView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import static com.example.maste.ramen.Cart.createdDish;
-import static com.example.maste.ramen.Cart.identifier;
+import com.example.maste.ramen.R;
 
 public class MainActivity extends AppCompatActivity {
     static int dif;
@@ -72,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         createYourOwnImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                identifier = 1;
+                Cart.identifier = 1;
                 dif = 1;
                 createYourOwnImgBtn.setVisibility(View.INVISIBLE);
                 curQuan.setText(String.valueOf(dif));
@@ -117,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         drinkImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                identifier = 6;
+                Cart.identifier = 6;
                 dif = 0;
                 if(cartHolder[6] == 0){
                     cartHolder[6] = 1;
@@ -157,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
         dish1ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                identifier = 2;
+                Cart.identifier = 2;
                 dif = 0;
                 if(cartHolder[2] == 0){
                     cartHolder[2] = 1;
@@ -210,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
         dish2ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                identifier = 3;
+                Cart.identifier = 3;
                 dif = 0;
                 if(cartHolder[3] == 0){
                     cartHolder[3] = 1;
@@ -248,7 +247,7 @@ public class MainActivity extends AppCompatActivity {
         dish3ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                identifier = 4;
+                Cart.identifier = 4;
                 dif = 0;
                 if(cartHolder[4] == 0){
                     cartHolder[4] = 1;
@@ -286,7 +285,7 @@ public class MainActivity extends AppCompatActivity {
         dish4ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                identifier = 5;
+                Cart.identifier = 5;
                 dif = 0;
                 if(cartHolder[5] == 0){
                     cartHolder[5] = 1;
@@ -344,21 +343,21 @@ public class MainActivity extends AppCompatActivity {
         quantityDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(cartHolder[identifier] > 0){
-                    cartHolder[identifier]--;
+                if(cartHolder[Cart.identifier] > 0){
+                    cartHolder[Cart.identifier]--;
                     dif--;
                 }
-                curQuan.setText(String.valueOf(cartHolder[identifier]));
-                switch (identifier) {
-                    case 2: Cart.dish1.setQuantity(cartHolder[identifier]);
+                curQuan.setText(String.valueOf(cartHolder[Cart.identifier]));
+                switch (Cart.identifier) {
+                    case 2: Cart.dish1.setQuantity(cartHolder[Cart.identifier]);
                         break;
-                    case 3: Cart.dish2.setQuantity(cartHolder[identifier]);
+                    case 3: Cart.dish2.setQuantity(cartHolder[Cart.identifier]);
                         break;
-                    case 4: Cart.dish3.setQuantity(cartHolder[identifier]);
+                    case 4: Cart.dish3.setQuantity(cartHolder[Cart.identifier]);
                         break;
-                    case 5: Cart.dish4.setQuantity(cartHolder[identifier]);
+                    case 5: Cart.dish4.setQuantity(cartHolder[Cart.identifier]);
                         break;
-                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
+                    case 6: Cart.drink.setQuantity(cartHolder[Cart.identifier]);
                 }
             }
         }); //End quantityDown OnClickListener
@@ -368,19 +367,19 @@ public class MainActivity extends AppCompatActivity {
         quantityUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cartHolder[identifier]++;
+                cartHolder[Cart.identifier]++;
                 dif++;
-                curQuan.setText(String.valueOf(cartHolder[identifier]));
-                switch (identifier) {
-                    case 2: Cart.dish1.setQuantity(cartHolder[identifier]);
+                curQuan.setText(String.valueOf(cartHolder[Cart.identifier]));
+                switch (Cart.identifier) {
+                    case 2: Cart.dish1.setQuantity(cartHolder[Cart.identifier]);
                         break;
-                    case 3: Cart.dish2.setQuantity(cartHolder[identifier]);
+                    case 3: Cart.dish2.setQuantity(cartHolder[Cart.identifier]);
                         break;
-                    case 4: Cart.dish3.setQuantity(cartHolder[identifier]);
+                    case 4: Cart.dish3.setQuantity(cartHolder[Cart.identifier]);
                         break;
-                    case 5: Cart.dish4.setQuantity(cartHolder[identifier]);
+                    case 5: Cart.dish4.setQuantity(cartHolder[Cart.identifier]);
                         break;
-                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
+                    case 6: Cart.drink.setQuantity(cartHolder[Cart.identifier]);
                 }
             }
         }); //End quantityUp OnClickListener
@@ -390,16 +389,16 @@ public class MainActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switch (identifier) {
-                    case 2: Cart.dish1.setQuantity(cartHolder[identifier]);
+                switch (Cart.identifier) {
+                    case 2: Cart.dish1.setQuantity(cartHolder[Cart.identifier]);
                         break;
-                    case 3: Cart.dish2.setQuantity(cartHolder[identifier]);
+                    case 3: Cart.dish2.setQuantity(cartHolder[Cart.identifier]);
                         break;
-                    case 4: Cart.dish3.setQuantity(cartHolder[identifier]);
+                    case 4: Cart.dish3.setQuantity(cartHolder[Cart.identifier]);
                         break;
-                    case 5: Cart.dish4.setQuantity(cartHolder[identifier]);
+                    case 5: Cart.dish4.setQuantity(cartHolder[Cart.identifier]);
                         break;
-                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
+                    case 6: Cart.drink.setQuantity(cartHolder[Cart.identifier]);
                 }
 
                 if (dif < 1) {
@@ -494,23 +493,23 @@ public class MainActivity extends AppCompatActivity {
                             item2.getSelectedItem().toString();
 
                     if(selectedDish.equals("-Beef 50c Extra -Broccoli")){
-                        createdDish[0].setQuantity(createdDish[0].getQuantity() + dif);
+                        Cart.createdDish[0].setQuantity(Cart.createdDish[0].getQuantity() + dif);
                     }else if(selectedDish.equals("-Beef 50c Extra -Carrots")){
-                        createdDish[1].setQuantity(createdDish[1].getQuantity() + dif);
+                        Cart.createdDish[1].setQuantity(Cart.createdDish[1].getQuantity() + dif);
                     }else if(selectedDish.equals("-Beef 50c Extra -Spinach")){
-                        createdDish[2].setQuantity(createdDish[2].getQuantity() + dif);
+                        Cart.createdDish[2].setQuantity(Cart.createdDish[2].getQuantity() + dif);
                     }else if(selectedDish.equals("-Chicken -Broccoli")){
-                        createdDish[3].setQuantity(createdDish[3].getQuantity() + dif);
+                        Cart.createdDish[3].setQuantity(Cart.createdDish[3].getQuantity() + dif);
                     }else if(selectedDish.equals("-Chicken -Carrots")){
-                        createdDish[4].setQuantity(createdDish[4].getQuantity() + dif);
+                        Cart.createdDish[4].setQuantity(Cart.createdDish[4].getQuantity() + dif);
                     }else if(selectedDish.equals("-Chicken -Spinach")){
-                        createdDish[5].setQuantity(createdDish[5].getQuantity() + dif);
+                        Cart.createdDish[5].setQuantity(Cart.createdDish[5].getQuantity() + dif);
                     }else if(selectedDish.equals("-Pork -Broccoli")){
-                        createdDish[6].setQuantity(createdDish[6].getQuantity() + dif);
+                        Cart.createdDish[6].setQuantity(Cart.createdDish[6].getQuantity() + dif);
                     }else if(selectedDish.equals("-Pork -Carrots")){
-                        createdDish[7].setQuantity(createdDish[7].getQuantity() + dif);
+                        Cart.createdDish[7].setQuantity(Cart.createdDish[7].getQuantity() + dif);
                     }else if(selectedDish.equals("-Pork -Spinach")){
-                        createdDish[8].setQuantity(createdDish[8].getQuantity() + dif);
+                        Cart.createdDish[8].setQuantity(Cart.createdDish[8].getQuantity() + dif);
                     }
                     else if(selectedDish.equals("-Select Meat -Select Veggie")) {
                         Toast.makeText(getApplicationContext(), "Nothing was added", Toast.LENGTH_SHORT).show();

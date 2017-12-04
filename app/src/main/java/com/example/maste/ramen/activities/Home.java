@@ -1,4 +1,4 @@
-package com.example.maste.ramen;
+package com.example.maste.ramen.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +24,7 @@ import android.view.View;
 import com.androidtutorialshub.loginregister.R;
 import com.androidtutorialshub.loginregister.helpers.InputValidation;
 import com.androidtutorialshub.loginregister.sql.DatabaseHelper;
+import com.example.maste.ramen.R;
 
 public class Home extends AppCompatActivity implements View.OnClickListener {
 

@@ -1,4 +1,4 @@
-package com.example.maste.ramen;
+package com.example.maste.ramen.activities;
 
 import android.support.v7.app.AppCompatActivity;
 

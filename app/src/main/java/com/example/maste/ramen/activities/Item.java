@@ -1,4 +1,4 @@
-package com.example.maste.ramen;
+package com.example.maste.ramen.activities;
 
 /**
  * Instances of this class are objects that will be added to the cart.

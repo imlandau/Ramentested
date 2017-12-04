@@ -1,4 +1,4 @@
-package com.example.maste.ramen;
+package com.example.maste.ramen.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.example.maste.ramen.R;
 
 import java.text.DecimalFormat;
 
