@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import static com.example.maste.ramen.Cart.createdDish;
 import static com.example.maste.ramen.Cart.identifier;
-
+//
 public class MainActivity extends AppCompatActivity {
     //Create variable int for reference to the quantity
     static int dif;
