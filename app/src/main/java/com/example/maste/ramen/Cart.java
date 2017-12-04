@@ -39,5 +39,5 @@ public class Cart extends AppCompatActivity {
         dish3.setQuantity(0);
         dish4.setQuantity(0);
         drink.setQuantity(0);
-    }
-} // end class
+    }//End removeAll
+}//End class
