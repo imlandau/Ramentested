@@ -14,16 +14,16 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        Button homeBtn2 = (Button) findViewById(R.id.homeBtn2);
-        homeBtn2.setOnClickListener(new View.OnClickListener() {
+        Button signUpBtn2 = (Button) findViewById(R.id.signUpBtn2);
+        signUpBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SignUp.this, Home.class));
             }
         });
 
-        TextView ToMenuBtn = (TextView) findViewById(R.id.ToMenuBtn);
-        ToMenuBtn.setOnClickListener(new View.OnClickListener() {
+        TextView loginPage = (TextView) findViewById(R.id.loginPage);
+        loginPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SignUp.this, MainActivity.class));
