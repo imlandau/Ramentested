@@ -250,7 +250,7 @@ public class CartActivity extends AppCompatActivity{
                             Toast.LENGTH_SHORT).show();
                     clear();
                 }else{
-                    Toast.makeText(getApplicationContext(), "Your cart was already " +
+                    Toast.makeText(getApplicationContext(), "Your cart is already " +
                             "empty.", Toast.LENGTH_SHORT).show();
                     }
                 }

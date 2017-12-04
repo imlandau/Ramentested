@@ -110,18 +110,6 @@ public class MainActivity extends AppCompatActivity {
                 description.setText(getResources().getStringArray(R.array.Descriptions)[1]);
                 showPopupMenu();
                 submit.setVisibility(View.VISIBLE);
-                ArrayAdapter<String> myAdapter = new ArrayAdapter<>(MainActivity.this,
-                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Meat));
-                myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                item1.setAdapter(myAdapter);
-
-
-                ArrayAdapter<String> myAdapter2 = new ArrayAdapter<>(MainActivity.this,
-                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Veggie));
-                myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                item2.setAdapter(myAdapter2);
-
-
             } // end onClick
         }); // end dish1ImgBtn onClickListener
 
@@ -176,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 curQuan.setText(String.valueOf(cartHolder[5]));
                 title.setText(String.valueOf(itemHolder[5]));
-                description.setText(getResources().getStringArray(R.array.Descriptions)[5]);
+                description.setText(getResources().getStringArray(R.array.Descriptions)[4]);
                 showPopupMenu();
                 submit.setVisibility(View.VISIBLE);
             }
@@ -250,7 +238,11 @@ public class MainActivity extends AppCompatActivity {
         quantityUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cartHolder[identifier]++;
+                if (identifier == 1){
+
+                }else if(identifier > 1){
+                    cartHolder[identifier]++;
+                }
                 dif++;
                 curQuan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
