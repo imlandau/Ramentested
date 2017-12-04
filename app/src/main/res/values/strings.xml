@@ -14,10 +14,12 @@
     <string name="loginpage">Go to Login</string>
     <string name="beg">1</string>
     <string name="signup">Sign Up</string>
-    <string name="Username">Username</string>
+    <string name="Username">Enter Username</string>
     <string name="update">Update Cart</string>
-    <string name="Password">Password</string>
+    <string name="Password">Enter Password</string>
+    <string name="conPassword">Confirm Password</string>
     <string name="Price">Price</string>
+    <string name="name">Enter Name</string>
     <string name="Item">Item</string>
     <string name="Subtotal">Subtotal</string>
     <string name="Tax">Tax</string>
