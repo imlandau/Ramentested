@@ -198,6 +198,8 @@ public class CartActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 if(Cart.createdDish[0].getQuantity() > 0){
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[1].getQuantity() > 0) {
                     Toast.makeText(getApplicationContext(), "Your cart is empty",
