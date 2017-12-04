@@ -18,6 +18,7 @@
     <string name="Username">Username</string>
     <string name="update">Update Cart</string>
     <string name="Password">Password</string>
+    <string name="conPassword">Confirm Password</string>
     <string name="Price">Price</string>
     <string name="Item">Item</string>
     <string name="Subtotal">Subtotal</string>
