@@ -246,6 +246,7 @@ public class MainActivity extends AppCompatActivity {
                 dif++;
                 curQuan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
+                    case 1: curQuan.setText(String.valueOf(dif));
                     case 2: Cart.dish1.setQuantity(cartHolder[identifier]);
                         break;
                     case 3: Cart.dish2.setQuantity(cartHolder[identifier]);
