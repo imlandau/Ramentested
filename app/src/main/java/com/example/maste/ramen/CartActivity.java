@@ -120,15 +120,15 @@ public class CartActivity extends AppCompatActivity{
         taxTextView.setText("Tax:\n$" + money.format(tax));
         totalTextView.setText("Total:\n$" + money.format(total));
 
-        //Returns the user to the menu page
+        //Create an OnClickListener for menuBtn that returns the user to the menu page
         menuBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 startActivity(new Intent(CartActivity.this, MainActivity.class));
-            }
-        });
+            }//End onClick
+        });//End menuBtn OnClickListener
 
-        //Returns the user to the home page
+        //Create an OnClickListener for homeBtn returns the user to the home page
         homeBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -207,11 +207,10 @@ public class CartActivity extends AppCompatActivity{
                             Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(CartActivity.this, MainActivity.class));
                 }
+            }//End onClick
+        });//End homeBtn OnClickListener
 
-            }
-        });
-
-        //This button removes all items in the cart
+        //Create an OnClickListener for removeBtn that removes all items in the cart
         removeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -275,10 +274,9 @@ public class CartActivity extends AppCompatActivity{
                     Toast.makeText(getApplicationContext(), "Your cart is already " +
                             "empty.", Toast.LENGTH_SHORT).show();
                     }
-                }
-
-        });
-    } // end onCreate
+                }//End onClick
+        });//End removeBtn OnClickListener
+    }//End onCreate
 
     public void clear(){
         final TextView textItem = (TextView) findViewById(R.id.textItem);
@@ -298,5 +296,5 @@ public class CartActivity extends AppCompatActivity{
         subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
         taxTextView.setText("Tax:\n$" + money.format(tax));
         totalTextView.setText("Total:\n$" + money.format(total));
-    }
-} // end class
+    }//End clear
+}//End class

@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         //Declaration for button that takes the user to the home screen
         Button homeBtn = (Button) findViewById(R.id.purchaseBtn);
 
-        //Declaration for the cartHolder which will redundancy within
+        //Declaration for the cartHolder which will reduce redundancy
         final int[] cartHolder = new int[7];
         cartHolder[1] = Cart.nonDish.getQuantity();
         cartHolder[2] = Cart.dish1.getQuantity();
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         cartHolder[5] = Cart.dish4.getQuantity();
         cartHolder[6] = Cart.drink.getQuantity();
 
+        //Declaration for the itemHolder which will reduce redundancy
         final String[] itemHolder = new String[7];
         itemHolder[1] = "Create Your Own";
         itemHolder[2] = Cart.dish1.getName();
@@ -69,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
         itemHolder[5] = Cart.dish4.getName();
         itemHolder[6] = Cart.drink.getName();
 
-
+        //Create an OnClickListener for createYourOwnImgBtn which will allow the user to
+        //create their own dishes with different meats and veggies
         createYourOwnImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -92,10 +94,10 @@ public class MainActivity extends AppCompatActivity {
                         android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Veggie));
                 myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 item2.setAdapter(myAdapter2);
-            }
-        });
+            }//End onClick
+        });//End createYourOwnImgBtn OnClickListener
 
-        //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
+        //Create an OnClickListener for dish1ImgBtn that will identify which item will be receiving
         //a quantity change through the popup menu that will be made visible as well.
         dish1ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,10 +114,10 @@ public class MainActivity extends AppCompatActivity {
                 description.setText(getResources().getStringArray(R.array.Descriptions)[1]);
                 showPopupMenu();
                 submit.setVisibility(View.VISIBLE);
-            } // end onClick
-        }); // end dish1ImgBtn onClickListener
+            }//End onClick
+        });//End dish1ImgBtn onClickListener
 
-        //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
+        //Create an OnClickListener for dish2ImgBtn that will identify which item will be receiving
         //a quantity change through the popup menu that will be made visible as well.
         dish2ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,10 +134,10 @@ public class MainActivity extends AppCompatActivity {
                 description.setText(getResources().getStringArray(R.array.Descriptions)[2]);
                 showPopupMenu();
                 submit.setVisibility(View.VISIBLE);
-            } // end onClick
-        });
+            }//End onClick
+        });//End dish2ImgBtn OnClickListener
 
-        //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
+        //Create an OnClickListener for dish3ImgBtn that will identify which item will be receiving
         //a quantity change through the popup menu that will be made visible as well.
         dish3ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -152,10 +154,10 @@ public class MainActivity extends AppCompatActivity {
                 description.setText(getResources().getStringArray(R.array.Descriptions)[3]);
                 showPopupMenu();
                 submit.setVisibility(View.VISIBLE);
-            }
-        });
+            }//End onClick
+        });//End dish3ImgBtn OnClickListener
 
-        //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
+        //Create an OnClickListener for dish4ImgBtn that will identify which item will be receiving
         //a quantity change through the popup menu that will be made visible as well.
         dish4ImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -172,10 +174,10 @@ public class MainActivity extends AppCompatActivity {
                 description.setText(getResources().getStringArray(R.array.Descriptions)[4]);
                 showPopupMenu();
                 submit.setVisibility(View.VISIBLE);
-            }
-        });
+            }//End onClick
+        });//End dish4ImgBtn OnClickListener
 
-        //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
+        //Create an OnClickListener for drinkImgBtn that will identify which item will be receiving
         //a quantity change through the popup menu that will be made visible as well.
         drinkImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -192,28 +194,24 @@ public class MainActivity extends AppCompatActivity {
                 description.setText(getResources().getStringArray(R.array.Descriptions)[5]);
                 showPopupMenu();
                 submit.setVisibility(View.VISIBLE);
-            }
-        }); // end createYourOwnImgBtn OnClickListener
-
-        //Create an OnClickListener for dish5ImgBtn that will identify which item will be receiving
-        //a quantity change through the popup menu that will be made visible as well.
-
+            }//End onClick
+        });//End drinkImgBtn OnClickListener
 
         //Create an OnClickListener for cartBtn that will move the user to the cart page of the app.
         cartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, CartActivity.class));
-            }
-        }); // end cartBtn OnClickListener
+            }//End onClick
+        });//End cartBtn OnClickListener
 
         //Create an OnClickListener for homeBtn that will move the user to the home page of the app.
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, Home.class));
-            }
-        }); // end homeBtn OnClickListener
+            }//End onClick
+        });//End homeBtn OnClickListener
 
         //Create an OnClickListener for quantityDown that will
         //decrement the quantity of the item by 1 every click.
@@ -243,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 6: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
-            }
+            }//End onClick
         }); //End quantityDown OnClickListener
 
         //Create an OnClickListener for quantityUp that will
@@ -270,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 6: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
-            }
+            }//End onClick
         }); //End quantityUp OnClickListener
 
         //Create an OnClickListener for submit that will
@@ -279,32 +277,34 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 switch (identifier) {
-                    case 2: Cart.dish1.setQuantity(cartHolder[identifier]);
+                    case 2:
+                        Cart.dish1.setQuantity(cartHolder[identifier]);
                         break;
-                    case 3: Cart.dish2.setQuantity(cartHolder[identifier]);
+                    case 3:
+                        Cart.dish2.setQuantity(cartHolder[identifier]);
                         break;
-                    case 4: Cart.dish3.setQuantity(cartHolder[identifier]);
+                    case 4:
+                        Cart.dish3.setQuantity(cartHolder[identifier]);
                         break;
-                    case 5: Cart.dish4.setQuantity(cartHolder[identifier]);
+                    case 5:
+                        Cart.dish4.setQuantity(cartHolder[identifier]);
                         break;
-                    case 6: Cart.drink.setQuantity(cartHolder[identifier]);
+                    case 6:
+                        Cart.drink.setQuantity(cartHolder[identifier]);
                 }
-
                 if (dif < 0) {
                     closePopupMenu();
                     Toast.makeText(getApplicationContext(), "Your item(s) has been removed", Toast.LENGTH_SHORT).show();
-                }else if (dif == 0){
+                } else if (dif == 0) {
                     Toast.makeText(getApplicationContext(), "No changes have been made", Toast.LENGTH_SHORT).show();
                 } else {
                     closePopupMenu();
                     Toast.makeText(getApplicationContext(), "Your item(s) has been added to the cart", Toast.LENGTH_SHORT).show();
                 }
+            }//End onClick
+        }); //End submit OnClickListener
 
-            }
-            }
-        ); //End submit OnClickListener
-
-        //for the build your own
+        //Create an OnClickListener for byosubmit which takes of the newly created items
         byosubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -313,7 +313,6 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     String selectedDish = "-" + item1.getSelectedItem().toString() + " -" +
                             item2.getSelectedItem().toString();
-
                     if(selectedDish.equals("-Beef -Broccoli")){
                         createdDish[0].setQuantity(createdDish[0].getQuantity() + dif);
                     }else if(selectedDish.equals("-Beef -Carrots")){
@@ -372,18 +371,18 @@ public class MainActivity extends AppCompatActivity {
                                 Toast.LENGTH_SHORT).show();
                     }
                 }
-            }
-        }); //End build your own submit OnClickListener
+            }//End onClick
+        });//End build your own submit OnClickListener
 
+        //Create an OnClickListener for oops to allow the user to back out of the popup menu
         oops.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 closePopupMenu();
                 Toast.makeText(getApplicationContext(), "Your cart was not modified",
                         Toast.LENGTH_SHORT).show();
-            }
-        });
-//
+            }//End onClick
+        });//End oops OnClickListener
     } // end onCreate
 
     public void showPopupMenu() {
@@ -428,7 +427,7 @@ public class MainActivity extends AppCompatActivity {
         quantityUp.setVisibility(View.VISIBLE);
         background.setVisibility(View.VISIBLE);
         curQuan.setVisibility(View.VISIBLE);
-    }
+    }//End showPopupMenu
 
     public void closePopupMenu(){
         final ImageButton createYourOwnImgBtn = (ImageButton) findViewById(R.id.drinkImgBtn);
@@ -480,5 +479,5 @@ public class MainActivity extends AppCompatActivity {
         byosubmit.setVisibility(View.INVISIBLE);
         background.setVisibility(View.INVISIBLE);
         curQuan.setVisibility(View.INVISIBLE);
-    }
-} // end class
+    }//End closePopupMenu
+}//End class

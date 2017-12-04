@@ -18,7 +18,7 @@ public class Item {
         this.price = 0;
         this.quantity = 0;
         this.name = "";
-    } // end default Item constructor
+    } //End default Item constructor
 
     /**
      * Constructs an item object that can be added to the cart
@@ -29,27 +29,24 @@ public class Item {
         this.price = price;
         this.quantity = quantity;
         this.name = name;
-    } // end Item constructor
+    } //End Item constructor
 
     public double getPrice() {
         return price;
-    } // end getPrice
+    }//End getPrice
 
     public int getQuantity() {
         return quantity;
-    } // end getQuantity
+    }//End getQuantity
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    } // end setQuantity
+    public void setQuantity(int quantity) {this.quantity = quantity;}//End setQuantity
 
     public String getName() {
         return name;
-    } // end getName
+    }//End getName
 
     public String toString() {
         return this.name + "\nQuantity: " + this.quantity + "Price per unit: " +
                 this.price + "\nSubtotal: $" + this.price*this.quantity + "\n\n";
-    } // end toString
-
-} // end class
+    }//End toString
+}//End class
