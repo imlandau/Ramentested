@@ -13,18 +13,16 @@ import android.widget.Toast;
 
 import static com.example.maste.ramen.Cart.createdDish;
 import static com.example.maste.ramen.Cart.identifier;
-//
-public class MainActivity extends AppCompatActivity {
-    //Create variable int for reference to the quantity
-    static int dif;
-    static int change;
 
+public class MainActivity extends AppCompatActivity {
+    static int dif;
+    static int modified;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Create reference to all of the buttons and TextViews on the menu
+        //Create reference to all of the buttons  and TextViewon the menu
         final ImageButton createYourOwnImgBtn = (ImageButton) findViewById(R.id.drinkImgBtn);
         final ImageButton dish1ImgBtn = (ImageButton) findViewById(R.id.dish1ImgBtn);
         final ImageButton dish2ImgBtn = (ImageButton) findViewById(R.id.dish2ImgBtn);
@@ -33,13 +31,21 @@ public class MainActivity extends AppCompatActivity {
         final ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
         final Spinner item1 = (Spinner) findViewById(R.id.item1);
         final Spinner item2 = (Spinner) findViewById(R.id.item2);
+        final TextView text1 = (TextView) findViewById(R.id.text1);
+        final TextView text2 = (TextView) findViewById(R.id.text2);
+        final TextView text3 = (TextView) findViewById(R.id.text3);
+        final TextView text4 = (TextView) findViewById(R.id.text4);
+        final TextView text5 = (TextView) findViewById(R.id.text5);
+        final TextView text6 = (TextView) findViewById(R.id.text6);
         final TextView oops = (TextView) findViewById(R.id.oops);
         final TextView title = (TextView) findViewById(R.id.title);
         final TextView description = (TextView) findViewById(R.id.description);
+        final TextView extra = (TextView) findViewById(R.id.extra);
         final Button quantityDown = (Button) findViewById(R.id.quandown);
         final Button quantityUp = (Button) findViewById(R.id.quanup);
         final Button submit = (Button) findViewById(R.id.submit);
         final Button byosubmit =(Button) findViewById(R.id.byosubmit);
+        final TextView background = (TextView) findViewById(R.id.background);
         final TextView curQuan = (TextView) findViewById(R.id.curQuan);
         //Declaration button that takes the user to the cart
         final Button cartBtn = (Button) findViewById(R.id.cartBtn);
@@ -64,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
         itemHolder[5] = Cart.dish4.getName();
         itemHolder[6] = Cart.drink.getName();
 
-        //Create an OnClickListener for createYourOwnImgBtn that will allow the user to create their
-        //own dish from the 3 available meats and veggis.
+        //Create an OnClickListener for createYourOwnImgBtn which will allow the user to
+        //create their own dishes with different meats and veggies
         createYourOwnImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -76,10 +82,9 @@ public class MainActivity extends AppCompatActivity {
                 title.setText(String.valueOf(itemHolder[1]));
                 description.setText(getResources().getStringArray(R.array.Descriptions)[0]);
                 showPopupMenu();
-                byosubmit.setVisibility(View.VISIBLE);
                 item1.setVisibility(View.VISIBLE);
                 item2.setVisibility(View.VISIBLE);
-
+                byosubmit.setVisibility(View.VISIBLE);
                 ArrayAdapter<String> myAdapter = new ArrayAdapter<>(MainActivity.this,
                         android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Meat));
                 myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -98,17 +103,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 identifier = 2;
+                dif = 0;
+                modified = 0;
                 if(cartHolder[2] == 0){
                     cartHolder[2] = 1;
-                }else if(cartHolder[2] >0){
+                    dif = 1;
                 }
                 curQuan.setText(String.valueOf(cartHolder[2]));
                 title.setText(String.valueOf(itemHolder[2]));
                 description.setText(getResources().getStringArray(R.array.Descriptions)[1]);
                 showPopupMenu();
                 submit.setVisibility(View.VISIBLE);
-            } // end onClick
-        }); //End dish1ImgBtn onClickListener
+            }//End onClick
+        });//End dish1ImgBtn onClickListener
 
         //Create an OnClickListener for dish2ImgBtn that will identify which item will be receiving
         //a quantity change through the popup menu that will be made visible as well.
@@ -116,15 +123,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 identifier = 3;
+                dif = 0;
+                modified = 0;
                 if(cartHolder[3] == 0){
                     cartHolder[3] = 1;
+                    dif = 1;
                 }
                 curQuan.setText(String.valueOf(cartHolder[3]));
                 title.setText(String.valueOf(itemHolder[3]));
                 description.setText(getResources().getStringArray(R.array.Descriptions)[2]);
                 showPopupMenu();
                 submit.setVisibility(View.VISIBLE);
-            } //End onClick
+            }//End onClick
         });//End dish2ImgBtn OnClickListener
 
         //Create an OnClickListener for dish3ImgBtn that will identify which item will be receiving
@@ -133,15 +143,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 identifier = 4;
+                dif = 0;
+                modified = 0;
                 if(cartHolder[4] == 0){
                     cartHolder[4] = 1;
+                    dif = 1;
                 }
                 curQuan.setText(String.valueOf(cartHolder[4]));
                 title.setText(String.valueOf(itemHolder[4]));
                 description.setText(getResources().getStringArray(R.array.Descriptions)[3]);
                 showPopupMenu();
                 submit.setVisibility(View.VISIBLE);
-            }//End nClick
+            }//End onClick
         });//End dish3ImgBtn OnClickListener
 
         //Create an OnClickListener for dish4ImgBtn that will identify which item will be receiving
@@ -150,8 +163,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 identifier = 5;
+                dif = 0;
+                modified = 0;
                 if(cartHolder[5] == 0){
                     cartHolder[5] = 1;
+                    dif = 1;
                 }
                 curQuan.setText(String.valueOf(cartHolder[5]));
                 title.setText(String.valueOf(itemHolder[5]));
@@ -159,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
                 showPopupMenu();
                 submit.setVisibility(View.VISIBLE);
             }//End onClick
-        });//End dish4Imgbtn OnClickListener
+        });//End dish4ImgBtn OnClickListener
 
         //Create an OnClickListener for drinkImgBtn that will identify which item will be receiving
         //a quantity change through the popup menu that will be made visible as well.
@@ -168,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 identifier = 6;
                 dif = 0;
+                modified = 0;
                 if(cartHolder[6] == 0){
                     cartHolder[6] = 1;
                     dif = 1;
@@ -178,14 +195,14 @@ public class MainActivity extends AppCompatActivity {
                 showPopupMenu();
                 submit.setVisibility(View.VISIBLE);
             }//End onClick
-        }); //End drinkImgBtn OnClickListener
+        });//End drinkImgBtn OnClickListener
 
         //Create an OnClickListener for cartBtn that will move the user to the cart page of the app.
         cartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, CartActivity.class));
-            }//End OnClick
+            }//End onClick
         });//End cartBtn OnClickListener
 
         //Create an OnClickListener for homeBtn that will move the user to the home page of the app.
@@ -193,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, Home.class));
-            }//End onCLick
+            }//End onClick
         });//End homeBtn OnClickListener
 
         //Create an OnClickListener for quantityDown that will
@@ -202,17 +219,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(identifier == 1){
-                    if(dif > 0){
+                    if (dif > 0){
                         dif--;
-                        change--;
                     }
-                }else if(identifier > 1){
-                    if(cartHolder[identifier] > 0){
-                        cartHolder[identifier]--;
-                    }
+                }else if(cartHolder[identifier] > 0){
+                    cartHolder[identifier]--;
+                    dif--;
                 }
+                curQuan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
                     case 1: curQuan.setText(String.valueOf(dif));
+
                         break;
                     case 2: Cart.dish1.setQuantity(cartHolder[identifier]);
                         break;
@@ -224,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 6: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
-            }
+            }//End onClick
         }); //End quantityDown OnClickListener
 
         //Create an OnClickListener for quantityUp that will
@@ -232,17 +249,15 @@ public class MainActivity extends AppCompatActivity {
         quantityUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(identifier == 1){
-                    dif++;
-                    change++;
+                if (identifier == 1){
+
                 }else if(identifier > 1){
                     cartHolder[identifier]++;
                 }
-
+                dif++;
                 curQuan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
                     case 1: curQuan.setText(String.valueOf(dif));
-                        break;
                     case 2: Cart.dish1.setQuantity(cartHolder[identifier]);
                         break;
                     case 3: Cart.dish2.setQuantity(cartHolder[identifier]);
@@ -253,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 6: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
-            }
+            }//End onClick
         }); //End quantityUp OnClickListener
 
         //Create an OnClickListener for submit that will
@@ -277,93 +292,105 @@ public class MainActivity extends AppCompatActivity {
                     case 6:
                         Cart.drink.setQuantity(cartHolder[identifier]);
                 }
-
-                if (dif < 1) {
+                if (dif < 0) {
                     closePopupMenu();
-                    Toast.makeText(getApplicationContext(), "Your item(s) has been removed " +
-                            "from the cart", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your item(s) has been removed", Toast.LENGTH_SHORT).show();
                 } else if (dif == 0) {
-                    closePopupMenu();
-                    Toast.makeText(getApplicationContext(), "No changes were made",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "No changes have been made", Toast.LENGTH_SHORT).show();
                 } else {
                     closePopupMenu();
-                    Toast.makeText(getApplicationContext(), "Your item(s) has been added to " +
-                            "the cart", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your item(s) has been added to the cart", Toast.LENGTH_SHORT).show();
                 }
-
             }//End onClick
-        });//End submit OnClickListener
+        }); //End submit OnClickListener
 
-        //Create an OnClickListener for byosubmit which add or remove a created dish to the cart.
+        //Create an OnClickListener for byosubmit which takes of the newly created items
         byosubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String selectedDish = "-" + item1.getSelectedItem().toString() + " -" +
-                        item2.getSelectedItem().toString();
-                if(item1.getSelectedItem().toString() == "Select Meat"){
-                    Toast.makeText(getApplicationContext(), "Nothing was added",
-                            Toast.LENGTH_SHORT).show();
-                }else if(item2.getSelectedItem().toString() == "Select Veggie") {
-                    Toast.makeText(getApplicationContext(), "Nothing was added",
-                            Toast.LENGTH_SHORT).show();
-                }else if(selectedDish.equals("-Beef -Broccoli")){
-                    createdDish[0].setQuantity(createdDish[0].getQuantity() + dif);
-                }else if(selectedDish.equals("-Beef -Carrots")){
-                    createdDish[1].setQuantity(createdDish[1].getQuantity() + dif);
-                }else if(selectedDish.equals("-Beef -Spinach")){
-                    createdDish[2].setQuantity(createdDish[2].getQuantity() + dif);
-                }else if(selectedDish.equals("-Chicken -Broccoli")){
-                    createdDish[3].setQuantity(createdDish[3].getQuantity() + dif);
-                }else if(selectedDish.equals("-Chicken -Carrots")){
-                    createdDish[4].setQuantity(createdDish[4].getQuantity() + dif);
-                }else if(selectedDish.equals("-Chicken -Spinach")){
-                    createdDish[5].setQuantity(createdDish[5].getQuantity() + dif);
-                }else if(selectedDish.equals("-Pork -Broccoli")){
-                    createdDish[6].setQuantity(createdDish[6].getQuantity() + dif);
-                }else if(selectedDish.equals("-Pork -Carrots")){
-                    createdDish[7].setQuantity(createdDish[7].getQuantity() + dif);
-                }else if(selectedDish.equals("-Pork -Spinach")){
-                    createdDish[8].setQuantity(createdDish[8].getQuantity() + dif);
-                }
+                if(item1.getSelectedItem().toString() == "Select Meat" ||
+                        item2.getSelectedItem().toString() == "Select Veggie"){
+                }else{
+                    String selectedDish = "-" + item1.getSelectedItem().toString() + " -" +
+                            item2.getSelectedItem().toString();
+                    if(selectedDish.equals("-Beef -Broccoli")){
+                        createdDish[0].setQuantity(createdDish[0].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Beef -Carrots")){
+                        createdDish[1].setQuantity(createdDish[1].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Beef -Spinach")){
+                        createdDish[2].setQuantity(createdDish[2].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Chicken -Broccoli")){
+                        createdDish[3].setQuantity(createdDish[3].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Chicken -Carrots")){
+                        createdDish[4].setQuantity(createdDish[4].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Chicken -Spinach")){
+                        createdDish[5].setQuantity(createdDish[5].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Pork -Broccoli")){
+                        createdDish[6].setQuantity(createdDish[6].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Pork -Carrots")){
+                        createdDish[7].setQuantity(createdDish[7].getQuantity() + dif);
+                    }else if(selectedDish.equals("-Pork -Spinach")){
+                        createdDish[8].setQuantity(createdDish[8].getQuantity() + dif);
+                    }
+                    else if(selectedDish.equals("-Select Meat -Select Veggie")) {
+                        Toast.makeText(getApplicationContext(), "Nothing was added", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    else if(selectedDish.equals("-Select Meat -Broccoli")) {
+                        Toast.makeText(getApplicationContext(), "Nothing was added", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    else if(selectedDish.equals("-Select Meat -Carrots")){
+                        Toast.makeText(getApplicationContext(), "Nothing was added", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    else if(selectedDish.equals("-Select Meat -Spinach")) {
+                        Toast.makeText(getApplicationContext(), "Nothing was added", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    else if(selectedDish.equals("-Beef 50c Extra -Select Veggie")){
+                        Toast.makeText(getApplicationContext(), "Nothing was added", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    else if(selectedDish.equals("-Chicken -Select Veggie")){
+                        Toast.makeText(getApplicationContext(), "Nothing was added", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    else if(selectedDish.equals("-Pork -Select Veggie")){
+                        Toast.makeText(getApplicationContext(), "Nothing was added", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
 
-                if(dif == 0){
-                    byosubmit.setVisibility(View.INVISIBLE);
-                    item1.setVisibility(View.INVISIBLE);
-                    item2.setVisibility(View.INVISIBLE);
-                    closePopupMenu();
-                    Toast.makeText(getApplicationContext(), "Nothing was added",
-                            Toast.LENGTH_SHORT).show();
-                }else if(dif > 0){
-                    byosubmit.setVisibility(View.INVISIBLE);
-                    item1.setVisibility(View.INVISIBLE);
-                    item2.setVisibility(View.INVISIBLE);
-                    closePopupMenu();
-                    Toast.makeText(getApplicationContext(), "Your item(s) has been added to " +
-                            "the cart", Toast.LENGTH_SHORT).show();
+                    if (dif == 0){
+                        closePopupMenu();
+                        Toast.makeText(getApplicationContext(), "Nothing was added",
+                                Toast.LENGTH_SHORT).show();
+                    }else if (dif > 0){
+                        closePopupMenu();
+                        Toast.makeText(getApplicationContext(), "Your item(s) has been added",
+                                Toast.LENGTH_SHORT).show();
+                    }
                 }
             }//End onClick
-        });//End byosubmit OnClickListener
+        });//End build your own submit OnClickListener
 
-        //Create an OnClicListener for oops which will close the menu to the user
-        //and make no changes to the cart.
+        //Create an OnClickListener for oops to allow the user to back out of the popup menu
         oops.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 closePopupMenu();
-                Toast.makeText(getApplicationContext(), "Your cart was not modified", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Your cart was not modified",
+                        Toast.LENGTH_SHORT).show();
             }//End onClick
-        });//End oops OnCLickListnener
+        });//End oops OnClickListener
     } // end onCreate
 
-    //This will show the popup menu to the user whenever
-    //create your own, dish1, dish2, dish3, dish4, or drink are selected.
-    private void showPopupMenu(){
+    public void showPopupMenu() {
         final ImageButton createYourOwnImgBtn = (ImageButton) findViewById(R.id.drinkImgBtn);
         final ImageButton dish1ImgBtn = (ImageButton) findViewById(R.id.dish1ImgBtn);
         final ImageButton dish2ImgBtn = (ImageButton) findViewById(R.id.dish2ImgBtn);
         final ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
-        final ImageButton dish4ImgBtn= (ImageButton) findViewById(R.id.dish4ImgBtn);
+        final ImageButton dish4ImgBtn = (ImageButton) findViewById(R.id.dish4ImgBtn);
         final ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
         final TextView text1 = (TextView) findViewById(R.id.text1);
         final TextView text2 = (TextView) findViewById(R.id.text2);
@@ -402,15 +429,15 @@ public class MainActivity extends AppCompatActivity {
         curQuan.setVisibility(View.VISIBLE);
     }//End showPopupMenu
 
-    //This will close the popup menu to the use whenever
-    //create your own, dish1, dish2, dish3, dish4, and drink are selected.
-    private void closePopupMenu(){
+    public void closePopupMenu(){
         final ImageButton createYourOwnImgBtn = (ImageButton) findViewById(R.id.drinkImgBtn);
         final ImageButton dish1ImgBtn = (ImageButton) findViewById(R.id.dish1ImgBtn);
         final ImageButton dish2ImgBtn = (ImageButton) findViewById(R.id.dish2ImgBtn);
         final ImageButton dish3ImgBtn = (ImageButton) findViewById(R.id.dish3ImgBtn);
         final ImageButton dish4ImgBtn= (ImageButton) findViewById(R.id.dish4ImgBtn);
         final ImageButton drinkImgBtn = (ImageButton) findViewById(R.id.dish5ImgBtn);
+        final Spinner item1 = (Spinner) findViewById(R.id.item1);
+        final Spinner item2 = (Spinner) findViewById(R.id.item2);
         final TextView text1 = (TextView) findViewById(R.id.text1);
         final TextView text2 = (TextView) findViewById(R.id.text2);
         final TextView text3 = (TextView) findViewById(R.id.text3);
@@ -434,6 +461,8 @@ public class MainActivity extends AppCompatActivity {
         dish3ImgBtn.setVisibility(View.VISIBLE);
         dish4ImgBtn.setVisibility(View.VISIBLE);
         drinkImgBtn.setVisibility(View.VISIBLE);
+        item1.setVisibility(View.INVISIBLE);
+        item2.setVisibility(View.INVISIBLE);
         text1.setVisibility(View.VISIBLE);
         text2.setVisibility(View.VISIBLE);
         text3.setVisibility(View.VISIBLE);
@@ -451,4 +480,4 @@ public class MainActivity extends AppCompatActivity {
         background.setVisibility(View.INVISIBLE);
         curQuan.setVisibility(View.INVISIBLE);
     }//End closePopupMenu
-} // end class
+}//End class
