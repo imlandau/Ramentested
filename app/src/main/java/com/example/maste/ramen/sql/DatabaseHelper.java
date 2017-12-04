@@ -5,8 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import com.androidtutorialshub.loginregister.model.User;
+import com.example.maste.ramen.model.User;
 
 import java.util.ArrayList;
 import java.util.List;

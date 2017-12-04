@@ -8,11 +8,11 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import com.example.maste.ramen.model.User;
+import com.example.maste.ramen.sql.DatabaseHelper;
+import com.example.maste.ramen.adapters.UsersRecyclerAdapter;
+import com.example.maste.ramen.R;
 
-import com.androidtutorialshub.loginregister.R;
-import com.androidtutorialshub.loginregister.adapters.UsersRecyclerAdapter;
-import com.androidtutorialshub.loginregister.model.User;
-import com.androidtutorialshub.loginregister.sql.DatabaseHelper;
 
 import java.util.ArrayList;
 import java.util.List;

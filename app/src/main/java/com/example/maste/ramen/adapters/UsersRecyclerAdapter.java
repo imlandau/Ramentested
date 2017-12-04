@@ -6,15 +6,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.androidtutorialshub.loginregister.R;
-import com.androidtutorialshub.loginregister.model.User;
+import com.example.maste.ramen.model.User;
+import com.example.maste.ramen.R;
 
 import java.util.List;
 
-/**
- * Created by lalit on 10/10/2016.
- */
 
 public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdapter.UserViewHolder> {
 
@@ -62,7 +58,7 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
             textViewEmail = (AppCompatTextView) view.findViewById(R.id.textViewEmail);
             textViewPassword = (AppCompatTextView) view.findViewById(R.id.textViewPassword);
         }
-    }
+    } // end UserViewHolder
 
 
-}
+} // end class

@@ -17,15 +17,14 @@ import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 
-import com.androidtutorialshub.loginregister.R;
-import com.androidtutorialshub.loginregister.helpers.InputValidation;
-import com.androidtutorialshub.loginregister.model.User;
-import com.androidtutorialshub.loginregister.sql.DatabaseHelper;
 import com.example.maste.ramen.R;
+import com.example.maste.ramen.helpers.InputValidation;
+import com.example.maste.ramen.sql.DatabaseHelper;
+import com.example.maste.ramen.model.User;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
-    private final AppCompatActivity activity = RegisterActivity.this;
+    private final AppCompatActivity activity = SignUp.this;
     private NestedScrollView nestedScrollView;
     private TextInputLayout layoutSName;
     private TextInputLayout layoutSUser;
@@ -93,6 +92,8 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                 finish();
                 break;
         }
+    }// end onClick
+
     private void postDataToSQLite() {
         if (!inputValidation.isInputEditTextFilled(signName, layoutSName, getString(R.string.error_message_name))) {
             return;
@@ -130,7 +131,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         }
 
 
-    }
+    } // end postDataToSQLite
 
     /**
      * This method is to empty all input edit text

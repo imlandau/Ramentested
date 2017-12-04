@@ -19,11 +19,10 @@ import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.Log;
 import android.view.View;
+import com.example.maste.ramen.helpers.InputValidation;
+import com.example.maste.ramen.sql.DatabaseHelper;
 
 
-import com.androidtutorialshub.loginregister.R;
-import com.androidtutorialshub.loginregister.helpers.InputValidation;
-import com.androidtutorialshub.loginregister.sql.DatabaseHelper;
 import com.example.maste.ramen.R;
 
 public class Home extends AppCompatActivity implements View.OnClickListener {
@@ -48,7 +47,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
         initViews();
         initListeners();
         initObjects();
-    }
+    } // end onCreate
 
     /**
      * This method is to initialize views
@@ -93,7 +92,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
                 break;
             case R.id.signUpBtn:
                 // Navigate to RegisterActivity
-                Intent intentRegister = new Intent(getApplicationContext(), RegisterActivity.class);
+                Intent intentRegister = new Intent(getApplicationContext(), SignUp.class);
                 startActivity(intentRegister);
                 break;
         }
@@ -136,9 +135,5 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
         userName.setText(null);
         userPass.setText(null);
     }
-}
-
-
-
-    } // end onCreate
+} // end class
 
