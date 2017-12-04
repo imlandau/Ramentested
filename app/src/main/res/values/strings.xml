@@ -195,7 +195,7 @@
 
     <string-array name="Meat">
         <item>Select Meat</item>
-        <item>Beef 50c Extra</item>
+        <item>Beef</item>
         <item>Chicken</item>
         <item>Pork</item>
     </string-array>

@@ -266,8 +266,6 @@ public class CartActivity extends AppCompatActivity{
         final TextView taxTextView = (TextView) findViewById(R.id.taxTextView);
         final TextView totalTextView = (TextView) findViewById(R.id.totalTextView);
 
-        Toast.makeText(getApplicationContext(), "Your order has been placed, please wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(CartActivity.this, Home.class));
         Cart.removeAll();
         subtotal = 0;
         tax = 0;
