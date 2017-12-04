@@ -289,7 +289,6 @@ public class MainActivity extends AppCompatActivity {
                     closePopupMenu();
                     Toast.makeText(getApplicationContext(), "Your item(s) has been removed", Toast.LENGTH_SHORT).show();
                 }else if (dif == 0){
-                    closePopupMenu();
                     Toast.makeText(getApplicationContext(), "No changes have been made", Toast.LENGTH_SHORT).show();
                 } else {
                     closePopupMenu();
