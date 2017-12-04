@@ -214,12 +214,19 @@ public class MainActivity extends AppCompatActivity {
         quantityDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(cartHolder[identifier] > 0){
+                if(identifier == 1){
+                    if (dif > 0){
+                        dif--;
+                    }
+                }else if(cartHolder[identifier] > 1){
                     cartHolder[identifier]--;
                     dif--;
                 }
                 curQuan.setText(String.valueOf(cartHolder[identifier]));
                 switch (identifier) {
+                    case 1: curQuan.setText(String.valueOf(dif));
+
+                    break;
                     case 2: Cart.dish1.setQuantity(cartHolder[identifier]);
                         break;
                     case 3: Cart.dish2.setQuantity(cartHolder[identifier]);
@@ -302,11 +309,11 @@ public class MainActivity extends AppCompatActivity {
                     String selectedDish = "-" + item1.getSelectedItem().toString() + " -" +
                             item2.getSelectedItem().toString();
 
-                    if(selectedDish.equals("-Beef 50c Extra -Broccoli")){
+                    if(selectedDish.equals("-Beef -Broccoli")){
                         createdDish[0].setQuantity(createdDish[0].getQuantity() + dif);
-                    }else if(selectedDish.equals("-Beef 50c Extra -Carrots")){
+                    }else if(selectedDish.equals("-Beef -Carrots")){
                         createdDish[1].setQuantity(createdDish[1].getQuantity() + dif);
-                    }else if(selectedDish.equals("-Beef 50c Extra -Spinach")){
+                    }else if(selectedDish.equals("-Beef -Spinach")){
                         createdDish[2].setQuantity(createdDish[2].getQuantity() + dif);
                     }else if(selectedDish.equals("-Chicken -Broccoli")){
                         createdDish[3].setQuantity(createdDish[3].getQuantity() + dif);
@@ -350,17 +357,14 @@ public class MainActivity extends AppCompatActivity {
                         return;
                     }
 
-
-                    if (dif < 1) {
+                    if (dif == 0){
                         closePopupMenu();
-                        Toast.makeText(getApplicationContext(), "Your item(s) has been removed", Toast.LENGTH_SHORT).show();
-                    }else if (dif == 0){
+                        Toast.makeText(getApplicationContext(), "Your item(s) has been " +
+                                "removed", Toast.LENGTH_SHORT).show();
+                    }else if (dif > 0){
                         closePopupMenu();
-                        Toast.makeText(getApplicationContext(), "No changes have been made", Toast.LENGTH_SHORT).show();
-                    } else {
-                        closePopupMenu();
-                        Toast.makeText(getApplicationContext(), "Your item(s) has been added to the cart", Toast.LENGTH_SHORT).show();
-
+                        Toast.makeText(getApplicationContext(), "Your item(s) has been added",
+                                Toast.LENGTH_SHORT).show();
                     }
                 }
             }
