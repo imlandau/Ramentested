@@ -16,6 +16,7 @@ import static com.example.maste.ramen.Cart.identifier;
 
 public class MainActivity extends AppCompatActivity {
     static int dif;
+    static int modified;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -284,7 +285,7 @@ public class MainActivity extends AppCompatActivity {
                     case 6: Cart.drink.setQuantity(cartHolder[identifier]);
                 }
 
-                if (dif < 1) {
+                if (dif < -1) {
                     closePopupMenu();
                     Toast.makeText(getApplicationContext(), "Your item(s) has been removed", Toast.LENGTH_SHORT).show();
                 }else if (dif == 0){
