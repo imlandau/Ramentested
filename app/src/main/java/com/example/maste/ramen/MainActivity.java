@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 identifier = 2;
                 dif = 0;
+                modified = 0;
                 if(cartHolder[2] == 0){
                     cartHolder[2] = 1;
                     dif = 1;
@@ -121,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 identifier = 3;
                 dif = 0;
+                modified = 0;
                 if(cartHolder[3] == 0){
                     cartHolder[3] = 1;
                     dif = 1;
@@ -140,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 identifier = 4;
                 dif = 0;
+                modified = 0;
                 if(cartHolder[4] == 0){
                     cartHolder[4] = 1;
                     dif = 1;
@@ -159,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 identifier = 5;
                 dif = 0;
+                modified = 0;
                 if(cartHolder[5] == 0){
                     cartHolder[5] = 1;
                     dif = 1;
@@ -178,6 +182,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 identifier = 6;
                 dif = 0;
+                modified = 0;
                 if(cartHolder[6] == 0){
                     cartHolder[6] = 1;
                     dif = 1;
@@ -219,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
                     if (dif > 0){
                         dif--;
                     }
-                }else if(cartHolder[identifier] > 1){
+                }else if(cartHolder[identifier] > 0){
                     cartHolder[identifier]--;
                     dif--;
                 }
