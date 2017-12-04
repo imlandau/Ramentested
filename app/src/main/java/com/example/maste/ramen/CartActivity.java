@@ -133,58 +133,60 @@ public class CartActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 if(Cart.createdDish[0].getQuantity() > 0){
+                    Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
+                            "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[1].getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your cart is empty",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
+                            "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[2].getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your cart is empty",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
+                            "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[3].getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your cart is empty",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
+                            "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[4].getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your cart is empty",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
+                            "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[5].getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your cart is empty",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
+                            "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[6].getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your cart is empty",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
+                            "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[7].getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your cart is empty",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
+                            "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[8].getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your cart is empty",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
+                            "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.dish1.getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your cart is empty",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
+                            "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.dish2.getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your cart is empty",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
+                            "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.dish3.getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your cart is empty",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
+                            "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.dish4.getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your cart is empty",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
+                            "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.drink.getQuantity() > 0) {
-                    Toast.makeText(getApplicationContext(), "Your cart is empty",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
+                            "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
                 }
                 startActivity(new Intent(CartActivity.this, Home.class));
