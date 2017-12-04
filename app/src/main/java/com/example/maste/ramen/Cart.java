@@ -3,8 +3,7 @@ package com.example.maste.ramen;
 import android.support.v7.app.AppCompatActivity;
 
 public class Cart extends AppCompatActivity {
-    //Create all the items in the cart
-
+    //Create all the available items in the cart
     static Item var1 = new Item(6.50, 0, "-Beef - Broccoli");
     static Item var2 = new Item(6.50, 0, "-Beef -Carrots");
     static Item var3 = new Item(6.50, 0, "-Beef -Spinach");
