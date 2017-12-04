@@ -136,60 +136,78 @@ public class CartActivity extends AppCompatActivity{
                     Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
                             "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
+                    startActivity(new Intent(CartActivity.this, Home.class));
                 }else if(Cart.createdDish[1].getQuantity() > 0) {
                     Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
                             "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
+                    startActivity(new Intent(CartActivity.this, Home.class));
                 }else if(Cart.createdDish[2].getQuantity() > 0) {
                     Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
                             "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
+                    startActivity(new Intent(CartActivity.this, Home.class));
                 }else if(Cart.createdDish[3].getQuantity() > 0) {
                     Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
                             "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
+                    startActivity(new Intent(CartActivity.this, Home.class));
                 }else if(Cart.createdDish[4].getQuantity() > 0) {
                     Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
                             "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
+                    startActivity(new Intent(CartActivity.this, Home.class));
                 }else if(Cart.createdDish[5].getQuantity() > 0) {
                     Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
                             "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
+                    startActivity(new Intent(CartActivity.this, Home.class));
                 }else if(Cart.createdDish[6].getQuantity() > 0) {
                     Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
                             "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
+                    startActivity(new Intent(CartActivity.this, Home.class));
                 }else if(Cart.createdDish[7].getQuantity() > 0) {
                     Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
                             "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
+                    startActivity(new Intent(CartActivity.this, Home.class));
                 }else if(Cart.createdDish[8].getQuantity() > 0) {
                     Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
                             "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
+                    startActivity(new Intent(CartActivity.this, Home.class));
                 }else if(Cart.dish1.getQuantity() > 0) {
                     Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
                             "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
+                    startActivity(new Intent(CartActivity.this, Home.class));
                 }else if(Cart.dish2.getQuantity() > 0) {
                     Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
                             "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
+                    startActivity(new Intent(CartActivity.this, Home.class));
                 }else if(Cart.dish3.getQuantity() > 0) {
                     Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
                             "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
+                    startActivity(new Intent(CartActivity.this, Home.class));
                 }else if(Cart.dish4.getQuantity() > 0) {
                     Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
                             "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
+                    startActivity(new Intent(CartActivity.this, Home.class));
                 }else if(Cart.drink.getQuantity() > 0) {
                     Toast.makeText(getApplicationContext(), "Your order has been placed, please " +
                             "wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
                     clear();
+                    startActivity(new Intent(CartActivity.this, Home.class));
+                }else{
+                    Toast.makeText(getApplicationContext(), "Why don't you order something?",
+                            Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(CartActivity.this, MainActivity.class));
                 }
-                startActivity(new Intent(CartActivity.this, Home.class));
+
             }
         });
 
