@@ -8,62 +8,136 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.TextView;
-//test
-public class Home extends AppCompatActivity {
-    EditText username, password;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
+import android.support.v4.widget.NestedScrollView;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
+import android.support.v7.widget.AppCompatTextView;
+import android.util.Log;
+import android.view.View;
 
+
+import com.androidtutorialshub.loginregister.R;
+import com.androidtutorialshub.loginregister.helpers.InputValidation;
+import com.androidtutorialshub.loginregister.sql.DatabaseHelper;
+
+public class Home extends AppCompatActivity implements View.OnClickListener {
+
+    private final AppCompatActivity activity = LoginActivity.this;
+    private NestedScrollView nestedScrollView;
+    private TextInputLayout layoutUser;
+    private TextInputLayout layoutPass;
+    private TextInputEditText userName;
+    private TextInputEditText userPass;
+    private AppCompatButton loginBtn;
+    private AppCompatTextView signUpBtn;
+    private InputValidation inputValidation;
+    private DatabaseHelper databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getSupportActionBar().hide();
 
-        username=(EditText)findViewById(R.id.userName);
-        password=(EditText)findViewById(R.id.userPass);
+        initViews();
+        initListeners();
+        initObjects();
+    }
+
+    /**
+     * This method is to initialize views
+     */
+    private void initViews() {
+
+        nestedScrollView = (NestedScrollView) findViewById(R.id.nestedScrollView);
+
+        layoutUser = (TextInputLayout) findViewById(R.id.layoutUser);
+        layoutPass = (TextInputLayout) findViewById(R.id.layoutPass);
+
+        userName = (TextInputEditText) findViewById(R.id.userName);
+        userPass = (TextInputEditText) findViewById(R.id.userPass);
+
+        loginBtn = (AppCompatButton) findViewById(R.id.loginBtn);
+
+        signUpBtn = (AppCompatTextView) findViewById(R.id.signUpBtn);
+
+    }
+
+    /**
+     * This method is to initialize listeners
+     */
+    private void initListeners() {
+        loginBtn.setOnClickListener(this);
+        signUpBtn.setOnClickListener(this);
+    }
+
+    /**
+     * This method is to initialize objects to be used
+     */
+    private void initObjects() {
+        databaseHelper = new DatabaseHelper(activity);
+        inputValidation = new InputValidation(activity);
+
+    }
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.loginBtn:
+                verifyFromSQLite();
+                break;
+            case R.id.signUpBtn:
+                // Navigate to RegisterActivity
+                Intent intentRegister = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(intentRegister);
+                break;
+        }
+    }
+
+    /**
+     * This method is to validate the input text fields and verify login credentials from SQLite
+     */
+    private void verifyFromSQLite() {
+        if (!inputValidation.isInputEditTextFilled(userName, layoutUser, getString(R.string.error_message_email))) {
+
+        }
+        if (!inputValidation.isInputEditTextEmail(userName, layoutUser, getString(R.string.error_message_email))) {
+            return;
+        }
+        if (!inputValidation.isInputEditTextFilled(userPass, layoutPass, getString(R.string.error_message_email))) {
+            return;
+        }
+
+        if (databaseHelper.checkUser(userName.getText().toString().trim()
+                , userPass.getText().toString().trim())) {
 
 
-        Button loginBtn = (Button) findViewById(R.id.loginBtn);
-        Button signUpBtn = (Button) findViewById(R.id.signUpBtn);
+            Intent accountsIntent = new Intent(activity, UsersListActivity.class);
+            accountsIntent.putExtra("EMAIL", userName.getText().toString().trim());
+            emptyInputEditText();
+            startActivity(accountsIntent);
 
-        TextView toMenuBtn = (TextView) findViewById(R.id.toMenuBtn);
-        toMenuBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Home.this, MainActivity.class));
-            }
-        });
 
-        // create onClickListener for loginBtn
-        loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (login()) {
-                    startActivity(new Intent(Home.this, MainActivity.class));
-                } // end if
-            } // end onClick
-        });
-        // create OnClickListener for the signUpBtn
-        signUpBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Home.this, SignUp.class));
-            } // end onClick
-        }); // end onClickListener for signUpBtn
+        } else {
+            // Snack Bar to show success message that record is wrong
+            Snackbar.make(nestedScrollView, getString(R.string.error_valid_email_password), Snackbar.LENGTH_LONG).show();
+        }
+    }
+
+    /**
+     * This method is to empty all input edit text
+     */
+    private void emptyInputEditText() {
+        userName.setText(null);
+        userPass.setText(null);
+    }
+}
+
+
 
     } // end onCreate
 
-    public Boolean login() {
-        String user = username.getText().toString().trim();
-        String pass = password.getText().toString().trim();
-
-        // checks whether the username and password match
-        if (user.equals("ramen") && pass.equals("ramen"))
-        {
-            Toast.makeText(this, "username and password matched!", Toast.LENGTH_LONG).show();
-            return true;
-        } else {
-            Toast.makeText(this, "username and password do no matched", Toast.LENGTH_LONG).show();
-            return false;
-        } // end if else
-    } // end login
-} // end class
