@@ -59,16 +59,14 @@ public class CartActivity extends AppCompatActivity{
         String strQuantity = "Quantity\n";
 
 
-        /** Creates the string to display all the information about the items in the cart, and
+         /** Creates the string to display all the information about the items in the cart, and
          updates the subtotal based on the quantity of each item. If the quantity of an item
          is zero, it is not added to the string or subtotal. The item name, price, and quantity
          are concatenated on to the strName, strPrice, and strQuantity strings respectively, so
          that they can be displayed properly.
-         **/
-
+          **/
         int i = 0;
         while(i < 9){
-
             if(Cart.createdDish[i].getQuantity() > 0){
                 strName = strName + "Create Your Own:\n" + Cart.createdDish[i].getName() + "\n";
                 strPrice = strPrice + "\n" + String.valueOf(Cart.createdDish[i].getPrice()) + "\n";
@@ -137,35 +135,59 @@ public class CartActivity extends AppCompatActivity{
                 if(Cart.createdDish[0].getQuantity() > 0){
                     clear();
                 }else if(Cart.createdDish[1].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[2].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[3].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[4].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[5].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[6].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[7].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.createdDish[8].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.dish1.getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.dish2.getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.dish3.getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.dish4.getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
                     clear();
                 }else if(Cart.drink.getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
                     clear();
-                }else{
-                    Toast.makeText(getApplicationContext(), "Your cart is empty.", Toast.LENGTH_SHORT).show();
                 }
-
+                startActivity(new Intent(CartActivity.this, Home.class));
             }
         });
 
@@ -173,110 +195,76 @@ public class CartActivity extends AppCompatActivity{
         removeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int i = 0;
-                while(i < 9) {
-
-                    if (Cart.dish1.getQuantity() > 0) {
-                        Cart.removeAll();
-                        subtotal = 0;
-                        tax = 0;
-                        total = 0;
-                        textItem.setText("Item");
-                        textPrice.setText("Price");
-                        textQuantity.setText("Quantity");
-                        subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
-                        taxTextView.setText("Tax:\n$" + money.format(tax));
-                        totalTextView.setText("Total:\n$" + money.format(total));
-                        Toast.makeText(getApplicationContext(), "Your cart has been emptied.", Toast.LENGTH_SHORT).show();
-                    } else if (Cart.dish2.getQuantity() > 0) {
-                        Cart.removeAll();
-                        subtotal = 0;
-                        tax = 0;
-                        total = 0;
-                        textItem.setText("Item");
-                        textPrice.setText("Price");
-                        textQuantity.setText("Quantity");
-                        subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
-                        taxTextView.setText("Tax:\n$" + money.format(tax));
-                        totalTextView.setText("Total:\n$" + money.format(total));
-                        Toast.makeText(getApplicationContext(), "Your cart has been emptied.", Toast.LENGTH_SHORT).show();
-                    } else if (Cart.dish3.getQuantity() > 0) {
-                        Cart.removeAll();
-                        subtotal = 0;
-                        tax = 0;
-                        total = 0;
-                        textItem.setText("Item");
-                        textPrice.setText("Price");
-                        textQuantity.setText("Quantity");
-                        subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
-                        taxTextView.setText("Tax:\n$" + money.format(tax));
-                        totalTextView.setText("Total:\n$" + money.format(total));
-                        Toast.makeText(getApplicationContext(), "Your cart has been emptied.", Toast.LENGTH_SHORT).show();
-                    } else if (Cart.dish4.getQuantity() > 0) {
-                        Cart.removeAll();
-                        subtotal = 0;
-                        tax = 0;
-                        total = 0;
-                        textItem.setText("Item");
-                        textPrice.setText("Price");
-                        textQuantity.setText("Quantity");
-                        subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
-                        taxTextView.setText("Tax:\n$" + money.format(tax));
-                        totalTextView.setText("Total:\n$" + money.format(total));
-                        Toast.makeText(getApplicationContext(), "Your cart has been emptied.", Toast.LENGTH_SHORT).show();
-                    } else if (Cart.createdDish[i].getQuantity() > 0) {
-                        Cart.removeAll();
-                        subtotal = 0;
-                        tax = 0;
-                        total = 0;
-                        textItem.setText("Item");
-                        textPrice.setText("Price");
-                        textQuantity.setText("Quantity");
-                        subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
-                        taxTextView.setText("Tax:\n$" + money.format(tax));
-                        totalTextView.setText("Total:\n$" + money.format(total));
-                        Toast.makeText(getApplicationContext(), "Your cart has been emptied.", Toast.LENGTH_SHORT).show();
-
-                        }else if (Cart.drink.getQuantity() > 0) {
-                            Cart.removeAll();
-                            subtotal = 0;
-                            tax = 0;
-                            total = 0;
-                            textItem.setText("Item");
-                            textPrice.setText("Price");
-                            textQuantity.setText("Quantity");
-                            subtotalTextView.setText("Subtotal:\n$" + money.format(subtotal));
-                            taxTextView.setText("Tax:\n$" + money.format(tax));
-                            totalTextView.setText("Total:\n$" + money.format(total));
-                            Toast.makeText(getApplicationContext(), "Your cart has been emptied.", Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(getApplicationContext(), "Your cart already empty.", Toast.LENGTH_SHORT).show();
-
-                        }
-
-
+                if(Cart.createdDish[0].getQuantity() > 0){
+                    clear();
+                }else if(Cart.createdDish[1].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
+                    clear();
+                }else if(Cart.createdDish[2].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
+                    clear();
+                }else if(Cart.createdDish[3].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
+                    clear();
+                }else if(Cart.createdDish[4].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
+                    clear();
+                }else if(Cart.createdDish[5].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
+                    clear();
+                }else if(Cart.createdDish[6].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
+                    clear();
+                }else if(Cart.createdDish[7].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
+                    clear();
+                }else if(Cart.createdDish[8].getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
+                    clear();
+                }else if(Cart.dish1.getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
+                    clear();
+                }else if(Cart.dish2.getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
+                    clear();
+                }else if(Cart.dish3.getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
+                    clear();
+                }else if(Cart.dish4.getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
+                    clear();
+                }else if(Cart.drink.getQuantity() > 0) {
+                    Toast.makeText(getApplicationContext(), "Your cart is empty",
+                            Toast.LENGTH_SHORT).show();
+                    clear();
+                }else{
+                    Toast.makeText(getApplicationContext(), "Your cart was already " +
+                            "empty.", Toast.LENGTH_SHORT).show();
                     }
                 }
 
-    }
-    );
+        });
     } // end onCreate
 
     public void clear(){
-        //Displays the items in the cart
         final TextView textItem = (TextView) findViewById(R.id.textItem);
-        //Shows the prices of each item in the cart
         final TextView textPrice = (TextView) findViewById(R.id.textPrice);
-        //Shows the quantity of each item in the cart
         final TextView textQuantity = (TextView) findViewById(R.id.textQuantity);
-        //Shows the total of the order before tax
         final TextView subtotalTextView = (TextView) findViewById(R.id.subtotalTextView);
-        //Shows the tax of the order
         final TextView taxTextView = (TextView) findViewById(R.id.taxTextView);
-        //Shows the total cost of the order
         final TextView totalTextView = (TextView) findViewById(R.id.totalTextView);
-        //Tells the user the order has been placed
-        final TextView bghtTextView = (TextView) findViewById(R.id.bght);
 
         Toast.makeText(getApplicationContext(), "Your order has been placed, please wait 30 minutes for pickup.", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(CartActivity.this, Home.class));
