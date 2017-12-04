@@ -28,7 +28,7 @@ import com.example.maste.ramen.R;
 
 public class Home extends AppCompatActivity implements View.OnClickListener {
 
-    private final AppCompatActivity activity = LoginActivity.this;
+    private final AppCompatActivity activity = Home.this;
     private NestedScrollView nestedScrollView;
     private TextInputLayout layoutUser;
     private TextInputLayout layoutPass;
