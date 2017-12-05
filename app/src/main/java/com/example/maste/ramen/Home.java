@@ -32,9 +32,16 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(Home.this, MainActivity.class));
             }
         });
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, SignUp.class));
+            }
+        });
 
         // create onClickListener for loginBtn
 
         // create OnClickListener for the signUpBtn
 
     }
+}
