@@ -79,7 +79,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (corsor.moveToFirst()) {
             do {
                 UserName = corsor.getString(0);
-                if (UserName.contentEquals(Username)) {
+                if (UserName.contentEquals(UserName)) {
                     UserPass = corsor.getString(1);
                     break;
                 }

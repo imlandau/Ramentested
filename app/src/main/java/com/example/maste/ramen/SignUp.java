@@ -32,7 +32,7 @@ public class SignUp extends Activity {
             } else{
                 //insert the details in the database
                 Contact contact = new Contact();
-                contact.setUserName();
+                contact.setUserName(UserName);
                 contact.setUserPass(UserPass);
                 helper.InsertContacts(contact);
 
