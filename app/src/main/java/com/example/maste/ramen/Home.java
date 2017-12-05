@@ -12,18 +12,16 @@ import android.widget.TextView;
 public class Home extends AppCompatActivity {
     EditText username, password;
 
-
+    DatabaseHelper helper = new DatabaseHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        username=(EditText)findViewById(R.id.userName);
-        password=(EditText)findViewById(R.id.userPass);
-
 
         Button loginBtn = (Button) findViewById(R.id.loginBtn);
         Button signUpBtn = (Button) findViewById(R.id.signUpBtn);
+
 
         TextView toMenuBtn = (TextView) findViewById(R.id.toMenuBtn);
         toMenuBtn.setOnClickListener(new View.OnClickListener() {
@@ -52,18 +50,22 @@ public class Home extends AppCompatActivity {
 
     } // end onCreate
 
-    public Boolean login() {
-        String user = username.getText().toString().trim();
-        String pass = password.getText().toString().trim();
 
-        // checks whether the username and password match
-        if (user.equals("ramen") && pass.equals("ramen"))
-        {
-            Toast.makeText(this, "username and password matched!", Toast.LENGTH_LONG).show();
+    public Boolean login() {
+        username=(EditText)findViewById(R.id.userName);
+        password=(EditText)findViewById(R.id.userPass);
+        String namestr = username.getText().toString();
+        String str = password.getText().toString();
+        String passWord = helper.searchPass(str);
+
+        if (passWord.equals(password)){
+            Intent i = new Intent(Home.this,MainActivity.class);
+            i.putExtra("Name",str);
+            startActivity(i);
             return true;
-        } else {
-            Toast.makeText(this, "username and password do no matched", Toast.LENGTH_LONG).show();
+        }else {
+            Toast.makeText(this, "username and password do not match", Toast.LENGTH_LONG).show();
             return false;
-        } // end if else
+        }
     } // end login
 } // end class
