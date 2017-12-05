@@ -24,31 +24,39 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
-        EditText name = (EditText) findViewById(R.id.signName);
-        EditText pass = (EditText) findViewById(R.id.signPass);
-        EditText pass1 = (EditText) findViewById(R.id.signConPass);
 
-        String namestr = name.getText().toString();
-        String pass1str = pass.getText().toString();
-        String pass2str = pass.getText().toString();
+
         Button signUpBtn2 = (Button) findViewById(R.id.signUpBtn2);
 
 
 
-        if(!pass1str.equals(pass2str)){
-            Toast.makeText(SignUp.this, "Passwords don't match", Toast.LENGTH_SHORT).show();
-        }
-            else {
-            //insert the details to database
-            Contact c = new Contact();
-            c.setName(namestr);
-            c.setPass(pass1str);
 
-
-            helper.insertContact(c);
-        }
     }
+public void onSignUp(View v){
+        if (v.getId()==R.id.signUpBtn2){
 
+            EditText name = (EditText) findViewById(R.id.signName);
+            EditText pass = (EditText) findViewById(R.id.signPass);
+            EditText pass1 = (EditText) findViewById(R.id.signConPass);
+
+            String namestr = name.getText().toString();
+            String pass1str = pass.getText().toString();
+            String pass2str = pass.getText().toString();
+            if(!pass1str.equals(pass2str)){
+                Toast.makeText(SignUp.this, "Passwords don't match", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                //insert the details to database
+                Contact c = new Contact();
+                c.setName(namestr);
+                c.setPass(pass1str);
+
+
+                helper.insertContact(c);
+            }
+        }
+
+}
 
 
 }
