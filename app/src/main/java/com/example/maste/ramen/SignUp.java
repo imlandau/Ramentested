@@ -39,8 +39,6 @@ public class SignUp extends AppCompatActivity {
         userName = userNameEditText.getText().toString();
         userPass = password.getText().toString();
 
-        if (v.getId() == R.id.signUpBtn) {
-
             if ((userNameEditText.getText() == null)) {
                 // message
                 Toast.makeText(this, "Should not be Null", Toast.LENGTH_SHORT).show();
@@ -57,7 +55,6 @@ public class SignUp extends AppCompatActivity {
                 loginIntent.putExtra("UserPass", userPass);
                 startActivity(loginIntent);
             } // end else
-        } // end if
         } // end SignUp
     } // end class
 
