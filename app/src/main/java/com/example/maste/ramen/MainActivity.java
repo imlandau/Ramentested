@@ -294,12 +294,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (dif < 0) {
                     closePopupMenu();
-                    Toast.makeText(getApplicationContext(), "Your item(s) has been removed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your item(s) has been removed",
+                            Toast.LENGTH_SHORT).show();
                 } else if (dif == 0) {
-                    Toast.makeText(getApplicationContext(), "No changes have been made", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "No changes have been made",
+                            Toast.LENGTH_SHORT).show();
                 } else {
                     closePopupMenu();
-                    Toast.makeText(getApplicationContext(), "Your item(s) has been added to the cart", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Your item(s) has been added to the cart",
+                            Toast.LENGTH_SHORT).show();
                 }
             }//End onClick
         }); //End submit OnClickListener
@@ -333,11 +336,13 @@ public class MainActivity extends AppCompatActivity {
                         createdDish[8].setQuantity(createdDish[8].getQuantity() + dif);
                     }
                     else if(selectedDish.equals("-Select Meat -Select Veggie")) {
-                        Toast.makeText(getApplicationContext(), "Nothing was added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Nothing was added",
+                                Toast.LENGTH_SHORT).show();
                         return;
                     }
                     else if(selectedDish.equals("-Select Meat -Broccoli")) {
-                        Toast.makeText(getApplicationContext(), "Nothing was added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Nothing was added",
+                                Toast.LENGTH_SHORT).show();
                         return;
                     }
                     else if(selectedDish.equals("-Select Meat -Carrots")){
