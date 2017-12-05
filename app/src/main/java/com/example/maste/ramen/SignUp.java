@@ -48,10 +48,10 @@ public class SignUp extends AppCompatActivity {
             } else{
                 //insert the details in the database
                 Contact contact = new Contact();
+            Toast.makeText(this, "Entered to Registry", Toast.LENGTH_SHORT).show();
                 contact.setUserName(userName);
                 contact.setUserPass(userPass);
                 helper.InsertContacts(contact);
-
                 Intent loginIntent = new Intent(this, DisplayData.class);
                 // Send Data
                 loginIntent.putExtra("UserName", userName);
