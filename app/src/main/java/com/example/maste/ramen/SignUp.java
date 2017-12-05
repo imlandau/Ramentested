@@ -48,7 +48,7 @@ public class SignUp extends AppCompatActivity {
             } else{
                 //insert the details in the database
                 Contact contact = new Contact();
-            Toast.makeText(this, "Entered to Registry", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Entered to Registry", Toast.LENGTH_SHORT).show();
                 contact.setUserName(userName);
                 contact.setUserPass(userPass);
                 helper.InsertContacts(contact);
