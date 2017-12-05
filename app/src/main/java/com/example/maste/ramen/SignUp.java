@@ -41,11 +41,10 @@ public class SignUp extends AppCompatActivity {
 
         if (v.getId() == R.id.signUpBtn) {
 
-            if (!userPass.equals(null)) {
-                //message
+            if ((userNameEditText.getText() == null)) {
+                // message
                 Toast.makeText(this, "Should not be Null", Toast.LENGTH_SHORT).show();
-            }
-            } else{
+            } else {
                 //insert the details in the database
                 Contact contact = new Contact();
                 contact.setUserName(userName);
@@ -58,8 +57,7 @@ public class SignUp extends AppCompatActivity {
                 loginIntent.putExtra("UserPass", userPass);
                 startActivity(loginIntent);
             } // end else
-
-
+        } // end if
         } // end SignUp
     } // end class
 
