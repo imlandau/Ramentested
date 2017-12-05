@@ -18,12 +18,15 @@ public class SignUp extends Activity {
     }
 
     public void SignUp(View v) {
-        if (v.getId() == R.id.signup) {
+       String UserName;
+       String UserPass;
 
-            EditText username = (EditText) findViewById(R.id.UserName);
-            EditText password = (EditText) findViewById(R.id.UserPass);
-            String UserName = username.getText().toString();
-            String UserPass = password.getText().toString();
+        EditText username = (EditText) findViewById(R.id.UserName);
+        EditText password = (EditText) findViewById(R.id.UserPass);
+        UserName = username.getText().toString();
+        UserPass = password.getText().toString();
+
+        if (v.getId() == R.id.signup) {
 
             if (!UserPass.equals(null)) {
                 //message
@@ -37,14 +40,14 @@ public class SignUp extends Activity {
                 helper.InsertContacts(contact);
 
                 Intent loginIntent = new Intent(this, DisplayData.class);
-                //Send Data
-                loginIntent.putExtra("UserName",username);
-                loginIntent.putExtra("UserPass",Password);
+                // Send Data
+                loginIntent.putExtra("UserName", UserName);
+                loginIntent.putExtra("UserPass", UserPass);
                 startActivity(loginIntent);
-            }
+            } // end else
 
 
-        }
-    }
-}
+        } // end SignUp
+    } // end class
+
 
