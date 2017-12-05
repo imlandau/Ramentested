@@ -17,8 +17,8 @@ public class DisplayData extends Activity{
 
         String username=getIntent().getStringExtra("UserName");
         String userpass=getIntent().getStringExtra("Password");
-        TextView UserNameTV=(TextView)findViewById(R.id.UserName);
-        TextView PasswordTV=(TextView)findViewById(R.id.UserPass);
+        TextView UserNameTV=(TextView)findViewById(R.id.userNameEditText);
+        TextView PasswordTV=(TextView)findViewById(R.id.userPassEditText);
         UserNameTV.setText(username);
         PasswordTV.setText(userpass);
     }

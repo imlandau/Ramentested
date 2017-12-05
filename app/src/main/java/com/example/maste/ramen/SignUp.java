@@ -18,31 +18,31 @@ public class SignUp extends Activity {
     }
 
     public void SignUp(View v) {
-       String UserName;
-       String UserPass;
+       String userName;
+       String userPass;
 
-        EditText username = (EditText) findViewById(R.id.UserName);
-        EditText password = (EditText) findViewById(R.id.UserPass);
-        UserName = username.getText().toString();
-        UserPass = password.getText().toString();
+        EditText userNameEditText = (EditText) findViewById(R.id.userNameEditText);
+        EditText password = (EditText) findViewById(R.id.userPassEditText);
+        userName = userNameEditText.getText().toString();
+        userPass = password.getText().toString();
 
-        if (v.getId() == R.id.signup) {
+        if (v.getId() == R.id.signUpBtn) {
 
-            if (!UserPass.equals(null)) {
+            if (!userPass.equals(null)) {
                 //message
                 Toast.makeText(this, "Should not be Null", Toast.LENGTH_SHORT).show();
             }
             } else{
                 //insert the details in the database
                 Contact contact = new Contact();
-                contact.setUserName(UserName);
-                contact.setUserPass(UserPass);
+                contact.setUserName(userName);
+                contact.setUserPass(userPass);
                 helper.InsertContacts(contact);
 
                 Intent loginIntent = new Intent(this, DisplayData.class);
                 // Send Data
-                loginIntent.putExtra("UserName", UserName);
-                loginIntent.putExtra("UserPass", UserPass);
+                loginIntent.putExtra("UserName", userName);
+                loginIntent.putExtra("UserPass", userPass);
                 startActivity(loginIntent);
             } // end else
 

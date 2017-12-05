@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.073" />
 
     <EditText
-        android:id="@+id/signName"
+        android:id="@+id/userNameEditText"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginEnd="8dp"
@@ -55,13 +55,13 @@
         android:singleLine="true"
         android:textColor="@color/Black"
         android:textColorHint="@color/Gray"
-        app:layout_constraintBottom_toTopOf="@+id/signPass"
+        app:layout_constraintBottom_toTopOf="@+id/userPassEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signName" />
+        app:layout_constraintTop_toBottomOf="@+id/userNameEditText" />
 
     <EditText
-        android:id="@+id/signPass"
+        android:id="@+id/userPassEditText"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
@@ -98,7 +98,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signPass"
+        app:layout_constraintTop_toBottomOf="@+id/userPassEditText"
         app:layout_constraintVertical_bias="0.064" />
 
 
