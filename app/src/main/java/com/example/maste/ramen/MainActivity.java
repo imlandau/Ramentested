@@ -112,24 +112,24 @@ public class MainActivity extends AppCompatActivity {
         }); // end dish5ImgBtn OnClickListener
 
 
-        cartBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Cart.class));
-            }
-        }); // end cartBtn OnClickListener
+            cartBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(MainActivity.this, Cart.class));
+                }
+            }); // end cartBtn OnClickListener
 
-        homeTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Home.class));
-            }
-        }); // end homeTest OnClickListener
+            homeTest.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(MainActivity.this, Home.class));
+                }
+            }); // end homeTest OnClickListener
 
-        if (textView2.getId() == R.id.signup)
-        {
-            Intent i = new Intent(MainActivity.this , Home.class);
-            startActivity(i);
+            if (textView2.getId() == R.id.signup) {
+                Intent i = new Intent(MainActivity.this, Home.class);
+                startActivity(i);
+            }
         }
-    }
+
 }

@@ -77,4 +77,3 @@ public class AddOnItem extends Item {
     } // end setAddOnType
 
 } // end class
-

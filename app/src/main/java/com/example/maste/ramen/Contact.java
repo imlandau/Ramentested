@@ -2,39 +2,39 @@ package com.example.maste.ramen;
 
 public class Contact {
 
-    int id;
+    int Id;
     String UserName, UserPass;
 
-    public void setId(int id)
+    //public void setId(int id)
+    //{
+      //  this.id = id;
+
+    //}
+
+    //public int getId()
+   // {
+     //   return this.id;
+
+    //}
+
+    public void setUserName(String username)
     {
-        this.id = id;
-
-    }
-
-    public int getId()
-    {
-        return this.id;
-
-    }
-
-    public void setUserName(String UserName)
-    {
-        this.UserName = UserName;
+        this.UserName = username;
     }
 
     public String getUserName()
     {
-        return this.UserName;
+        return UserName;
     }
 
-    public void setUserPass(String UserPass)
+    public void setUserPass(String userpass)
     {
-        this.UserPass = UserPass;
+        this.UserPass = userpass;
     }
 
     public String getUserPass()
     {
-        return this.UserPass;
+        return UserPass;
     }
 
 
