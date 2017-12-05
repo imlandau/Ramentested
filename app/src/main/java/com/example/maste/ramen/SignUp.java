@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.Button;
 
 public class SignUp extends AppCompatActivity {
   DatabaseHelper helper = new DatabaseHelper(this);
@@ -16,7 +17,18 @@ public class SignUp extends AppCompatActivity {
       super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        Button registerBtn = (Button) findViewById(R.id.registerBtn);
+
+        registerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SignUp(v);
+            }
+        });
+
     }
+
+
 
     public void SignUp(View v) {
        String userName;
