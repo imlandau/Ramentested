@@ -16,9 +16,10 @@
     <string name="beg">1</string>
     <string name="signup">Sign Up</string>
     <string name="Username">Enter Username</string>
+    <string name="SignUsername">Create a Username</string>
     <string name="update">Update Cart</string>
     <string name="Password">Enter Password</string>
-    <string name="conPassword">Confirm Password</string>
+    <string name="SignPassword">Create a Password</string>
     <string name="Price">Price</string>
     <string name="Item">Item</string>
     <string name="Subtotal">Subtotal</string>
